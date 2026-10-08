@@ -4,34 +4,66 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>WebsitesDeal Pakistan — Premium Website Marketplace</title>
+<title>WebsitesDeal BD — Premium Ready-Made Websites</title>
 
 <meta name="description"
-content="Buy premium ready-made websites in Pakistan. Business, ecommerce, restaurant, real estate, portfolio and agency websites.">
+content="Buy premium ready-made websites in Bangladesh from ৳549. Business, ecommerce, restaurant, portfolio, agency and more.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-/* =========================================================
-   WEBSITESDEAL PAKISTAN
-   PREMIUM MARKETPLACE V2
-   ========================================================= */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
+/* =========================================================
+   WEBSITESDEAL BD
+   PREMIUM MARKETPLACE
+   DARK + LIGHT MODE
+   ========================================================= */
 
 :root{
   --green:#b7f34a;
   --green2:#8ed52e;
-  --dark:#07110d;
-  --dark2:#0b1712;
-  --dark3:#101e18;
+
+  --bg:#07110d;
+  --bg2:#09140f;
+  --bg3:#0d1a15;
   --card:#0d1a15;
+  --card2:#101f18;
+
   --border:#20352b;
+  --border2:#2c4939;
+
   --text:#f5f8f5;
   --muted:#91a39b;
-  --white:#fff;
-  --red:#ff5b65;
+  --muted2:#667a70;
+
+  --danger:#ff6670;
   --orange:#ffb84d;
-  --blue:#5ca8ff;
+  --blue:#66adff;
+
+  --shadow:0 25px 70px rgba(0,0,0,.25);
+
   --max:1320px;
+}
+
+html.light{
+
+  --bg:#f5f8f5;
+  --bg2:#eef3ef;
+  --bg3:#ffffff;
+  --card:#ffffff;
+  --card2:#f5f8f5;
+
+  --border:#dce6df;
+  --border2:#c7d6cc;
+
+  --text:#17231d;
+  --muted:#607269;
+  --muted2:#75877f;
+
+  --shadow:0 20px 55px rgba(30,55,40,.10);
 }
 
 *{
@@ -45,9 +77,12 @@ html{
 }
 
 body{
-  background:var(--dark);
+  background:var(--bg);
   color:var(--text);
   font-family:Inter,Arial,sans-serif;
+  transition:
+    background .3s ease,
+    color .3s ease;
 }
 
 button,
@@ -70,16 +105,26 @@ a{
    ========================================================= */
 
 .top-strip{
-  height:38px;
+  min-height:38px;
+
   background:#050c09;
+  color:#91a49a;
+
   border-bottom:1px solid var(--border);
 
   display:flex;
   justify-content:center;
   align-items:center;
 
+  padding:8px 15px;
+
+  text-align:center;
+
   font-size:11px;
-  color:#91a49a;
+}
+
+html.light .top-strip{
+  background:#102018;
 }
 
 .top-strip strong{
@@ -97,7 +142,12 @@ a{
   top:0;
   z-index:1000;
 
-  background:rgba(7,17,13,.94);
+  background:color-mix(
+    in srgb,
+    var(--bg) 94%,
+    transparent
+  );
+
   backdrop-filter:blur(18px);
 
   border-bottom:1px solid var(--border);
@@ -105,22 +155,29 @@ a{
 
 .header-inner{
   max-width:var(--max);
+
   height:100%;
+
   margin:auto;
 
   padding:0 20px;
 
   display:flex;
   align-items:center;
-  gap:35px;
+
+  gap:30px;
 }
+
+/* =========================================================
+   LOGO
+   ========================================================= */
 
 .logo{
   display:flex;
   align-items:center;
   gap:10px;
 
-  min-width:220px;
+  min-width:225px;
 }
 
 .logo-icon{
@@ -135,13 +192,17 @@ a{
   display:grid;
   place-items:center;
 
-  font-size:22px;
+  font-size:21px;
   font-weight:900;
+
+  box-shadow:0 8px 25px rgba(183,243,74,.12);
 }
 
 .logo-text{
   font-family:"Plus Jakarta Sans";
+
   font-weight:800;
+
   font-size:18px;
 }
 
@@ -151,25 +212,31 @@ a{
 
 .logo-text small{
   display:block;
-  color:#687c72;
+
+  color:#71857b;
 
   font-size:8px;
+
   letter-spacing:.25em;
+
   margin-top:2px;
 }
 
-/* NAV */
+/* =========================================================
+   NAV
+   ========================================================= */
 
 .main-nav{
   display:flex;
   align-items:center;
-  gap:25px;
+  gap:24px;
 
   flex:1;
 }
 
 .main-nav a{
-  color:#9cacA4;
+  color:var(--muted);
+
   font-size:12px;
   font-weight:600;
 
@@ -180,33 +247,43 @@ a{
   color:var(--green);
 }
 
-/* HEADER ACTIONS */
+/* =========================================================
+   HEADER ACTIONS
+   ========================================================= */
 
 .header-actions{
   display:flex;
   align-items:center;
-  gap:8px;
+  gap:7px;
 }
 
 .header-btn{
-  border:1px solid var(--border);
-  background:#0b1712;
-  color:#b8c7c0;
-
   width:39px;
   height:39px;
 
   border-radius:9px;
 
+  border:1px solid var(--border);
+
+  background:var(--card);
+
+  color:var(--muted);
+
   display:grid;
   place-items:center;
 
   font-size:16px;
+
+  transition:.2s;
 }
 
 .header-btn:hover{
-  border-color:#47633f;
   color:var(--green);
+  border-color:var(--border2);
+}
+
+.theme-btn{
+  font-size:15px;
 }
 
 .sell-btn{
@@ -214,35 +291,46 @@ a{
 
   border-radius:9px;
 
+  border:0;
+
   background:var(--green);
+
   color:#07110d;
 
   font-size:11px;
   font-weight:800;
 
-  border:0;
+  transition:.2s;
+}
+
+.sell-btn:hover{
+  background:#d3ff80;
+  transform:translateY(-2px);
 }
 
 /* =========================================================
-   MEGA CATEGORY BAR
+   CATEGORY BAR
    ========================================================= */
 
 .category-bar{
   border-bottom:1px solid var(--border);
-  background:#09140f;
+
+  background:var(--bg2);
 }
 
 .category-inner{
   max-width:var(--max);
+
   margin:auto;
 
   padding:0 20px;
 
-  height:48px;
+  min-height:48px;
 
   display:flex;
   align-items:center;
-  gap:28px;
+
+  gap:27px;
 
   overflow:auto;
 }
@@ -254,8 +342,9 @@ a{
 .category-item{
   white-space:nowrap;
 
+  color:var(--muted);
+
   font-size:11px;
-  color:#84968e;
 
   cursor:pointer;
 
@@ -272,6 +361,7 @@ a{
 
 .hero{
   position:relative;
+
   overflow:hidden;
 
   min-height:600px;
@@ -279,19 +369,30 @@ a{
   border-bottom:1px solid var(--border);
 
   background:
-    radial-gradient(circle at 80% 20%,rgba(183,243,74,.10),transparent 30%),
-    radial-gradient(circle at 20% 70%,rgba(64,150,100,.08),transparent 35%),
-    var(--dark);
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(183,243,74,.10),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 20% 70%,
+      rgba(64,150,100,.08),
+      transparent 35%
+    ),
+    var(--bg);
 }
 
 .hero-inner{
   max-width:var(--max);
+
   min-height:600px;
 
   margin:auto;
+
   padding:70px 20px;
 
   display:grid;
+
   grid-template-columns:1fr 1fr;
 
   align-items:center;
@@ -306,21 +407,23 @@ a{
 
 .hero-label{
   display:inline-flex;
+
   align-items:center;
   gap:8px;
-
-  border:1px solid #294331;
-
-  background:#0c1913;
 
   padding:8px 11px;
 
   border-radius:30px;
 
-  color:#a3b5ad;
+  border:1px solid var(--border2);
+
+  background:var(--card);
+
+  color:var(--muted);
 
   font-size:9px;
-  font-weight:700;
+  font-weight:800;
+
   letter-spacing:.1em;
 }
 
@@ -354,7 +457,7 @@ a{
 .hero-description{
   max-width:590px;
 
-  color:#8ea198;
+  color:var(--muted);
 
   font-size:16px;
 
@@ -363,13 +466,20 @@ a{
 
 .hero-buttons{
   display:flex;
+
   gap:12px;
 
   margin-top:30px;
 }
 
 .primary-btn{
+  display:inline-flex;
+
+  justify-content:center;
+  align-items:center;
+
   background:var(--green);
+
   color:#07110d;
 
   border:0;
@@ -378,21 +488,27 @@ a{
 
   border-radius:9px;
 
-  font-weight:800;
   font-size:12px;
+  font-weight:800;
 
   transition:.2s;
 }
 
 .primary-btn:hover{
   background:#d2ff80;
+
   transform:translateY(-2px);
 }
 
 .secondary-btn{
-  background:#0c1914;
+  display:inline-flex;
 
-  color:#c4d1ca;
+  justify-content:center;
+  align-items:center;
+
+  background:var(--card);
+
+  color:var(--text);
 
   border:1px solid var(--border);
 
@@ -405,12 +521,14 @@ a{
 }
 
 .secondary-btn:hover{
-  border-color:#4a6542;
+  border-color:var(--border2);
+
   color:var(--green);
 }
 
 .hero-trust{
   display:flex;
+
   gap:30px;
 
   margin-top:42px;
@@ -418,27 +536,35 @@ a{
 
 .hero-trust div{
   display:flex;
+
   flex-direction:column;
+
   gap:4px;
 }
 
 .hero-trust strong{
   font-family:"Plus Jakarta Sans";
+
   font-size:19px;
 }
 
 .hero-trust span{
-  color:#687b72;
+  color:var(--muted2);
+
   font-size:9px;
 }
 
-/* HERO VISUAL */
+/* =========================================================
+   HERO VISUAL
+   ========================================================= */
 
 .hero-right{
   position:relative;
+
   height:470px;
 
   display:grid;
+
   place-items:center;
 }
 
@@ -457,6 +583,7 @@ a{
 
 .dashboard-preview{
   position:relative;
+
   z-index:2;
 
   width:560px;
@@ -466,12 +593,12 @@ a{
 
   border-radius:18px;
 
-  border:1px solid #2a4538;
+  border:1px solid var(--border2);
 
-  background:#0a1410;
+  background:var(--card);
 
   box-shadow:
-    0 40px 100px rgba(0,0,0,.55),
+    0 40px 100px rgba(0,0,0,.45),
     0 0 0 1px rgba(255,255,255,.02);
 
   overflow:hidden;
@@ -498,26 +625,26 @@ a{
 
   border-radius:50%;
 
-  background:#2d4037;
+  background:#5b6d64;
 }
 
 .preview-address{
   margin:auto;
 
-  width:180px;
+  width:190px;
   height:18px;
 
   border-radius:20px;
 
-  background:#0e1d17;
+  background:var(--bg);
 
-  border:1px solid #1b3027;
+  border:1px solid var(--border);
 
   text-align:center;
 
   font-size:7px;
 
-  color:#60746b;
+  color:var(--muted2);
 
   padding-top:5px;
 }
@@ -533,7 +660,7 @@ a{
 .preview-sidebar{
   border-right:1px solid var(--border);
 
-  background:#0b1712;
+  background:var(--bg2);
 
   padding:18px 13px;
 }
@@ -554,7 +681,7 @@ a{
 
   border-radius:5px;
 
-  color:#61756c;
+  color:var(--muted2);
 
   font-size:7px;
 
@@ -563,6 +690,7 @@ a{
 
 .preview-menu.active{
   background:#17261e;
+
   color:var(--green);
 }
 
@@ -572,16 +700,19 @@ a{
 
 .preview-heading{
   display:flex;
+
   justify-content:space-between;
 }
 
 .preview-heading h3{
   font-size:17px;
+
   font-family:"Plus Jakarta Sans";
 }
 
 .preview-heading small{
-  color:#63766d;
+  color:var(--muted2);
+
   font-size:7px;
 }
 
@@ -600,7 +731,7 @@ a{
 
   border:1px solid var(--border);
 
-  background:#0d1a15;
+  background:var(--bg2);
 
   border-radius:7px;
 }
@@ -608,7 +739,7 @@ a{
 .preview-stat small{
   display:block;
 
-  color:#63776d;
+  color:var(--muted2);
 
   font-size:6px;
 }
@@ -635,8 +766,15 @@ a{
   overflow:hidden;
 
   background:
-    linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);
+    linear-gradient(
+      rgba(128,128,128,.08) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(128,128,128,.08) 1px,
+      transparent 1px
+    );
 
   background-size:25px 25px;
 }
@@ -662,26 +800,27 @@ a{
 
   z-index:5;
 
-  background:#101f18;
+  background:var(--card2);
 
-  border:1px solid #34513f;
+  border:1px solid var(--border2);
 
   border-radius:11px;
 
   padding:12px 15px;
 
-  box-shadow:0 20px 50px #0009;
+  box-shadow:0 20px 50px rgba(0,0,0,.35);
 }
 
 .floating-price{
   right:-15px;
+
   top:70px;
 }
 
 .floating-price small{
   display:block;
 
-  color:#71857b;
+  color:var(--muted2);
 
   font-size:7px;
 }
@@ -698,11 +837,12 @@ a{
 
 .floating-sale{
   left:-10px;
+
   bottom:55px;
 
   font-size:9px;
 
-  color:#d7e4de;
+  color:var(--text);
 }
 
 .floating-sale b{
@@ -710,13 +850,13 @@ a{
 }
 
 /* =========================================================
-   TRUST BAR
+   TRUST
    ========================================================= */
 
 .trust-bar{
   border-bottom:1px solid var(--border);
 
-  background:#09140f;
+  background:var(--bg2);
 }
 
 .trust-inner{
@@ -745,9 +885,9 @@ a{
   width:38px;
   height:38px;
 
-  border:1px solid #294237;
+  border:1px solid var(--border2);
 
-  background:#0e1b15;
+  background:var(--card);
 
   border-radius:9px;
 
@@ -768,7 +908,7 @@ a{
 .trust-box span{
   display:block;
 
-  color:#6e8279;
+  color:var(--muted2);
 
   font-size:8px;
 
@@ -798,7 +938,7 @@ a{
 }
 
 .section-kicker{
-  color:#82958c;
+  color:var(--muted);
 
   font-size:9px;
 
@@ -824,13 +964,13 @@ a{
 }
 
 .view-all{
-  color:#9dafA7;
+  color:var(--muted);
 
   font-size:11px;
 
   font-weight:700;
 
-  border-bottom:1px solid #344b40;
+  border-bottom:1px solid var(--border2);
 
   padding-bottom:5px;
 }
@@ -840,7 +980,7 @@ a{
 }
 
 /* =========================================================
-   CATEGORY CARDS
+   CATEGORIES
    ========================================================= */
 
 .category-grid{
@@ -867,14 +1007,16 @@ a{
   position:relative;
 
   overflow:hidden;
+
+  cursor:pointer;
 }
 
 .category-card:hover{
   transform:translateY(-5px);
 
-  border-color:#4b6841;
+  border-color:var(--border2);
 
-  background:#122119;
+  background:var(--card2);
 }
 
 .category-number{
@@ -885,7 +1027,7 @@ a{
 
   font-size:8px;
 
-  color:#42584d;
+  color:var(--muted2);
 }
 
 .category-icon{
@@ -894,11 +1036,12 @@ a{
 
   border-radius:10px;
 
-  background:#13241b;
+  background:var(--card2);
 
-  border:1px solid #263e31;
+  border:1px solid var(--border);
 
   display:grid;
+
   place-items:center;
 
   color:var(--green);
@@ -915,7 +1058,7 @@ a{
 }
 
 .category-card p{
-  color:#667a70;
+  color:var(--muted2);
 
   font-size:8px;
 
@@ -923,13 +1066,15 @@ a{
 }
 
 /* =========================================================
-   PRODUCT SECTION
+   MARKETPLACE
    ========================================================= */
 
 .marketplace{
-  background:#09140f;
+  background:var(--bg2);
 
-  max-width:none;
+  border-top:1px solid var(--border);
+
+  border-bottom:1px solid var(--border);
 }
 
 .marketplace-inner{
@@ -960,14 +1105,18 @@ a{
   overflow:auto;
 }
 
+.filters::-webkit-scrollbar{
+  display:none;
+}
+
 .filter{
   white-space:nowrap;
 
-  background:#0c1914;
+  background:var(--card);
 
   border:1px solid var(--border);
 
-  color:#758980;
+  color:var(--muted);
 
   padding:9px 13px;
 
@@ -988,11 +1137,11 @@ a{
 }
 
 .sort{
-  background:#0c1914;
+  background:var(--card);
 
   border:1px solid var(--border);
 
-  color:#a6b6af;
+  color:var(--muted);
 
   padding:10px 12px;
 
@@ -1011,10 +1160,12 @@ a{
   gap:18px;
 }
 
-/* PRODUCT */
+/* =========================================================
+   PRODUCT CARD
+   ========================================================= */
 
 .product-card{
-  background:#0d1a15;
+  background:var(--card);
 
   border:1px solid var(--border);
 
@@ -1028,9 +1179,9 @@ a{
 .product-card:hover{
   transform:translateY(-5px);
 
-  border-color:#3c5a46;
+  border-color:var(--border2);
 
-  box-shadow:0 25px 60px rgba(0,0,0,.25);
+  box-shadow:var(--shadow);
 }
 
 .product-image{
@@ -1042,7 +1193,7 @@ a{
 
   overflow:hidden;
 
-  background:#111b17;
+  background:var(--card2);
 }
 
 .product-label{
@@ -1055,7 +1206,7 @@ a{
 
   padding:6px 8px;
 
-  background:#08120edb;
+  background:rgba(7,17,13,.88);
 
   color:var(--green);
 
@@ -1066,6 +1217,25 @@ a{
   font-size:7px;
 
   font-weight:800;
+}
+
+.product-badge{
+  position:absolute;
+
+  z-index:4;
+
+  left:13px;
+  bottom:13px;
+
+  padding:6px 8px;
+
+  background:rgba(7,17,13,.88);
+
+  color:white;
+
+  border-radius:5px;
+
+  font-size:7px;
 }
 
 .product-actions{
@@ -1090,7 +1260,7 @@ a{
 
   border:1px solid #32473c;
 
-  background:#07110dd9;
+  background:rgba(7,17,13,.88);
 
   color:#b4c3bc;
 
@@ -1101,10 +1271,13 @@ a{
 
 .product-action:hover{
   color:var(--green);
+
   border-color:var(--green);
 }
 
-/* FAKE WEBSITE PREVIEW */
+/* =========================================================
+   REAL DEMO IMAGE
+   ========================================================= */
 
 .website-preview{
   height:100%;
@@ -1117,121 +1290,43 @@ a{
 
   color:#18231e;
 
-  box-shadow:0 15px 30px #0005;
+  box-shadow:0 15px 30px rgba(0,0,0,.25);
+
+  position:relative;
 }
 
-.preview-nav{
-  height:28px;
+.website-preview img{
+  width:100%;
+  height:100%;
 
-  background:#f8f9f5;
+  display:block;
 
-  display:flex;
+  object-fit:cover;
 
-  align-items:center;
-
-  gap:9px;
-
-  padding:0 11px;
-
-  font-size:5px;
+  transition:.5s;
 }
 
-.preview-nav strong{
-  margin-right:auto;
-
-  font-size:9px;
+.product-card:hover .website-preview img{
+  transform:scale(1.04);
 }
 
-.preview-hero{
-  height:105px;
+.demo-overlay{
+  position:absolute;
 
-  padding:18px;
+  inset:0;
 
-  background:
-    linear-gradient(135deg,#d9e5d9,#f3eee3);
+  background:linear-gradient(
+    to bottom,
+    rgba(0,0,0,.02),
+    rgba(0,0,0,.25)
+  );
+
+  pointer-events:none;
 }
 
-.preview-hero h4{
-  font-family:"Plus Jakarta Sans";
-
-  font-size:20px;
-
-  line-height:1;
-
-  margin:5px 0;
-}
-
-.preview-hero p{
-  font-size:6px;
-}
-
-.preview-button{
-  display:inline-block;
-
-  margin-top:8px;
-
-  background:#17231d;
-
-  color:white;
-
-  padding:5px 8px;
-
-  font-size:5px;
-
-  border-radius:3px;
-}
-
-.preview-blocks{
-  display:flex;
-
-  gap:7px;
-
-  padding:12px;
-}
-
-.preview-block{
-  flex:1;
-
-  height:55px;
-
-  background:#d0dbd0;
-
-  border-radius:4px;
-}
-
-.product-card:nth-child(2) .website-preview{
-  background:#18191a;
-  color:white;
-}
-
-.product-card:nth-child(2) .preview-nav{
-  background:#232526;
-}
-
-.product-card:nth-child(2) .preview-hero{
-  background:linear-gradient(135deg,#1c211f,#69553d);
-}
-
-.product-card:nth-child(2) .preview-button{
-  background:#e0b96b;
-  color:#17130d;
-}
-
-.product-card:nth-child(3) .preview-hero{
-  background:linear-gradient(135deg,#f1dfc7,#fff7ed);
-}
-
-.product-card:nth-child(4) .preview-hero{
-  background:linear-gradient(135deg,#d9e6ee,#f3f7f8);
-}
-
-.product-card:nth-child(5) .preview-hero{
-  background:linear-gradient(135deg,#e7d9dd,#faf3f4);
-}
-
-.product-card:nth-child(6) .preview-hero{
-  background:linear-gradient(135deg,#dddfe5,#f6f7fa);
-}
+/* =========================================================
+   PRODUCT INFO
+   ========================================================= */
 
 .product-info{
   padding:17px;
@@ -1262,7 +1357,7 @@ a{
 }
 
 .product-description{
-  color:#71857c;
+  color:var(--muted);
 
   font-size:9px;
 
@@ -1280,13 +1375,13 @@ a{
 
   justify-content:space-between;
 
-  color:#667a71;
+  color:var(--muted2);
 
   font-size:8px;
 }
 
 .product-meta strong{
-  color:#b4c3bc;
+  color:var(--text);
 }
 
 /* =========================================================
@@ -1304,7 +1399,7 @@ a{
 .feature-banner-inner{
   min-height:330px;
 
-  border:1px solid #2d4939;
+  border:1px solid var(--border2);
 
   border-radius:18px;
 
@@ -1315,8 +1410,12 @@ a{
   overflow:hidden;
 
   background:
-    radial-gradient(circle at 75% 40%,rgba(183,243,74,.16),transparent 30%),
-    linear-gradient(120deg,#0d1c15,#101e18);
+    radial-gradient(
+      circle at 75% 40%,
+      rgba(183,243,74,.16),
+      transparent 30%
+    ),
+    var(--card);
 }
 
 .feature-banner-inner:after{
@@ -1330,13 +1429,13 @@ a{
   right:-100px;
   top:-100px;
 
-  border:1px solid #38543f;
+  border:1px solid var(--border2);
 
   border-radius:50%;
 
   box-shadow:
-    0 0 0 45px #20372533,
-    0 0 0 90px #20372522;
+    0 0 0 45px rgba(32,55,37,.2),
+    0 0 0 90px rgba(32,55,37,.1);
 }
 
 .feature-content{
@@ -1352,7 +1451,7 @@ a{
 }
 
 .feature-content p{
-  color:#83968d;
+  color:var(--muted);
 
   font-size:12px;
 
@@ -1374,7 +1473,7 @@ a{
 }
 
 .step{
-  background:#0c1914;
+  background:var(--card);
 
   border:1px solid var(--border);
 
@@ -1386,7 +1485,7 @@ a{
 }
 
 .step-number{
-  color:#53685f;
+  color:var(--muted2);
 
   font-size:9px;
 
@@ -1410,7 +1509,7 @@ a{
 }
 
 .step p{
-  color:#6f8379;
+  color:var(--muted);
 
   font-size:9px;
 
@@ -1422,9 +1521,11 @@ a{
    ========================================================= */
 
 .pricing-section{
-  background:#09140f;
+  background:var(--bg2);
 
-  max-width:none;
+  border-top:1px solid var(--border);
+
+  border-bottom:1px solid var(--border);
 }
 
 .pricing-inner{
@@ -1438,7 +1539,7 @@ a{
 .pricing-grid{
   display:grid;
 
-  grid-template-columns:repeat(3,1fr);
+  grid-template-columns:repeat(4,1fr);
 
   gap:15px;
 
@@ -1446,7 +1547,7 @@ a{
 }
 
 .price-card{
-  background:#0d1a15;
+  background:var(--card);
 
   border:1px solid var(--border);
 
@@ -1460,7 +1561,7 @@ a{
 .price-card.featured{
   border-color:#648747;
 
-  box-shadow:0 25px 70px rgba(0,0,0,.25);
+  box-shadow:var(--shadow);
 }
 
 .popular{
@@ -1483,7 +1584,7 @@ a{
 }
 
 .price-card small{
-  color:#758a80;
+  color:var(--muted);
 
   font-size:8px;
 
@@ -1493,7 +1594,7 @@ a{
 .price{
   font-family:"Plus Jakarta Sans";
 
-  font-size:29px;
+  font-size:25px;
 
   margin:18px 0 4px;
 }
@@ -1503,9 +1604,11 @@ a{
 }
 
 .price-card p{
-  color:#70847b;
+  color:var(--muted);
 
   font-size:9px;
+
+  min-height:30px;
 }
 
 .price-card hr{
@@ -1519,7 +1622,7 @@ a{
 .price-card li{
   list-style:none;
 
-  color:#a8b7b0;
+  color:var(--muted);
 
   font-size:9px;
 
@@ -1553,15 +1656,19 @@ a{
 }
 
 .cta-inner{
-  border:1px solid #304b3a;
+  border:1px solid var(--border2);
 
   border-radius:18px;
 
   padding:55px;
 
   background:
-    radial-gradient(circle at 75% 30%,rgba(183,243,74,.14),transparent 35%),
-    #0d1b15;
+    radial-gradient(
+      circle at 75% 30%,
+      rgba(183,243,74,.14),
+      transparent 35%
+    ),
+    var(--card);
 
   display:flex;
 
@@ -1583,7 +1690,7 @@ a{
 }
 
 .cta p{
-  color:#80948b;
+  color:var(--muted);
 
   font-size:11px;
 }
@@ -1653,7 +1760,7 @@ footer{
 
   padding:20px;
 
-  border-top:1px solid var(--border);
+  border-top:1px solid #20352b;
 
   display:flex;
 
@@ -1695,23 +1802,23 @@ footer{
 .search-box{
   width:min(700px,90%);
 
-  background:#0d1a15;
+  background:var(--card);
 
-  border:1px solid #35523f;
+  border:1px solid var(--border2);
 
   border-radius:14px;
 
   padding:20px;
 
-  box-shadow:0 30px 90px #0009;
+  box-shadow:0 30px 90px rgba(0,0,0,.45);
 }
 
 .search-input{
   width:100%;
 
-  background:#07110d;
+  background:var(--bg);
 
-  color:white;
+  color:var(--text);
 
   border:1px solid var(--border);
 
@@ -1739,7 +1846,7 @@ footer{
 
   border-radius:8px;
 
-  color:#a8b8b1;
+  color:var(--muted);
 
   font-size:10px;
 
@@ -1747,16 +1854,57 @@ footer{
 }
 
 .search-result:hover{
-  border-color:#486741;
+  border-color:var(--border2);
 
   color:var(--green);
+}
+
+/* =========================================================
+   TOAST
+   ========================================================= */
+
+.toast{
+  position:fixed;
+
+  left:50%;
+  bottom:25px;
+
+  transform:translate(-50%,30px);
+
+  opacity:0;
+
+  pointer-events:none;
+
+  z-index:5000;
+
+  background:var(--card);
+
+  border:1px solid var(--border2);
+
+  color:var(--text);
+
+  padding:13px 18px;
+
+  border-radius:9px;
+
+  font-size:11px;
+
+  box-shadow:var(--shadow);
+
+  transition:.3s;
+}
+
+.toast.show{
+  opacity:1;
+
+  transform:translate(-50%,0);
 }
 
 /* =========================================================
    MOBILE
    ========================================================= */
 
-@media(max-width:1050px){
+@media(max-width:1100px){
 
   .main-nav{
     display:none;
@@ -1768,8 +1916,6 @@ footer{
 
   .hero-inner{
     grid-template-columns:1fr;
-
-    padding-top:60px;
   }
 
   .hero-right{
@@ -1784,6 +1930,10 @@ footer{
     grid-template-columns:repeat(2,1fr);
   }
 
+  .pricing-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
   .footer-inner{
     grid-template-columns:1fr 1fr;
   }
@@ -1793,19 +1943,29 @@ footer{
 
   .top-strip{
     font-size:9px;
-    text-align:center;
+  }
+
+  .header{
+    height:70px;
   }
 
   .header-inner{
-    gap:10px;
+    padding:0 14px;
+    gap:8px;
   }
 
   .logo{
     min-width:auto;
+    flex:1;
   }
 
   .logo-text{
     font-size:15px;
+  }
+
+  .logo-icon{
+    width:36px;
+    height:36px;
   }
 
   .sell-btn{
@@ -1880,6 +2040,7 @@ footer{
 
   .view-all{
     display:inline-block;
+
     margin-top:18px;
   }
 
@@ -1910,6 +2071,7 @@ footer{
 
   .feature-banner{
     padding:0 16px;
+
     margin-bottom:70px;
   }
 
@@ -1943,21 +2105,33 @@ footer{
 
   .footer-bottom span{
     display:block;
+
     margin-top:8px;
   }
 }
+
 </style>
 </head>
 
 <body>
 
 <!-- =====================================================
-     TOP STRIP
+     TOP
 ====================================================== -->
 
 <div class="top-strip">
-  🇵🇰 <strong>Pakistan's premium ready-made website marketplace</strong>
-  &nbsp; · &nbsp; PKR pricing &nbsp; · &nbsp; WhatsApp support
+
+  🇧🇩
+  <strong>Bangladesh's premium ready-made website marketplace</strong>
+
+  &nbsp; · &nbsp;
+
+  BDT pricing
+
+  &nbsp; · &nbsp;
+
+  WhatsApp support
+
 </div>
 
 
@@ -1976,8 +2150,13 @@ footer{
       </div>
 
       <div class="logo-text">
+
         Websites<span>Deal</span>
-        <small>PAKISTAN</small>
+
+        <small>
+          BANGLADESH
+        </small>
+
       </div>
 
     </a>
@@ -1985,11 +2164,25 @@ footer{
 
     <nav class="main-nav">
 
-      <a href="#websites">Websites</a>
-      <a href="#categories">Categories</a>
-      <a href="#featured">Featured</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#how">How It Works</a>
+      <a href="#websites">
+        Websites
+      </a>
+
+      <a href="#categories">
+        Categories
+      </a>
+
+      <a href="#featured">
+        Featured
+      </a>
+
+      <a href="#pricing">
+        Pricing
+      </a>
+
+      <a href="#how">
+        How It Works
+      </a>
 
     </nav>
 
@@ -1998,33 +2191,60 @@ footer{
 
       <button
         class="header-btn"
-        id="openSearch">
+        id="openSearch"
+        title="Search">
+
         ⌕
+
       </button>
+
 
       <button
         class="header-btn"
-        onclick="alert('Wishlist is ready for the next marketplace phase.')">
+        onclick="showToast('Wishlist feature coming soon')"
+        title="Wishlist">
+
         ♡
+
       </button>
+
 
       <button
         class="header-btn"
-        onclick="alert('Compare feature is ready for the next marketplace phase.')">
+        onclick="showToast('Compare feature coming soon')"
+        title="Compare">
+
         ⇄
+
       </button>
+
+
+      <button
+        class="header-btn theme-btn"
+        id="themeToggle"
+        title="Toggle theme">
+
+        ☀
+
+      </button>
+
 
       <a
         href="admin-login.html"
         class="header-btn"
         title="Admin">
+
         ⚙
+
       </a>
+
 
       <button
         class="sell-btn"
         onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+
         Sell With Us
+
       </button>
 
     </div>
@@ -2042,32 +2262,60 @@ footer{
 
   <div class="category-inner">
 
-    <div class="category-item" onclick="filterProducts('All')">
+    <div
+      class="category-item"
+      onclick="filterProducts('All')">
+
       All Websites
+
     </div>
 
-    <div class="category-item" onclick="filterProducts('Business')">
+    <div
+      class="category-item"
+      onclick="filterProducts('Business')">
+
       Business
+
     </div>
 
-    <div class="category-item" onclick="filterProducts('Ecommerce')">
+    <div
+      class="category-item"
+      onclick="filterProducts('Ecommerce')">
+
       E-commerce
+
     </div>
 
-    <div class="category-item" onclick="filterProducts('Restaurant')">
+    <div
+      class="category-item"
+      onclick="filterProducts('Restaurant')">
+
       Restaurant
+
     </div>
 
-    <div class="category-item" onclick="filterProducts('Real Estate')">
+    <div
+      class="category-item"
+      onclick="filterProducts('Real Estate')">
+
       Real Estate
+
     </div>
 
-    <div class="category-item" onclick="filterProducts('Portfolio')">
+    <div
+      class="category-item"
+      onclick="filterProducts('Portfolio')">
+
       Portfolio
+
     </div>
 
-    <div class="category-item" onclick="filterProducts('Agency')">
+    <div
+      class="category-item"
+      onclick="filterProducts('Agency')">
+
       Agency
+
     </div>
 
     <div class="category-item">
@@ -2094,52 +2342,97 @@ footer{
     <div class="hero-left">
 
       <div class="hero-label">
+
         <i></i>
-        BUILT FOR PAKISTANI BUSINESSES
+
+        BUILT FOR BANGLADESHI BUSINESSES
+
       </div>
 
+
       <h1>
+
         Websites that
-        <span>look expensive.</span>
+
+        <span>
+          look expensive.
+        </span>
+
       </h1>
 
+
       <p class="hero-description">
-        Discover premium ready-made websites for businesses,
-        stores, restaurants, agencies and professionals.
-        Pick a design, customize your brand and launch faster.
+
+        Discover premium ready-made websites for
+        Bangladeshi businesses, stores, restaurants,
+        agencies and professionals — starting from only
+        <strong style="color:var(--green)">
+          ৳549
+        </strong>.
+
       </p>
+
 
       <div class="hero-buttons">
 
         <a
           href="#websites"
           class="primary-btn">
+
           Explore Websites →
+
         </a>
+
 
         <a
           href="#how"
           class="secondary-btn">
+
           How It Works
+
         </a>
 
       </div>
 
+
       <div class="hero-trust">
 
         <div>
-          <strong>500+</strong>
-          <span>Premium designs</span>
+
+          <strong>
+            500+
+          </strong>
+
+          <span>
+            Premium designs
+          </span>
+
         </div>
 
-        <div>
-          <strong>PKR</strong>
-          <span>Local pricing</span>
-        </div>
 
         <div>
-          <strong>24/7</strong>
-          <span>WhatsApp support</span>
+
+          <strong>
+            ৳549
+          </strong>
+
+          <span>
+            Starting price
+          </span>
+
+        </div>
+
+
+        <div>
+
+          <strong>
+            24/7
+          </strong>
+
+          <span>
+            Support
+          </span>
+
         </div>
 
       </div>
@@ -2147,9 +2440,12 @@ footer{
     </div>
 
 
+    <!-- HERO DASHBOARD -->
+
     <div class="hero-right">
 
       <div class="hero-glow"></div>
+
 
       <div class="dashboard-preview">
 
@@ -2159,8 +2455,11 @@ footer{
           <span class="preview-dot"></span>
           <span class="preview-dot"></span>
 
+
           <div class="preview-address">
-            websitesdeal.pk
+
+            websitesdeal.bd
+
           </div>
 
         </div>
@@ -2171,7 +2470,7 @@ footer{
           <div class="preview-sidebar">
 
             <div class="preview-logo">
-              WDeal
+              WDeal BD
             </div>
 
             <div class="preview-menu active">
@@ -2215,6 +2514,7 @@ footer{
             <div class="preview-stats">
 
               <div class="preview-stat">
+
                 <small>
                   WEBSITES
                 </small>
@@ -2222,9 +2522,12 @@ footer{
                 <strong>
                   500+
                 </strong>
+
               </div>
 
+
               <div class="preview-stat">
+
                 <small>
                   SALES
                 </small>
@@ -2232,16 +2535,20 @@ footer{
                 <strong>
                   1,284
                 </strong>
+
               </div>
 
+
               <div class="preview-stat">
+
                 <small>
                   REVENUE
                 </small>
 
                 <strong>
-                  2.4M
+                  ৳24L+
                 </strong>
+
               </div>
 
             </div>
@@ -2267,7 +2574,7 @@ footer{
         </small>
 
         <strong>
-          PKR 14,999
+          ৳549
         </strong>
 
       </div>
@@ -2275,8 +2582,10 @@ footer{
 
       <div class="floating-card floating-sale">
 
-        ✓ <b>Pakistan Ready</b>
+        ✓ <b>Bangladesh Ready</b>
+
         <br>
+
         Fast delivery
 
       </div>
@@ -2289,7 +2598,7 @@ footer{
 
 
 <!-- =====================================================
-     TRUST BAR
+     TRUST
 ====================================================== -->
 
 <div class="trust-bar">
@@ -2303,6 +2612,7 @@ footer{
       </div>
 
       <div>
+
         <strong>
           Premium Designs
         </strong>
@@ -2310,6 +2620,7 @@ footer{
         <span>
           Curated website templates
         </span>
+
       </div>
 
     </div>
@@ -2318,17 +2629,19 @@ footer{
     <div class="trust-box">
 
       <div class="trust-icon">
-        ₨
+        ৳
       </div>
 
       <div>
+
         <strong>
-          PKR Pricing
+          BDT Pricing
         </strong>
 
         <span>
-          Made for Pakistan
+          Made for Bangladesh
         </span>
+
       </div>
 
     </div>
@@ -2341,6 +2654,7 @@ footer{
       </div>
 
       <div>
+
         <strong>
           Fast Delivery
         </strong>
@@ -2348,6 +2662,7 @@ footer{
         <span>
           Launch without waiting
         </span>
+
       </div>
 
     </div>
@@ -2360,6 +2675,7 @@ footer{
       </div>
 
       <div>
+
         <strong>
           Support Included
         </strong>
@@ -2367,6 +2683,7 @@ footer{
         <span>
           WhatsApp assistance
         </span>
+
       </div>
 
     </div>
@@ -2393,22 +2710,31 @@ footer{
       </div>
 
       <h2 class="section-title">
+
         Find the right
-        <span>website.</span>
+
+        <span>
+          website.
+        </span>
+
       </h2>
 
     </div>
 
+
     <a
       href="#websites"
       class="view-all">
+
       View all websites →
+
     </a>
 
   </div>
 
 
   <div class="category-grid">
+
 
     <div
       class="category-card"
@@ -2562,6 +2888,7 @@ footer{
 
   <div class="marketplace-inner">
 
+
     <div class="section-header">
 
       <div>
@@ -2571,8 +2898,13 @@ footer{
         </div>
 
         <h2 class="section-title">
+
           Websites people
-          <span>want to buy.</span>
+
+          <span>
+            want to buy.
+          </span>
+
         </h2>
 
       </div>
@@ -2587,37 +2919,54 @@ footer{
         <button
           class="filter active"
           onclick="filterProducts('All',this)">
+
           All
+
         </button>
+
 
         <button
           class="filter"
           onclick="filterProducts('Business',this)">
+
           Business
+
         </button>
+
 
         <button
           class="filter"
           onclick="filterProducts('Ecommerce',this)">
+
           E-commerce
+
         </button>
+
 
         <button
           class="filter"
           onclick="filterProducts('Restaurant',this)">
+
           Restaurant
+
         </button>
+
 
         <button
           class="filter"
           onclick="filterProducts('Real Estate',this)">
+
           Real Estate
+
         </button>
+
 
         <button
           class="filter"
           onclick="filterProducts('Portfolio',this)">
+
           Portfolio
+
         </button>
 
       </div>
@@ -2675,20 +3024,32 @@ footer{
         FEATURED COLLECTION
       </div>
 
+
       <h2 class="section-title">
+
         Launch your next
-        <span>big idea.</span>
+
+        <span>
+          big idea.
+        </span>
+
       </h2>
 
+
       <p>
-        Premium business websites designed to make your
-        brand look established from day one.
+
+        Premium business websites designed to make
+        your Bangladeshi brand look established from day one.
+
       </p>
+
 
       <a
         href="#websites"
         class="primary-btn">
+
         Explore Featured Designs →
+
       </a>
 
     </div>
@@ -2699,7 +3060,7 @@ footer{
 
 
 <!-- =====================================================
-     HOW IT WORKS
+     HOW
 ====================================================== -->
 
 <section
@@ -2715,8 +3076,13 @@ footer{
       </div>
 
       <h2 class="section-title">
+
         From idea to
-        <span>live.</span>
+
+        <span>
+          live.
+        </span>
+
       </h2>
 
     </div>
@@ -2725,6 +3091,7 @@ footer{
 
 
   <div class="steps-grid">
+
 
     <div class="step">
 
@@ -2741,8 +3108,10 @@ footer{
       </h3>
 
       <p>
+
         Browse our curated collection and choose
         a design that matches your business.
+
       </p>
 
     </div>
@@ -2763,8 +3132,10 @@ footer{
       </h3>
 
       <p>
+
         Send your logo, colors, business details,
         content and required changes.
+
       </p>
 
     </div>
@@ -2785,8 +3156,10 @@ footer{
       </h3>
 
       <p>
+
         Get your customized website and take
         your business online.
+
       </p>
 
     </div>
@@ -2810,13 +3183,22 @@ footer{
       SIMPLE PRICING
     </div>
 
+
     <h2 class="section-title">
+
       Premium websites.
-      <span>Fair prices.</span>
+
+      <span>
+        Fair prices.
+      </span>
+
     </h2>
 
 
     <div class="pricing-grid">
+
+
+      <!-- STARTER -->
 
       <div class="price-card">
 
@@ -2824,30 +3206,59 @@ footer{
           STARTER
         </small>
 
+
         <div class="price">
-          PKR <span>14,999</span>
+
+          ৳ <span>549</span>
+
         </div>
 
+
         <p>
-          Perfect for individuals & small businesses.
+          Perfect for landing pages and small businesses.
         </p>
+
 
         <hr>
 
+
         <ul>
-          <li>One-page website</li>
-          <li>Responsive design</li>
-          <li>WhatsApp integration</li>
-          <li>Basic SEO</li>
+
+          <li>
+            One-page website
+          </li>
+
+          <li>
+            Responsive design
+          </li>
+
+          <li>
+            WhatsApp button
+          </li>
+
+          <li>
+            Contact section
+          </li>
+
+          <li>
+            Basic SEO setup
+          </li>
+
         </ul>
 
+
         <button
-          class="secondary-btn">
+          class="secondary-btn"
+          onclick="showToast('Starter plan selected — ৳549')">
+
           Choose Starter
+
         </button>
 
       </div>
 
+
+      <!-- BUSINESS -->
 
       <div class="price-card featured">
 
@@ -2855,35 +3266,132 @@ footer{
           MOST POPULAR
         </div>
 
+
         <small>
           BUSINESS
         </small>
 
+
         <div class="price">
-          PKR <span>24,999</span>
+
+          ৳ <span>1,499</span>
+
         </div>
+
 
         <p>
           For serious businesses ready to grow.
         </p>
 
+
         <hr>
 
+
         <ul>
-          <li>Up to 6 pages</li>
-          <li>Premium UI design</li>
-          <li>WhatsApp + contact form</li>
-          <li>Basic SEO</li>
-          <li>Social integration</li>
+
+          <li>
+            Up to 5 pages
+          </li>
+
+          <li>
+            Premium UI design
+          </li>
+
+          <li>
+            WhatsApp integration
+          </li>
+
+          <li>
+            Contact form
+          </li>
+
+          <li>
+            Social integration
+          </li>
+
+          <li>
+            Basic SEO
+          </li>
+
         </ul>
 
+
         <button
-          class="primary-btn">
+          class="primary-btn"
+          onclick="showToast('Business plan selected — ৳1,499')">
+
           Get Business Website
+
         </button>
 
       </div>
 
+
+      <!-- PREMIUM -->
+
+      <div class="price-card">
+
+        <small>
+          PREMIUM
+        </small>
+
+
+        <div class="price">
+
+          ৳ <span>2,999</span>
+
+        </div>
+
+
+        <p>
+          Premium multi-page website for growing brands.
+        </p>
+
+
+        <hr>
+
+
+        <ul>
+
+          <li>
+            Up to 8 pages
+          </li>
+
+          <li>
+            Premium animations
+          </li>
+
+          <li>
+            WhatsApp + contact
+          </li>
+
+          <li>
+            Advanced sections
+          </li>
+
+          <li>
+            SEO ready
+          </li>
+
+          <li>
+            Social integration
+          </li>
+
+        </ul>
+
+
+        <button
+          class="secondary-btn"
+          onclick="showToast('Premium plan selected — ৳2,999')">
+
+          Choose Premium
+
+        </button>
+
+      </div>
+
+
+      <!-- ECOMMERCE -->
 
       <div class="price-card">
 
@@ -2891,27 +3399,57 @@ footer{
           E-COMMERCE
         </small>
 
+
         <div class="price">
-          PKR <span>39,999</span>
+
+          ৳ <span>4,999</span>
+
         </div>
+
 
         <p>
           Complete online store experience.
         </p>
 
+
         <hr>
 
+
         <ul>
-          <li>Product catalogue</li>
-          <li>COD-ready flow</li>
-          <li>Order management</li>
-          <li>WhatsApp orders</li>
-          <li>Mobile optimized</li>
+
+          <li>
+            Product catalogue
+          </li>
+
+          <li>
+            Shopping cart
+          </li>
+
+          <li>
+            COD-ready flow
+          </li>
+
+          <li>
+            Order management
+          </li>
+
+          <li>
+            WhatsApp orders
+          </li>
+
+          <li>
+            Mobile optimized
+          </li>
+
         </ul>
 
+
         <button
-          class="secondary-btn">
+          class="secondary-btn"
+          onclick="showToast('E-commerce plan selected — ৳4,999')">
+
           Start Selling
+
         </button>
 
       </div>
@@ -2939,24 +3477,30 @@ footer{
         NEED SOMETHING CUSTOM?
       </div>
 
+
       <h2>
         Tell us what
         you're building.
       </h2>
 
+
       <p>
+
         Can't find the perfect website?
         Talk to our team about a custom solution.
+
       </p>
 
     </div>
 
 
     <a
-      href="https://wa.me/923001234567"
+      href="https://wa.me/8801300000000"
       target="_blank"
       class="primary-btn">
+
       Chat on WhatsApp ↗
+
     </a>
 
   </div>
@@ -2972,6 +3516,7 @@ footer{
 
   <div class="footer-inner">
 
+
     <div class="footer-brand">
 
       <a
@@ -2983,15 +3528,23 @@ footer{
         </div>
 
         <div class="logo-text">
+
           Websites<span>Deal</span>
-          <small>PAKISTAN</small>
+
+          <small>
+            BANGLADESH
+          </small>
+
         </div>
 
       </a>
 
+
       <p>
+
         Premium ready-made websites for ambitious
-        Pakistani businesses.
+        Bangladeshi businesses.
+
       </p>
 
     </div>
@@ -3028,19 +3581,19 @@ footer{
         BUSINESS
       </h4>
 
-      <a href="#">
+      <a href="#contact">
         Sell With Us
       </a>
 
-      <a href="#">
+      <a href="#contact">
         Become a Partner
       </a>
 
-      <a href="#">
+      <a href="#contact">
         Support
       </a>
 
-      <a href="#">
+      <a href="#contact">
         Contact
       </a>
 
@@ -3077,12 +3630,17 @@ footer{
   <div class="footer-bottom">
 
     <span>
-      © 2026 WebsitesDeal Pakistan.
+
+      © 2026 WebsitesDeal Bangladesh.
       All rights reserved.
+
     </span>
 
+
     <span>
-      Made for Pakistani businesses.
+
+      Made for Bangladeshi businesses.
+
     </span>
 
   </div>
@@ -3091,7 +3649,7 @@ footer{
 
 
 <!-- =====================================================
-     SEARCH MODAL
+     SEARCH
 ====================================================== -->
 
 <div
@@ -3106,12 +3664,25 @@ footer{
       placeholder="Search websites, categories..."
       autocomplete="off">
 
+
     <div
       class="search-results"
       id="searchResults">
+
     </div>
 
   </div>
+
+</div>
+
+
+<!-- =====================================================
+     TOAST
+====================================================== -->
+
+<div
+  class="toast"
+  id="toast">
 
 </div>
 
@@ -3127,85 +3698,104 @@ const products = [
   {
     name:"Nexora Corporate",
     category:"Business",
-    price:24999,
+    price:1499,
     description:"Premium corporate website for modern businesses.",
-    pages:"6 Pages",
-    sales:42
+    pages:"5 Pages",
+    sales:42,
+    image:"https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=85",
+    badge:"BEST SELLER"
   },
 
   {
     name:"LuxeCart",
     category:"Ecommerce",
-    price:39999,
+    price:4999,
     description:"Luxury fashion and online shopping experience.",
     pages:"Online Store",
-    sales:31
+    sales:31,
+    image:"https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=85",
+    badge:"HOT"
   },
 
   {
     name:"Karahi House",
     category:"Restaurant",
-    price:19999,
+    price:1999,
     description:"Modern restaurant website with menu presentation.",
     pages:"5 Pages",
-    sales:28
+    sales:28,
+    image:"https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=85",
+    badge:"POPULAR"
   },
 
   {
     name:"EstateHub",
     category:"Real Estate",
-    price:29999,
+    price:2499,
     description:"Property listings and real estate agency website.",
     pages:"7 Pages",
-    sales:18
+    sales:18,
+    image:"https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=85",
+    badge:"NEW"
   },
 
   {
     name:"Apex Portfolio",
     category:"Portfolio",
-    price:17999,
+    price:999,
     description:"Elegant personal and creative portfolio website.",
     pages:"4 Pages",
-    sales:35
+    sales:35,
+    image:"https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=85",
+    badge:"CREATIVE"
   },
 
   {
     name:"GrowthLab",
     category:"Agency",
-    price:27999,
+    price:1799,
     description:"Modern digital marketing agency website.",
     pages:"6 Pages",
-    sales:24
+    sales:24,
+    image:"https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=85",
+    badge:"TRENDING"
   },
 
   {
     name:"Urban Store",
     category:"Ecommerce",
-    price:34999,
+    price:3499,
     description:"Premium retail storefront for growing brands.",
     pages:"Online Store",
-    sales:22
+    sales:22,
+    image:"https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&w=1200&q=85",
+    badge:"SALE"
   },
 
   {
     name:"Sapphire Clinic",
     category:"Business",
-    price:21999,
+    price:1299,
     description:"Professional clinic and appointment website.",
     pages:"5 Pages",
-    sales:19
+    sales:19,
+    image:"https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200&q=85",
+    badge:"BUSINESS"
   },
 
   {
     name:"Biryani District",
     category:"Restaurant",
-    price:18999,
+    price:1499,
     description:"Food brand and restaurant presentation website.",
     pages:"5 Pages",
-    sales:27
+    sales:27,
+    image:"https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=85",
+    badge:"FOOD"
   }
 
 ];
+
 
 let currentFilter="All";
 
@@ -3235,11 +3825,13 @@ function renderProducts(){
 
   }
 
+
   if(sort==="high"){
 
     list.sort((a,b)=>b.price-a.price);
 
   }
+
 
   if(sort==="name"){
 
@@ -3248,28 +3840,37 @@ function renderProducts(){
   }
 
 
-  grid.innerHTML=list.map((product,index)=>`
+  grid.innerHTML=list.map(product=>`
 
     <article class="product-card">
 
       <div class="product-image">
 
+
         <div class="product-label">
+
           ${product.category.toUpperCase()}
+
         </div>
+
 
         <div class="product-actions">
 
           <button
             class="product-action"
             onclick="addWishlist('${product.name}')">
+
             ♡
+
           </button>
+
 
           <button
             class="product-action"
             onclick="compareProduct('${product.name}')">
+
             ⇄
+
           </button>
 
         </div>
@@ -3277,47 +3878,19 @@ function renderProducts(){
 
         <div class="website-preview">
 
-          <div class="preview-nav">
+          <img
+            src="${product.image}"
+            alt="${product.name}"
+            loading="lazy">
 
-            <strong>
-              ${product.name.split(" ")[0]}
-            </strong>
+          <div class="demo-overlay"></div>
 
-            <span>HOME</span>
-            <span>ABOUT</span>
-            <span>CONTACT</span>
-
-          </div>
+        </div>
 
 
-          <div class="preview-hero">
+        <div class="product-badge">
 
-            <small>
-              PREMIUM WEBSITE
-            </small>
-
-            <h4>
-              ${product.name}
-            </h4>
-
-            <p>
-              ${product.description}
-            </p>
-
-            <span class="preview-button">
-              Explore →
-            </span>
-
-          </div>
-
-
-          <div class="preview-blocks">
-
-            <div class="preview-block"></div>
-            <div class="preview-block"></div>
-            <div class="preview-block"></div>
-
-          </div>
+          ${product.badge}
 
         </div>
 
@@ -3326,32 +3899,44 @@ function renderProducts(){
 
       <div class="product-info">
 
+
         <div class="product-title-row">
 
           <h3 class="product-title">
+
             ${product.name}
+
           </h3>
 
+
           <strong class="product-price">
-            PKR ${product.price.toLocaleString()}
+
+            ৳${product.price.toLocaleString("en-BD")}
+
           </strong>
 
         </div>
 
 
         <p class="product-description">
+
           ${product.description}
+
         </p>
 
 
         <div class="product-meta">
 
           <span>
+
             ${product.pages}
+
           </span>
 
           <strong>
+
             ${product.sales} sold
+
           </strong>
 
         </div>
@@ -3371,9 +3956,11 @@ function renderProducts(){
         grid-column:1/-1;
         padding:60px;
         text-align:center;
-        color:#71857b;
+        color:var(--muted);
       ">
+
         No websites found in this category.
+
       </div>
 
     `;
@@ -3391,10 +3978,13 @@ function filterProducts(category,button){
 
   currentFilter=category;
 
+
   document
     .querySelectorAll(".filter")
     .forEach(item=>{
+
       item.classList.remove("active");
+
     });
 
 
@@ -3409,13 +3999,16 @@ function filterProducts(category,button){
     );
 
     if(matching){
+
       matching.classList.add("active");
+
     }
 
   }
 
 
   renderProducts();
+
 
   document
     .getElementById("websites")
@@ -3443,9 +4036,8 @@ function sortProducts(){
 
 function addWishlist(name){
 
-  alert(
-    name+
-    " has been added to your wishlist."
+  showToast(
+    name+" added to wishlist"
   );
 
 }
@@ -3457,10 +4049,34 @@ function addWishlist(name){
 
 function compareProduct(name){
 
-  alert(
-    name+
-    " added to comparison."
+  showToast(
+    name+" added to comparison"
   );
+
+}
+
+
+/* =========================================================
+   TOAST
+========================================================= */
+
+let toastTimer;
+
+function showToast(message){
+
+  const toast=document.getElementById("toast");
+
+  toast.textContent=message;
+
+  toast.classList.add("show");
+
+  clearTimeout(toastTimer);
+
+  toastTimer=setTimeout(()=>{
+
+    toast.classList.remove("show");
+
+  },2500);
 
 }
 
@@ -3484,6 +4100,10 @@ document
   .addEventListener("click",()=>{
 
     searchModal.classList.add("show");
+
+    searchInput.value="";
+
+    searchResults.innerHTML="";
 
     searchInput.focus();
 
@@ -3560,12 +4180,14 @@ searchInput.addEventListener("input",()=>{
         ">
 
         <strong>
+
           ${product.name}
+
         </strong>
 
         · ${product.category}
 
-        · PKR ${product.price.toLocaleString()}
+        · ৳${product.price.toLocaleString("en-BD")}
 
       </div>
 
@@ -3577,12 +4199,67 @@ searchInput.addEventListener("input",()=>{
     searchResults.innerHTML=`
 
       <div class="search-result">
+
         No matching website found.
+
       </div>
 
     `;
 
   }
+
+});
+
+
+/* =========================================================
+   DARK / LIGHT MODE
+========================================================= */
+
+const themeToggle=
+  document.getElementById("themeToggle");
+
+
+function setTheme(theme){
+
+  if(theme==="light"){
+
+    document.documentElement.classList.add("light");
+
+    themeToggle.textContent="☾";
+
+  }else{
+
+    document.documentElement.classList.remove("light");
+
+    themeToggle.textContent="☀";
+
+  }
+
+  localStorage.setItem(
+    "websitesDealTheme",
+    theme
+  );
+
+}
+
+
+const savedTheme=
+  localStorage.getItem("websitesDealTheme");
+
+
+setTheme(
+  savedTheme || "dark"
+);
+
+
+themeToggle.addEventListener("click",()=>{
+
+  const isLight=
+    document.documentElement.classList.contains("light");
+
+  setTheme(
+    isLight ? "dark" : "light"
+  );
 
 });
 

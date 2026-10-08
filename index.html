@@ -1,2113 +1,1064 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="pageRoot">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>WebsitesDeal BD — Premium Ready-Made Websites</title>
+<title id="metaTitle">WebsitesDeal Pakistan — Premium Website Marketplace</title>
 
-<meta name="description"
-content="Buy premium ready-made websites in Bangladesh from ৳549. Business, ecommerce, restaurant, portfolio, agency and more.">
+<meta
+    id="metaDescription"
+    name="description"
+    content="Premium ready-made websites in Pakistan. Buy business, ecommerce, restaurant, property, portfolio and agency websites."
+>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+>
 
 <style>
 
 /* =========================================================
-   WEBSITESDEAL BD
-   PREMIUM MARKETPLACE
-   DARK + LIGHT MODE
-   ========================================================= */
-
-:root{
-  --green:#b7f34a;
-  --green2:#8ed52e;
-
-  --bg:#07110d;
-  --bg2:#09140f;
-  --bg3:#0d1a15;
-  --card:#0d1a15;
-  --card2:#101f18;
-
-  --border:#20352b;
-  --border2:#2c4939;
-
-  --text:#f5f8f5;
-  --muted:#91a39b;
-  --muted2:#667a70;
-
-  --danger:#ff6670;
-  --orange:#ffb84d;
-  --blue:#66adff;
-
-  --shadow:0 25px 70px rgba(0,0,0,.25);
-
-  --max:1320px;
-}
-
-html.light{
-
-  --bg:#f5f8f5;
-  --bg2:#eef3ef;
-  --bg3:#ffffff;
-  --card:#ffffff;
-  --card2:#f5f8f5;
-
-  --border:#dce6df;
-  --border2:#c7d6cc;
-
-  --text:#17231d;
-  --muted:#607269;
-  --muted2:#75877f;
-
-  --shadow:0 20px 55px rgba(30,55,40,.10);
-}
+   RESET
+========================================================= */
 
 *{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 html{
-  scroll-behavior:smooth;
+    scroll-behavior:smooth;
 }
 
 body{
-  background:var(--bg);
-  color:var(--text);
-  font-family:Inter,Arial,sans-serif;
-  transition:
-    background .3s ease,
-    color .3s ease;
+    font-family:"Inter",sans-serif;
+    background:#f7f8fc;
+    color:#101828;
+    line-height:1.6;
 }
 
 button,
-input,
-select{
-  font-family:inherit;
+input{
+    font:inherit;
 }
 
 button{
-  cursor:pointer;
+    cursor:pointer;
 }
 
 a{
-  text-decoration:none;
-  color:inherit;
+    color:inherit;
+    text-decoration:none;
 }
 
 /* =========================================================
-   TOP STRIP
-   ========================================================= */
+   VARIABLES
+========================================================= */
 
-.top-strip{
-  min-height:38px;
-
-  background:#050c09;
-  color:#91a49a;
-
-  border-bottom:1px solid var(--border);
-
-  display:flex;
-  justify-content:center;
-  align-items:center;
-
-  padding:8px 15px;
-
-  text-align:center;
-
-  font-size:11px;
-}
-
-html.light .top-strip{
-  background:#102018;
-}
-
-.top-strip strong{
-  color:var(--green);
+:root{
+    --primary:#16a34a;
+    --primary-dark:#15803d;
+    --dark:#101828;
+    --muted:#667085;
+    --border:#e4e7ec;
+    --white:#fff;
+    --soft:#f2f4f7;
+    --green:#12b76a;
+    --orange:#f79009;
+    --shadow:0 20px 60px rgba(16,24,40,.08);
 }
 
 /* =========================================================
    HEADER
-   ========================================================= */
+========================================================= */
 
 .header{
-  height:78px;
-
-  position:sticky;
-  top:0;
-  z-index:1000;
-
-  background:color-mix(
-    in srgb,
-    var(--bg) 94%,
-    transparent
-  );
-
-  backdrop-filter:blur(18px);
-
-  border-bottom:1px solid var(--border);
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(255,255,255,.95);
+    backdrop-filter:blur(18px);
+    border-bottom:1px solid var(--border);
 }
 
 .header-inner{
-  max-width:var(--max);
-
-  height:100%;
-
-  margin:auto;
-
-  padding:0 20px;
-
-  display:flex;
-  align-items:center;
-
-  gap:30px;
+    max-width:1450px;
+    margin:auto;
+    padding:15px 28px;
+    display:flex;
+    align-items:center;
+    gap:20px;
 }
-
-/* =========================================================
-   LOGO
-   ========================================================= */
 
 .logo{
-  display:flex;
-  align-items:center;
-  gap:10px;
-
-  min-width:225px;
+    display:flex;
+    align-items:center;
+    gap:11px;
+    min-width:230px;
 }
 
-.logo-icon{
-  width:40px;
-  height:40px;
-
-  border-radius:11px;
-
-  background:var(--green);
-  color:#07110d;
-
-  display:grid;
-  place-items:center;
-
-  font-size:21px;
-  font-weight:900;
-
-  box-shadow:0 8px 25px rgba(183,243,74,.12);
+.logo-mark{
+    width:43px;
+    height:43px;
+    border-radius:13px;
+    background:linear-gradient(135deg,#16a34a,#22c55e);
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:900;
+    font-size:17px;
+    box-shadow:0 10px 25px rgba(22,163,74,.25);
+    overflow:hidden;
 }
 
-.logo-text{
-  font-family:"Plus Jakarta Sans";
+.logo-mark img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+}
 
-  font-weight:800;
-
-  font-size:18px;
+.logo-text strong{
+    display:block;
+    font-size:18px;
+    font-weight:900;
+    letter-spacing:-.5px;
 }
 
 .logo-text span{
-  color:var(--green);
+    display:block;
+    color:var(--muted);
+    font-size:9px;
+    font-weight:800;
+    text-transform:uppercase;
+    letter-spacing:1.4px;
 }
 
-.logo-text small{
-  display:block;
-
-  color:#71857b;
-
-  font-size:8px;
-
-  letter-spacing:.25em;
-
-  margin-top:2px;
+.search-box{
+    flex:1;
+    position:relative;
 }
 
-/* =========================================================
-   NAV
-   ========================================================= */
-
-.main-nav{
-  display:flex;
-  align-items:center;
-  gap:24px;
-
-  flex:1;
+.search-box input{
+    width:100%;
+    height:48px;
+    border:1px solid var(--border);
+    background:#f9fafb;
+    border-radius:13px;
+    padding:0 50px 0 18px;
+    outline:none;
+    transition:.25s;
 }
 
-.main-nav a{
-  color:var(--muted);
-
-  font-size:12px;
-  font-weight:600;
-
-  transition:.2s;
+.search-box input:focus{
+    background:#fff;
+    border-color:var(--primary);
+    box-shadow:0 0 0 4px rgba(22,163,74,.08);
 }
 
-.main-nav a:hover{
-  color:var(--green);
+.search-icon{
+    position:absolute;
+    right:17px;
+    top:12px;
+    font-size:20px;
 }
-
-/* =========================================================
-   HEADER ACTIONS
-   ========================================================= */
 
 .header-actions{
-  display:flex;
-  align-items:center;
-  gap:7px;
+    display:flex;
+    align-items:center;
+    gap:8px;
 }
 
-.header-btn{
-  width:39px;
-  height:39px;
-
-  border-radius:9px;
-
-  border:1px solid var(--border);
-
-  background:var(--card);
-
-  color:var(--muted);
-
-  display:grid;
-  place-items:center;
-
-  font-size:16px;
-
-  transition:.2s;
+.icon-btn{
+    width:44px;
+    height:44px;
+    border:1px solid var(--border);
+    background:#fff;
+    border-radius:12px;
+    font-size:18px;
+    transition:.2s;
 }
 
-.header-btn:hover{
-  color:var(--green);
-  border-color:var(--border2);
+.icon-btn:hover{
+    border-color:var(--primary);
+    color:var(--primary);
+    transform:translateY(-2px);
 }
 
-.theme-btn{
-  font-size:15px;
+/* =========================================================
+   LANGUAGE
+========================================================= */
+
+.language-btn{
+    height:44px;
+    padding:0 12px;
+    border:1px solid var(--border);
+    background:#fff;
+    border-radius:12px;
+    font-size:12px;
+    font-weight:900;
+    color:#344054;
+    transition:.2s;
+}
+
+.language-btn:hover{
+    border-color:var(--primary);
+    color:var(--primary);
+}
+
+.language-btn .active{
+    color:var(--primary);
 }
 
 .sell-btn{
-  padding:11px 16px;
-
-  border-radius:9px;
-
-  border:0;
-
-  background:var(--green);
-
-  color:#07110d;
-
-  font-size:11px;
-  font-weight:800;
-
-  transition:.2s;
+    height:44px;
+    padding:0 16px;
+    border:0;
+    border-radius:12px;
+    color:#fff;
+    font-weight:800;
+    background:var(--dark);
 }
 
 .sell-btn:hover{
-  background:#d3ff80;
-  transform:translateY(-2px);
+    background:#000;
 }
 
 /* =========================================================
    CATEGORY BAR
-   ========================================================= */
+========================================================= */
 
 .category-bar{
-  border-bottom:1px solid var(--border);
-
-  background:var(--bg2);
+    background:#fff;
+    border-bottom:1px solid var(--border);
 }
 
 .category-inner{
-  max-width:var(--max);
-
-  margin:auto;
-
-  padding:0 20px;
-
-  min-height:48px;
-
-  display:flex;
-  align-items:center;
-
-  gap:27px;
-
-  overflow:auto;
+    max-width:1450px;
+    margin:auto;
+    padding:10px 28px;
+    display:flex;
+    gap:8px;
+    overflow:auto;
 }
 
 .category-inner::-webkit-scrollbar{
-  display:none;
+    height:0;
 }
 
-.category-item{
-  white-space:nowrap;
-
-  color:var(--muted);
-
-  font-size:11px;
-
-  cursor:pointer;
-
-  transition:.2s;
+.category-btn{
+    white-space:nowrap;
+    border:0;
+    background:transparent;
+    padding:8px 14px;
+    border-radius:9px;
+    color:#475467;
+    font-weight:600;
+    font-size:12px;
 }
 
-.category-item:hover{
-  color:var(--green);
+.category-btn:hover,
+.category-btn.active{
+    background:#ecfdf3;
+    color:var(--primary);
 }
 
 /* =========================================================
    HERO
-   ========================================================= */
+========================================================= */
 
 .hero{
-  position:relative;
-
-  overflow:hidden;
-
-  min-height:600px;
-
-  border-bottom:1px solid var(--border);
-
-  background:
-    radial-gradient(
-      circle at 80% 20%,
-      rgba(183,243,74,.10),
-      transparent 30%
-    ),
-    radial-gradient(
-      circle at 20% 70%,
-      rgba(64,150,100,.08),
-      transparent 35%
-    ),
-    var(--bg);
+    max-width:1450px;
+    margin:30px auto 0;
+    padding:0 28px;
 }
 
-.hero-inner{
-  max-width:var(--max);
-
-  min-height:600px;
-
-  margin:auto;
-
-  padding:70px 20px;
-
-  display:grid;
-
-  grid-template-columns:1fr 1fr;
-
-  align-items:center;
-
-  gap:70px;
+.hero-card{
+    min-height:455px;
+    border-radius:30px;
+    overflow:hidden;
+    position:relative;
+    background:
+        radial-gradient(
+            circle at 80% 15%,
+            rgba(255,255,255,.18),
+            transparent 28%
+        ),
+        linear-gradient(
+            125deg,
+            #071a10,
+            #123524 48%,
+            #15803d
+        );
+    color:#fff;
+    display:flex;
+    align-items:center;
+    padding:65px;
 }
 
-.hero-left{
-  position:relative;
-  z-index:2;
+.hero-card:before{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    border-radius:50%;
+    border:1px solid rgba(255,255,255,.1);
+    right:100px;
+    top:-180px;
 }
 
-.hero-label{
-  display:inline-flex;
-
-  align-items:center;
-  gap:8px;
-
-  padding:8px 11px;
-
-  border-radius:30px;
-
-  border:1px solid var(--border2);
-
-  background:var(--card);
-
-  color:var(--muted);
-
-  font-size:9px;
-  font-weight:800;
-
-  letter-spacing:.1em;
+.hero-card:after{
+    content:"";
+    position:absolute;
+    width:350px;
+    height:350px;
+    border-radius:50%;
+    border:1px solid rgba(255,255,255,.08);
+    right:210px;
+    top:-100px;
 }
 
-.hero-label i{
-  width:7px;
-  height:7px;
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:720px;
+}
 
-  border-radius:50%;
-
-  background:var(--green);
-
-  box-shadow:0 0 15px var(--green);
+.hero-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:7px;
+    background:rgba(255,255,255,.1);
+    border:1px solid rgba(255,255,255,.14);
+    padding:8px 13px;
+    border-radius:30px;
+    font-size:11px;
+    font-weight:800;
+    margin-bottom:20px;
 }
 
 .hero h1{
-  font-family:"Plus Jakarta Sans";
-
-  font-size:clamp(48px,5vw,75px);
-
-  line-height:.98;
-
-  letter-spacing:-.06em;
-
-  margin:25px 0 20px;
+    font-size:clamp(40px,5vw,68px);
+    line-height:1.02;
+    letter-spacing:-3px;
+    margin-bottom:20px;
 }
 
 .hero h1 span{
-  color:var(--green);
+    color:#4ade80;
 }
 
-.hero-description{
-  max-width:590px;
-
-  color:var(--muted);
-
-  font-size:16px;
-
-  line-height:1.8;
+.hero p{
+    color:#d0d5dd;
+    font-size:16px;
+    max-width:620px;
+    margin-bottom:30px;
 }
 
-.hero-buttons{
-  display:flex;
-
-  gap:12px;
-
-  margin-top:30px;
+.hero-actions{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
 }
 
-.primary-btn{
-  display:inline-flex;
-
-  justify-content:center;
-  align-items:center;
-
-  background:var(--green);
-
-  color:#07110d;
-
-  border:0;
-
-  padding:14px 20px;
-
-  border-radius:9px;
-
-  font-size:12px;
-  font-weight:800;
-
-  transition:.2s;
+.btn-primary{
+    background:var(--primary);
+    color:#fff;
+    border:0;
+    padding:14px 22px;
+    border-radius:12px;
+    font-weight:800;
+    box-shadow:0 12px 30px rgba(22,163,74,.25);
 }
 
-.primary-btn:hover{
-  background:#d2ff80;
-
-  transform:translateY(-2px);
+.btn-primary:hover{
+    background:var(--primary-dark);
+    transform:translateY(-2px);
 }
 
-.secondary-btn{
-  display:inline-flex;
-
-  justify-content:center;
-  align-items:center;
-
-  background:var(--card);
-
-  color:var(--text);
-
-  border:1px solid var(--border);
-
-  padding:14px 20px;
-
-  border-radius:9px;
-
-  font-size:12px;
-  font-weight:700;
+.btn-white{
+    background:#fff;
+    color:#111827;
+    border:0;
+    padding:14px 22px;
+    border-radius:12px;
+    font-weight:800;
 }
 
-.secondary-btn:hover{
-  border-color:var(--border2);
-
-  color:var(--green);
+.hero-stats{
+    display:flex;
+    gap:30px;
+    margin-top:38px;
 }
 
-.hero-trust{
-  display:flex;
-
-  gap:30px;
-
-  margin-top:42px;
+.hero-stat strong{
+    display:block;
+    font-size:22px;
 }
 
-.hero-trust div{
-  display:flex;
-
-  flex-direction:column;
-
-  gap:4px;
-}
-
-.hero-trust strong{
-  font-family:"Plus Jakarta Sans";
-
-  font-size:19px;
-}
-
-.hero-trust span{
-  color:var(--muted2);
-
-  font-size:9px;
+.hero-stat span{
+    color:#98a2b3;
+    font-size:11px;
 }
 
 /* =========================================================
-   HERO VISUAL
-   ========================================================= */
+   COMMON
+========================================================= */
 
-.hero-right{
-  position:relative;
-
-  height:470px;
-
-  display:grid;
-
-  place-items:center;
+.container{
+    max-width:1450px;
+    margin:auto;
+    padding:0 28px;
 }
 
-.hero-glow{
-  position:absolute;
-
-  width:360px;
-  height:360px;
-
-  background:rgba(183,243,74,.13);
-
-  border-radius:50%;
-
-  filter:blur(80px);
+.section{
+    padding-top:70px;
 }
 
-.dashboard-preview{
-  position:relative;
-
-  z-index:2;
-
-  width:560px;
-  max-width:100%;
-
-  height:365px;
-
-  border-radius:18px;
-
-  border:1px solid var(--border2);
-
-  background:var(--card);
-
-  box-shadow:
-    0 40px 100px rgba(0,0,0,.45),
-    0 0 0 1px rgba(255,255,255,.02);
-
-  overflow:hidden;
-
-  transform:rotate(2deg);
+.section-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    margin-bottom:25px;
 }
 
-.preview-top{
-  height:38px;
-
-  border-bottom:1px solid var(--border);
-
-  display:flex;
-  align-items:center;
-
-  padding:0 13px;
-
-  gap:5px;
+.section-head h2{
+    font-size:29px;
+    letter-spacing:-1.2px;
 }
 
-.preview-dot{
-  width:7px;
-  height:7px;
-
-  border-radius:50%;
-
-  background:#5b6d64;
+.section-head p{
+    color:var(--muted);
+    font-size:13px;
+    margin-top:4px;
 }
 
-.preview-address{
-  margin:auto;
-
-  width:190px;
-  height:18px;
-
-  border-radius:20px;
-
-  background:var(--bg);
-
-  border:1px solid var(--border);
-
-  text-align:center;
-
-  font-size:7px;
-
-  color:var(--muted2);
-
-  padding-top:5px;
-}
-
-.preview-content{
-  display:grid;
-
-  grid-template-columns:145px 1fr;
-
-  height:327px;
-}
-
-.preview-sidebar{
-  border-right:1px solid var(--border);
-
-  background:var(--bg2);
-
-  padding:18px 13px;
-}
-
-.preview-logo{
-  font-size:12px;
-  font-weight:800;
-
-  color:var(--green);
-
-  margin-bottom:25px;
-}
-
-.preview-menu{
-  height:25px;
-
-  margin-bottom:5px;
-
-  border-radius:5px;
-
-  color:var(--muted2);
-
-  font-size:7px;
-
-  padding:8px;
-}
-
-.preview-menu.active{
-  background:#17261e;
-
-  color:var(--green);
-}
-
-.preview-main{
-  padding:20px;
-}
-
-.preview-heading{
-  display:flex;
-
-  justify-content:space-between;
-}
-
-.preview-heading h3{
-  font-size:17px;
-
-  font-family:"Plus Jakarta Sans";
-}
-
-.preview-heading small{
-  color:var(--muted2);
-
-  font-size:7px;
-}
-
-.preview-stats{
-  display:grid;
-
-  grid-template-columns:repeat(3,1fr);
-
-  gap:8px;
-
-  margin-top:18px;
-}
-
-.preview-stat{
-  padding:13px;
-
-  border:1px solid var(--border);
-
-  background:var(--bg2);
-
-  border-radius:7px;
-}
-
-.preview-stat small{
-  display:block;
-
-  color:var(--muted2);
-
-  font-size:6px;
-}
-
-.preview-stat strong{
-  display:block;
-
-  margin-top:8px;
-
-  font-size:14px;
-}
-
-.preview-chart{
-  height:130px;
-
-  margin-top:10px;
-
-  border:1px solid var(--border);
-
-  border-radius:7px;
-
-  position:relative;
-
-  overflow:hidden;
-
-  background:
-    linear-gradient(
-      rgba(128,128,128,.08) 1px,
-      transparent 1px
-    ),
-    linear-gradient(
-      90deg,
-      rgba(128,128,128,.08) 1px,
-      transparent 1px
-    );
-
-  background-size:25px 25px;
-}
-
-.chart-line{
-  position:absolute;
-
-  left:15px;
-  right:15px;
-  bottom:35px;
-
-  height:70px;
-
-  border-bottom:2px solid var(--green);
-
-  transform:skewY(-10deg);
-
-  opacity:.8;
-}
-
-.floating-card{
-  position:absolute;
-
-  z-index:5;
-
-  background:var(--card2);
-
-  border:1px solid var(--border2);
-
-  border-radius:11px;
-
-  padding:12px 15px;
-
-  box-shadow:0 20px 50px rgba(0,0,0,.35);
-}
-
-.floating-price{
-  right:-15px;
-
-  top:70px;
-}
-
-.floating-price small{
-  display:block;
-
-  color:var(--muted2);
-
-  font-size:7px;
-}
-
-.floating-price strong{
-  display:block;
-
-  color:var(--green);
-
-  font-size:16px;
-
-  margin-top:4px;
-}
-
-.floating-sale{
-  left:-10px;
-
-  bottom:55px;
-
-  font-size:9px;
-
-  color:var(--text);
-}
-
-.floating-sale b{
-  color:var(--green);
+.view-all{
+    color:var(--primary);
+    font-size:12px;
+    font-weight:800;
 }
 
 /* =========================================================
    TRUST
-   ========================================================= */
+========================================================= */
 
-.trust-bar{
-  border-bottom:1px solid var(--border);
-
-  background:var(--bg2);
+.trust-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
 }
 
-.trust-inner{
-  max-width:var(--max);
-
-  margin:auto;
-
-  padding:25px 20px;
-
-  display:grid;
-
-  grid-template-columns:repeat(4,1fr);
-
-  gap:20px;
-}
-
-.trust-box{
-  display:flex;
-
-  align-items:center;
-
-  gap:13px;
+.trust-card{
+    background:#fff;
+    border:1px solid var(--border);
+    padding:20px;
+    border-radius:17px;
+    display:flex;
+    gap:14px;
+    align-items:center;
 }
 
 .trust-icon{
-  width:38px;
-  height:38px;
-
-  border:1px solid var(--border2);
-
-  background:var(--card);
-
-  border-radius:9px;
-
-  display:grid;
-  place-items:center;
-
-  color:var(--green);
-
-  font-size:15px;
+    width:45px;
+    height:45px;
+    border-radius:13px;
+    background:#ecfdf3;
+    color:var(--primary);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:20px;
 }
 
-.trust-box strong{
-  display:block;
-
-  font-size:11px;
+.trust-card strong{
+    display:block;
+    font-size:13px;
 }
 
-.trust-box span{
-  display:block;
-
-  color:var(--muted2);
-
-  font-size:8px;
-
-  margin-top:3px;
+.trust-card span{
+    color:var(--muted);
+    font-size:10px;
 }
 
 /* =========================================================
-   SECTION
-   ========================================================= */
+   PRODUCTS
+========================================================= */
 
-.section{
-  max-width:var(--max);
-
-  margin:auto;
-
-  padding:100px 20px;
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
 }
 
-.section-header{
-  display:flex;
-
-  justify-content:space-between;
-
-  align-items:end;
-
-  margin-bottom:35px;
+.product-card{
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:18px;
+    overflow:hidden;
+    transition:.3s;
 }
 
-.section-kicker{
-  color:var(--muted);
-
-  font-size:9px;
-
-  font-weight:800;
-
-  letter-spacing:.18em;
+.product-card:hover{
+    transform:translateY(-7px);
+    box-shadow:var(--shadow);
 }
 
-.section-title{
-  font-family:"Plus Jakarta Sans";
-
-  font-size:42px;
-
-  line-height:1.05;
-
-  letter-spacing:-.05em;
-
-  margin-top:12px;
+.product-image{
+    height:205px;
+    background:#eef2f6;
+    position:relative;
+    overflow:hidden;
 }
 
-.section-title span{
-  color:var(--green);
+.product-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.5s;
 }
 
-.view-all{
-  color:var(--muted);
-
-  font-size:11px;
-
-  font-weight:700;
-
-  border-bottom:1px solid var(--border2);
-
-  padding-bottom:5px;
+.product-card:hover .product-image img{
+    transform:scale(1.06);
 }
 
-.view-all:hover{
-  color:var(--green);
+.product-badge{
+    position:absolute;
+    left:12px;
+    top:12px;
+    background:#fff;
+    color:var(--primary);
+    border-radius:8px;
+    padding:6px 9px;
+    font-size:9px;
+    font-weight:900;
+}
+
+.wishlist{
+    position:absolute;
+    right:12px;
+    top:12px;
+    width:36px;
+    height:36px;
+    border-radius:10px;
+    background:rgba(255,255,255,.94);
+    border:0;
+    font-size:17px;
+}
+
+.product-content{
+    padding:17px;
+}
+
+.product-category{
+    color:var(--primary);
+    font-size:9px;
+    text-transform:uppercase;
+    font-weight:900;
+    letter-spacing:.8px;
+}
+
+.product-title{
+    font-size:15px;
+    font-weight:800;
+    margin:6px 0;
+}
+
+.product-desc{
+    color:var(--muted);
+    font-size:11px;
+    min-height:38px;
+}
+
+.product-meta{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:15px;
+    padding-top:14px;
+    border-top:1px solid #f0f2f5;
+}
+
+.price{
+    font-size:17px;
+    font-weight:900;
+}
+
+.price small{
+    display:block;
+    font-size:9px;
+    color:var(--muted);
+    font-weight:600;
+}
+
+.rating{
+    font-size:10px;
+    color:#f79009;
+    font-weight:700;
 }
 
 /* =========================================================
    CATEGORIES
-   ========================================================= */
+========================================================= */
 
 .category-grid{
-  display:grid;
-
-  grid-template-columns:repeat(6,1fr);
-
-  gap:12px;
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    gap:15px;
 }
 
 .category-card{
-  min-height:155px;
-
-  padding:20px;
-
-  background:var(--card);
-
-  border:1px solid var(--border);
-
-  border-radius:13px;
-
-  transition:.25s;
-
-  position:relative;
-
-  overflow:hidden;
-
-  cursor:pointer;
+    background:#fff;
+    border:1px solid var(--border);
+    padding:25px 15px;
+    text-align:center;
+    border-radius:17px;
+    transition:.25s;
+    cursor:pointer;
 }
 
 .category-card:hover{
-  transform:translateY(-5px);
-
-  border-color:var(--border2);
-
-  background:var(--card2);
-}
-
-.category-number{
-  position:absolute;
-
-  right:13px;
-  top:13px;
-
-  font-size:8px;
-
-  color:var(--muted2);
+    border-color:var(--primary);
+    transform:translateY(-4px);
 }
 
 .category-icon{
-  width:42px;
-  height:42px;
-
-  border-radius:10px;
-
-  background:var(--card2);
-
-  border:1px solid var(--border);
-
-  display:grid;
-
-  place-items:center;
-
-  color:var(--green);
-
-  font-size:18px;
-
-  margin-bottom:27px;
+    font-size:29px;
+    margin-bottom:10px;
 }
 
-.category-card h3{
-  font-family:"Plus Jakarta Sans";
-
-  font-size:13px;
+.category-card strong{
+    display:block;
+    font-size:12px;
 }
 
-.category-card p{
-  color:var(--muted2);
-
-  font-size:8px;
-
-  margin-top:5px;
+.category-card span{
+    color:var(--muted);
+    font-size:9px;
 }
 
 /* =========================================================
-   MARKETPLACE
-   ========================================================= */
-
-.marketplace{
-  background:var(--bg2);
-
-  border-top:1px solid var(--border);
-
-  border-bottom:1px solid var(--border);
-}
-
-.marketplace-inner{
-  max-width:var(--max);
-
-  margin:auto;
-
-  padding:100px 20px;
-}
-
-.marketplace-toolbar{
-  display:flex;
-
-  justify-content:space-between;
-
-  align-items:center;
-
-  gap:20px;
-
-  margin-bottom:25px;
-}
-
-.filters{
-  display:flex;
-
-  gap:6px;
-
-  overflow:auto;
-}
-
-.filters::-webkit-scrollbar{
-  display:none;
-}
-
-.filter{
-  white-space:nowrap;
-
-  background:var(--card);
-
-  border:1px solid var(--border);
-
-  color:var(--muted);
-
-  padding:9px 13px;
-
-  border-radius:7px;
-
-  font-size:9px;
-
-  font-weight:700;
-}
-
-.filter:hover,
-.filter.active{
-  color:#07110d;
-
-  background:var(--green);
-
-  border-color:var(--green);
-}
-
-.sort{
-  background:var(--card);
-
-  border:1px solid var(--border);
-
-  color:var(--muted);
-
-  padding:10px 12px;
-
-  border-radius:7px;
-
-  font-size:9px;
-
-  outline:none;
-}
-
-.product-grid{
-  display:grid;
-
-  grid-template-columns:repeat(3,1fr);
-
-  gap:18px;
-}
-
-/* =========================================================
-   PRODUCT CARD
-   ========================================================= */
-
-.product-card{
-  background:var(--card);
-
-  border:1px solid var(--border);
-
-  border-radius:14px;
-
-  overflow:hidden;
-
-  transition:.25s;
-}
-
-.product-card:hover{
-  transform:translateY(-5px);
-
-  border-color:var(--border2);
-
-  box-shadow:var(--shadow);
-}
-
-.product-image{
-  height:245px;
-
-  padding:15px;
-
-  position:relative;
-
-  overflow:hidden;
-
-  background:var(--card2);
-}
-
-.product-label{
-  position:absolute;
-
-  z-index:4;
-
-  left:13px;
-  top:13px;
-
-  padding:6px 8px;
-
-  background:rgba(7,17,13,.88);
-
-  color:var(--green);
-
-  border:1px solid #304936;
-
-  border-radius:5px;
-
-  font-size:7px;
-
-  font-weight:800;
-}
-
-.product-badge{
-  position:absolute;
-
-  z-index:4;
-
-  left:13px;
-  bottom:13px;
-
-  padding:6px 8px;
-
-  background:rgba(7,17,13,.88);
-
-  color:white;
-
-  border-radius:5px;
-
-  font-size:7px;
-}
-
-.product-actions{
-  position:absolute;
-
-  z-index:5;
-
-  right:12px;
-  top:12px;
-
-  display:flex;
-
-  gap:5px;
-}
-
-.product-action{
-  width:29px;
-  height:29px;
-
-  display:grid;
-  place-items:center;
-
-  border:1px solid #32473c;
-
-  background:rgba(7,17,13,.88);
-
-  color:#b4c3bc;
-
-  border-radius:7px;
-
-  font-size:12px;
-}
-
-.product-action:hover{
-  color:var(--green);
-
-  border-color:var(--green);
-}
-
-/* =========================================================
-   REAL DEMO IMAGE
-   ========================================================= */
-
-.website-preview{
-  height:100%;
-
-  border-radius:8px;
-
-  overflow:hidden;
-
-  background:#e9ede8;
-
-  color:#18231e;
-
-  box-shadow:0 15px 30px rgba(0,0,0,.25);
-
-  position:relative;
-}
-
-.website-preview img{
-  width:100%;
-  height:100%;
-
-  display:block;
-
-  object-fit:cover;
-
-  transition:.5s;
-}
-
-.product-card:hover .website-preview img{
-  transform:scale(1.04);
-}
-
-.demo-overlay{
-  position:absolute;
-
-  inset:0;
-
-  background:linear-gradient(
-    to bottom,
-    rgba(0,0,0,.02),
-    rgba(0,0,0,.25)
-  );
-
-  pointer-events:none;
-}
-
-/* =========================================================
-   PRODUCT INFO
-   ========================================================= */
-
-.product-info{
-  padding:17px;
-}
-
-.product-title-row{
-  display:flex;
-
-  justify-content:space-between;
-
-  gap:15px;
-}
-
-.product-title{
-  font-family:"Plus Jakarta Sans";
-
-  font-size:15px;
-}
-
-.product-price{
-  color:var(--green);
-
-  font-weight:800;
-
-  font-size:13px;
-
-  white-space:nowrap;
-}
-
-.product-description{
-  color:var(--muted);
-
-  font-size:9px;
-
-  line-height:1.5;
-
-  margin:8px 0 15px;
-}
-
-.product-meta{
-  border-top:1px solid var(--border);
-
-  padding-top:12px;
-
-  display:flex;
-
-  justify-content:space-between;
-
-  color:var(--muted2);
-
-  font-size:8px;
-}
-
-.product-meta strong{
-  color:var(--text);
-}
-
-/* =========================================================
-   FEATURED BANNER
-   ========================================================= */
+   FEATURE
+========================================================= */
 
 .feature-banner{
-  max-width:var(--max);
-
-  margin:0 auto 100px;
-
-  padding:0 20px;
+    margin-top:70px;
+    border-radius:24px;
+    overflow:hidden;
+    background:linear-gradient(120deg,#ecfdf3,#fff);
+    border:1px solid #bbf7d0;
+    display:grid;
+    grid-template-columns:1fr 1fr;
 }
 
-.feature-banner-inner{
-  min-height:330px;
-
-  border:1px solid var(--border2);
-
-  border-radius:18px;
-
-  padding:50px;
-
-  position:relative;
-
-  overflow:hidden;
-
-  background:
-    radial-gradient(
-      circle at 75% 40%,
-      rgba(183,243,74,.16),
-      transparent 30%
-    ),
-    var(--card);
+.feature-copy{
+    padding:50px;
 }
 
-.feature-banner-inner:after{
-  content:"";
-
-  position:absolute;
-
-  width:400px;
-  height:400px;
-
-  right:-100px;
-  top:-100px;
-
-  border:1px solid var(--border2);
-
-  border-radius:50%;
-
-  box-shadow:
-    0 0 0 45px rgba(32,55,37,.2),
-    0 0 0 90px rgba(32,55,37,.1);
+.feature-copy .label{
+    color:var(--primary);
+    font-size:10px;
+    font-weight:900;
+    text-transform:uppercase;
+    letter-spacing:1px;
 }
 
-.feature-content{
-  position:relative;
-
-  z-index:3;
-
-  max-width:600px;
+.feature-copy h2{
+    font-size:35px;
+    line-height:1.15;
+    margin:12px 0;
+    letter-spacing:-1.5px;
 }
 
-.feature-content .section-title{
-  font-size:40px;
+.feature-copy p{
+    color:var(--muted);
+    max-width:520px;
+    font-size:13px;
+    margin-bottom:22px;
 }
 
-.feature-content p{
-  color:var(--muted);
-
-  font-size:12px;
-
-  line-height:1.7;
-
-  margin:15px 0 25px;
+.feature-visual{
+    min-height:300px;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(22,163,74,.18),
+            rgba(17,24,39,.75)
+        ),
+        url("https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1200&q=80")
+        center/cover;
 }
 
 /* =========================================================
-   HOW IT WORKS
-   ========================================================= */
+   STEPS
+========================================================= */
 
-.steps-grid{
-  display:grid;
-
-  grid-template-columns:repeat(3,1fr);
-
-  gap:15px;
+.steps{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
 }
 
 .step{
-  background:var(--card);
-
-  border:1px solid var(--border);
-
-  border-radius:14px;
-
-  padding:25px;
-
-  min-height:220px;
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:18px;
+    padding:28px;
 }
 
 .step-number{
-  color:var(--muted2);
-
-  font-size:9px;
-
-  font-weight:800;
-}
-
-.step-icon{
-  margin-top:35px;
-
-  color:var(--green);
-
-  font-size:23px;
+    width:42px;
+    height:42px;
+    border-radius:12px;
+    background:#101828;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:900;
+    margin-bottom:18px;
 }
 
 .step h3{
-  font-family:"Plus Jakarta Sans";
-
-  font-size:15px;
-
-  margin:18px 0 8px;
+    font-size:16px;
+    margin-bottom:6px;
 }
 
 .step p{
-  color:var(--muted);
-
-  font-size:9px;
-
-  line-height:1.7;
+    color:var(--muted);
+    font-size:12px;
 }
 
 /* =========================================================
-   PRICING
-   ========================================================= */
+   SELL CTA
+========================================================= */
 
-.pricing-section{
-  background:var(--bg2);
-
-  border-top:1px solid var(--border);
-
-  border-bottom:1px solid var(--border);
+.sell-section{
+    margin-top:70px;
+    border-radius:25px;
+    padding:55px;
+    background:#101828;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:30px;
 }
 
-.pricing-inner{
-  max-width:var(--max);
-
-  margin:auto;
-
-  padding:100px 20px;
+.sell-section h2{
+    font-size:35px;
+    letter-spacing:-1.5px;
 }
 
-.pricing-grid{
-  display:grid;
-
-  grid-template-columns:repeat(4,1fr);
-
-  gap:15px;
-
-  margin-top:40px;
-}
-
-.price-card{
-  background:var(--card);
-
-  border:1px solid var(--border);
-
-  border-radius:14px;
-
-  padding:30px;
-
-  position:relative;
-}
-
-.price-card.featured{
-  border-color:#648747;
-
-  box-shadow:var(--shadow);
-}
-
-.popular{
-  position:absolute;
-
-  top:15px;
-  right:15px;
-
-  background:var(--green);
-
-  color:#07110d;
-
-  padding:5px 8px;
-
-  border-radius:5px;
-
-  font-size:7px;
-
-  font-weight:900;
-}
-
-.price-card small{
-  color:var(--muted);
-
-  font-size:8px;
-
-  letter-spacing:.15em;
-}
-
-.price{
-  font-family:"Plus Jakarta Sans";
-
-  font-size:25px;
-
-  margin:18px 0 4px;
-}
-
-.price span{
-  color:var(--green);
-}
-
-.price-card p{
-  color:var(--muted);
-
-  font-size:9px;
-
-  min-height:30px;
-}
-
-.price-card hr{
-  border:0;
-
-  border-top:1px solid var(--border);
-
-  margin:22px 0;
-}
-
-.price-card li{
-  list-style:none;
-
-  color:var(--muted);
-
-  font-size:9px;
-
-  margin:11px 0;
-}
-
-.price-card li:before{
-  content:"✓";
-
-  color:var(--green);
-
-  margin-right:8px;
-}
-
-.price-card button{
-  width:100%;
-
-  margin-top:20px;
-}
-
-/* =========================================================
-   CTA
-   ========================================================= */
-
-.cta{
-  max-width:var(--max);
-
-  margin:100px auto;
-
-  padding:0 20px;
-}
-
-.cta-inner{
-  border:1px solid var(--border2);
-
-  border-radius:18px;
-
-  padding:55px;
-
-  background:
-    radial-gradient(
-      circle at 75% 30%,
-      rgba(183,243,74,.14),
-      transparent 35%
-    ),
-    var(--card);
-
-  display:flex;
-
-  justify-content:space-between;
-
-  align-items:center;
-
-  gap:30px;
-}
-
-.cta h2{
-  font-family:"Plus Jakarta Sans";
-
-  font-size:38px;
-
-  letter-spacing:-.04em;
-
-  margin:10px 0;
-}
-
-.cta p{
-  color:var(--muted);
-
-  font-size:11px;
+.sell-section p{
+    color:#98a2b3;
+    margin-top:7px;
+    max-width:650px;
+    font-size:13px;
 }
 
 /* =========================================================
    FOOTER
-   ========================================================= */
+========================================================= */
 
 footer{
-  border-top:1px solid var(--border);
-
-  background:#050c09;
+    margin-top:80px;
+    background:#0b1220;
+    color:#fff;
 }
 
 .footer-inner{
-  max-width:var(--max);
+    max-width:1450px;
+    margin:auto;
+    padding:60px 28px 30px;
+}
 
-  margin:auto;
-
-  padding:55px 20px 30px;
-
-  display:grid;
-
-  grid-template-columns:1.5fr repeat(3,1fr);
-
-  gap:45px;
+.footer-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 1fr;
+    gap:45px;
 }
 
 .footer-brand p{
-  max-width:270px;
-
-  color:#64786e;
-
-  font-size:9px;
-
-  line-height:1.7;
-
-  margin-top:15px;
+    color:#98a2b3;
+    font-size:12px;
+    max-width:400px;
+    margin-top:15px;
 }
 
-.footer-column h4{
-  font-family:"Plus Jakarta Sans";
-
-  font-size:10px;
-
-  margin-bottom:18px;
+.footer-col h4{
+    font-size:12px;
+    margin-bottom:15px;
 }
 
-.footer-column a{
-  display:block;
-
-  color:#697d73;
-
-  font-size:9px;
-
-  margin:11px 0;
+.footer-col a{
+    display:block;
+    color:#98a2b3;
+    font-size:11px;
+    margin:9px 0;
 }
 
-.footer-column a:hover{
-  color:var(--green);
+.footer-col a:hover{
+    color:#fff;
 }
 
 .footer-bottom{
-  max-width:var(--max);
-
-  margin:auto;
-
-  padding:20px;
-
-  border-top:1px solid #20352b;
-
-  display:flex;
-
-  justify-content:space-between;
-
-  color:#50645a;
-
-  font-size:8px;
+    border-top:1px solid rgba(255,255,255,.08);
+    margin-top:40px;
+    padding-top:22px;
+    display:flex;
+    justify-content:space-between;
+    color:#667085;
+    font-size:10px;
 }
 
 /* =========================================================
    SEARCH MODAL
-   ========================================================= */
+========================================================= */
+
+.modal{
+    position:fixed;
+    inset:0;
+    background:rgba(16,24,40,.65);
+    backdrop-filter:blur(7px);
+    display:none;
+    align-items:flex-start;
+    justify-content:center;
+    padding-top:100px;
+    z-index:3000;
+}
+
+.modal.show{
+    display:flex;
+}
 
 .search-modal{
-  position:fixed;
-
-  inset:0;
-
-  z-index:3000;
-
-  background:rgba(2,7,5,.82);
-
-  backdrop-filter:blur(12px);
-
-  display:none;
-
-  align-items:flex-start;
-
-  justify-content:center;
-
-  padding-top:130px;
+    width:min(700px,calc(100% - 30px));
+    background:#fff;
+    border-radius:20px;
+    padding:22px;
+    box-shadow:0 30px 100px rgba(0,0,0,.25);
 }
 
-.search-modal.show{
-  display:flex;
+.search-modal input{
+    width:100%;
+    height:55px;
+    border:1px solid var(--border);
+    border-radius:12px;
+    padding:0 17px;
+    outline:none;
 }
 
-.search-box{
-  width:min(700px,90%);
-
-  background:var(--card);
-
-  border:1px solid var(--border2);
-
-  border-radius:14px;
-
-  padding:20px;
-
-  box-shadow:0 30px 90px rgba(0,0,0,.45);
+.modal-results{
+    margin-top:15px;
+    max-height:400px;
+    overflow:auto;
 }
 
-.search-input{
-  width:100%;
-
-  background:var(--bg);
-
-  color:var(--text);
-
-  border:1px solid var(--border);
-
-  padding:17px;
-
-  border-radius:9px;
-
-  outline:none;
-
-  font-size:14px;
+.result-item{
+    padding:14px;
+    border-bottom:1px solid var(--border);
+    cursor:pointer;
 }
 
-.search-results{
-  margin-top:15px;
-
-  display:grid;
-
-  gap:6px;
+.result-item:hover{
+    background:#f9fafb;
 }
 
-.search-result{
-  padding:13px;
-
-  border:1px solid var(--border);
-
-  border-radius:8px;
-
-  color:var(--muted);
-
-  font-size:10px;
-
-  cursor:pointer;
+.result-item strong{
+    display:block;
+    font-size:13px;
 }
 
-.search-result:hover{
-  border-color:var(--border2);
-
-  color:var(--green);
+.result-item span{
+    color:var(--muted);
+    font-size:10px;
 }
 
 /* =========================================================
    TOAST
-   ========================================================= */
+========================================================= */
 
 .toast{
-  position:fixed;
-
-  left:50%;
-  bottom:25px;
-
-  transform:translate(-50%,30px);
-
-  opacity:0;
-
-  pointer-events:none;
-
-  z-index:5000;
-
-  background:var(--card);
-
-  border:1px solid var(--border2);
-
-  color:var(--text);
-
-  padding:13px 18px;
-
-  border-radius:9px;
-
-  font-size:11px;
-
-  box-shadow:var(--shadow);
-
-  transition:.3s;
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    background:#101828;
+    color:#fff;
+    padding:13px 17px;
+    border-radius:11px;
+    font-size:11px;
+    font-weight:700;
+    transform:translateY(100px);
+    opacity:0;
+    transition:.3s;
+    z-index:5000;
 }
 
 .toast.show{
-  opacity:1;
-
-  transform:translate(-50%,0);
+    transform:translateY(0);
+    opacity:1;
 }
 
 /* =========================================================
-   MOBILE
-   ========================================================= */
+   RESPONSIVE
+========================================================= */
 
 @media(max-width:1100px){
 
-  .main-nav{
-    display:none;
-  }
+    .product-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
 
-  .category-grid{
-    grid-template-columns:repeat(3,1fr);
-  }
+    .category-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
 
-  .hero-inner{
-    grid-template-columns:1fr;
-  }
+    .trust-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
 
-  .hero-right{
-    height:400px;
-  }
+    .header-inner{
+        flex-wrap:wrap;
+    }
 
-  .product-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
+    .search-box{
+        order:5;
+        flex-basis:100%;
+    }
 
-  .trust-inner{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .pricing-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .footer-inner{
-    grid-template-columns:1fr 1fr;
-  }
 }
 
-@media(max-width:650px){
+@media(max-width:800px){
 
-  .top-strip{
-    font-size:9px;
-  }
+    .hero-card{
+        padding:40px 30px;
+    }
 
-  .header{
-    height:70px;
-  }
+    .product-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
 
-  .header-inner{
-    padding:0 14px;
-    gap:8px;
-  }
+    .feature-banner{
+        grid-template-columns:1fr;
+    }
 
-  .logo{
-    min-width:auto;
-    flex:1;
-  }
+    .feature-visual{
+        min-height:240px;
+    }
 
-  .logo-text{
-    font-size:15px;
-  }
+    .steps{
+        grid-template-columns:1fr;
+    }
 
-  .logo-icon{
-    width:36px;
-    height:36px;
-  }
+    .sell-section{
+        flex-direction:column;
+        align-items:flex-start;
+    }
 
-  .sell-btn{
-    display:none;
-  }
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
+    }
 
-  .hero{
-    min-height:auto;
-  }
+}
 
-  .hero-inner{
-    padding:55px 18px;
-  }
+@media(max-width:560px){
 
-  .hero h1{
-    font-size:48px;
-  }
+    .header-inner,
+    .category-inner,
+    .container,
+    .hero{
+        padding-left:15px;
+        padding-right:15px;
+    }
 
-  .hero-description{
-    font-size:13px;
-  }
+    .logo{
+        min-width:auto;
+    }
 
-  .hero-trust{
-    gap:17px;
-  }
+    .logo-text span{
+        display:none;
+    }
 
-  .hero-right{
-    height:300px;
-  }
+    .header-actions .icon-btn:nth-child(2),
+    .header-actions .icon-btn:nth-child(3){
+        display:none;
+    }
 
-  .dashboard-preview{
-    height:250px;
-  }
+    .sell-btn{
+        display:none;
+    }
 
-  .preview-content{
-    height:212px;
-  }
+    .hero-card{
+        min-height:500px;
+        border-radius:20px;
+        padding:30px 23px;
+    }
 
-  .preview-sidebar{
-    display:none;
-  }
+    .hero h1{
+        font-size:39px;
+        letter-spacing:-2px;
+    }
 
-  .preview-main{
-    padding:13px;
-  }
+    .hero p{
+        font-size:13px;
+    }
 
-  .preview-chart{
-    height:90px;
-  }
+    .hero-stats{
+        gap:20px;
+    }
 
-  .floating-price{
-    right:0;
-  }
+    .section{
+        padding-top:50px;
+    }
 
-  .floating-sale{
-    left:0;
-  }
+    .section-head h2{
+        font-size:24px;
+    }
 
-  .section,
-  .marketplace-inner,
-  .pricing-inner{
-    padding:70px 16px;
-  }
+    .product-grid{
+        grid-template-columns:1fr;
+    }
 
-  .section-title{
-    font-size:34px;
-  }
+    .category-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
 
-  .section-header{
-    display:block;
-  }
+    .trust-grid{
+        grid-template-columns:1fr;
+    }
 
-  .view-all{
-    display:inline-block;
+    .feature-copy{
+        padding:30px;
+    }
 
-    margin-top:18px;
-  }
+    .feature-copy h2{
+        font-size:28px;
+    }
 
-  .category-grid{
-    grid-template-columns:1fr 1fr;
-  }
+    .sell-section{
+        padding:35px 25px;
+    }
 
-  .product-grid{
-    grid-template-columns:1fr;
-  }
+    .sell-section h2{
+        font-size:28px;
+    }
 
-  .marketplace-toolbar{
-    display:block;
-  }
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
 
-  .filters{
-    margin-top:18px;
-  }
+    .footer-bottom{
+        flex-direction:column;
+        gap:8px;
+    }
 
-  .sort{
-    margin-top:12px;
-  }
-
-  .steps-grid,
-  .pricing-grid{
-    grid-template-columns:1fr;
-  }
-
-  .feature-banner{
-    padding:0 16px;
-
-    margin-bottom:70px;
-  }
-
-  .feature-banner-inner{
-    padding:35px 25px;
-  }
-
-  .cta{
-    margin:70px auto;
-  }
-
-  .cta-inner{
-    padding:35px 25px;
-
-    display:block;
-  }
-
-  .cta .primary-btn{
-    margin-top:25px;
-  }
-
-  .footer-inner{
-    grid-template-columns:1fr 1fr;
-
-    padding:45px 20px 25px;
-  }
-
-  .footer-bottom{
-    display:block;
-  }
-
-  .footer-bottom span{
-    display:block;
-
-    margin-top:8px;
-  }
 }
 
 </style>
@@ -2115,1946 +1066,2347 @@ footer{
 
 <body>
 
-<!-- =====================================================
-     TOP
-====================================================== -->
-
-<div class="top-strip">
-
-  🇧🇩
-  <strong>Bangladesh's premium ready-made website marketplace</strong>
-
-  &nbsp; · &nbsp;
-
-  BDT pricing
-
-  &nbsp; · &nbsp;
-
-  WhatsApp support
-
-</div>
-
-
-<!-- =====================================================
+<!-- =========================================================
      HEADER
-====================================================== -->
+========================================================= -->
 
-<header class="header">
+<header class="header" id="mainHeader">
 
-  <div class="header-inner">
+    <div class="header-inner">
 
-    <a href="#" class="logo">
+        <a href="#" class="logo" id="brandLogo">
 
-      <div class="logo-icon">
-        W
-      </div>
+            <div class="logo-mark" id="brandLogoMark">
+                WD
+            </div>
 
-      <div class="logo-text">
+            <div class="logo-text">
 
-        Websites<span>Deal</span>
+                <strong id="brandName">
+                    WebsitesDeal
+                </strong>
 
-        <small>
-          BANGLADESH
-        </small>
+                <span id="brandCountry">
+                    Pakistan Marketplace
+                </span>
 
-      </div>
+            </div>
 
-    </a>
+        </a>
 
+        <div class="search-box">
 
-    <nav class="main-nav">
+            <input
+                id="mainSearch"
+                type="text"
+                placeholder="Search websites, online stores, restaurants..."
+            >
 
-      <a href="#websites">
-        Websites
-      </a>
+            <span class="search-icon">
+                ⌕
+            </span>
 
-      <a href="#categories">
-        Categories
-      </a>
+        </div>
 
-      <a href="#featured">
-        Featured
-      </a>
+        <div class="header-actions">
 
-      <a href="#pricing">
-        Pricing
-      </a>
+            <button
+                class="icon-btn"
+                id="wishlistBtn"
+                title="Wishlist">
+                ♡
+            </button>
 
-      <a href="#how">
-        How It Works
-      </a>
+            <button
+                class="icon-btn"
+                id="compareBtn"
+                title="Compare">
+                ⇄
+            </button>
 
-    </nav>
+            <button
+                class="icon-btn"
+                id="themeBtn"
+                title="Theme">
+                ◐
+            </button>
 
+            <!-- PK / EN -->
+            <button
+                class="language-btn"
+                id="languageBtn"
+                title="Language">
 
-    <div class="header-actions">
+                <span
+                    id="languagePK"
+                    class="active">
+                    PK
+                </span>
 
-      <button
-        class="header-btn"
-        id="openSearch"
-        title="Search">
+                <span> / </span>
 
-        ⌕
+                <span id="languageEN">
+                    EN
+                </span>
 
-      </button>
+            </button>
 
+            <button
+                class="icon-btn"
+                id="adminBtn"
+                title="Admin">
+                ⚙
+            </button>
 
-      <button
-        class="header-btn"
-        onclick="showToast('Wishlist feature coming soon')"
-        title="Wishlist">
+            <button
+                class="sell-btn"
+                id="sellBtn">
+                Sell Website
+            </button>
 
-        ♡
-
-      </button>
-
-
-      <button
-        class="header-btn"
-        onclick="showToast('Compare feature coming soon')"
-        title="Compare">
-
-        ⇄
-
-      </button>
-
-
-      <button
-        class="header-btn theme-btn"
-        id="themeToggle"
-        title="Toggle theme">
-
-        ☀
-
-      </button>
-
-
-      <a
-        href="admin-login.html"
-        class="header-btn"
-        title="Admin">
-
-        ⚙
-
-      </a>
-
-
-      <button
-        class="sell-btn"
-        onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
-
-        Sell With Us
-
-      </button>
+        </div>
 
     </div>
-
-  </div>
 
 </header>
 
-
-<!-- =====================================================
+<!-- =========================================================
      CATEGORY BAR
-====================================================== -->
+========================================================= -->
 
 <div class="category-bar">
 
-  <div class="category-inner">
+    <div class="category-inner">
 
-    <div
-      class="category-item"
-      onclick="filterProducts('All')">
+        <button
+            class="category-btn active"
+            data-category="all"
+            id="catAll">
+            All
+        </button>
 
-      All Websites
+        <button
+            class="category-btn"
+            data-category="Business"
+            id="catBusiness">
+            Business
+        </button>
+
+        <button
+            class="category-btn"
+            data-category="Ecommerce"
+            id="catEcommerce">
+            Ecommerce
+        </button>
+
+        <button
+            class="category-btn"
+            data-category="Restaurant"
+            id="catRestaurant">
+            Restaurant
+        </button>
+
+        <button
+            class="category-btn"
+            data-category="Property"
+            id="catProperty">
+            Property
+        </button>
+
+        <button
+            class="category-btn"
+            data-category="Portfolio"
+            id="catPortfolio">
+            Portfolio
+        </button>
+
+        <button
+            class="category-btn"
+            data-category="Agency"
+            id="catAgency">
+            Agency
+        </button>
+
+        <button
+            class="category-btn"
+            data-category="Healthcare"
+            id="catHealthcare">
+            Healthcare
+        </button>
+
+        <button
+            class="category-btn"
+            data-category="Education"
+            id="catEducation">
+            Education
+        </button>
 
     </div>
-
-    <div
-      class="category-item"
-      onclick="filterProducts('Business')">
-
-      Business
-
-    </div>
-
-    <div
-      class="category-item"
-      onclick="filterProducts('Ecommerce')">
-
-      E-commerce
-
-    </div>
-
-    <div
-      class="category-item"
-      onclick="filterProducts('Restaurant')">
-
-      Restaurant
-
-    </div>
-
-    <div
-      class="category-item"
-      onclick="filterProducts('Real Estate')">
-
-      Real Estate
-
-    </div>
-
-    <div
-      class="category-item"
-      onclick="filterProducts('Portfolio')">
-
-      Portfolio
-
-    </div>
-
-    <div
-      class="category-item"
-      onclick="filterProducts('Agency')">
-
-      Agency
-
-    </div>
-
-    <div class="category-item">
-      ✦ New Arrivals
-    </div>
-
-    <div class="category-item">
-      🔥 Best Sellers
-    </div>
-
-  </div>
 
 </div>
 
-
-<!-- =====================================================
+<!-- =========================================================
      HERO
-====================================================== -->
+========================================================= -->
 
 <section class="hero">
 
-  <div class="hero-inner">
+    <div class="hero-card">
 
-    <div class="hero-left">
+        <div class="hero-content">
 
-      <div class="hero-label">
+            <div
+                class="hero-badge"
+                id="heroBadge">
+                🇵🇰 Pakistan Website Marketplace
+            </div>
 
-        <i></i>
+            <h1 id="heroTitle">
+                Premium Websites.<br>
+                <span>Ready for Pakistan.</span>
+            </h1>
 
-        BUILT FOR BANGLADESHI BUSINESSES
+            <p id="heroDescription">
+                Discover ready-made websites for Pakistani
+                businesses, ecommerce stores, restaurants,
+                property agencies, portfolios and digital agencies.
+            </p>
 
-      </div>
+            <div class="hero-actions">
 
+                <button
+                    class="btn-primary"
+                    id="exploreBtn">
+                    Explore Websites
+                </button>
 
-      <h1>
+                <button
+                    class="btn-white"
+                    id="heroSellBtn">
+                    Sell Your Website
+                </button>
 
-        Websites that
+            </div>
 
-        <span>
-          look expensive.
-        </span>
+            <div class="hero-stats">
 
-      </h1>
+                <div class="hero-stat">
 
+                    <strong>
+                        500+
+                    </strong>
 
-      <p class="hero-description">
+                    <span id="statWebsites">
+                        Ready Websites
+                    </span>
 
-        Discover premium ready-made websites for
-        Bangladeshi businesses, stores, restaurants,
-        agencies and professionals — starting from only
-        <strong style="color:var(--green)">
-          ৳549
-        </strong>.
+                </div>
 
-      </p>
+                <div class="hero-stat">
 
+                    <strong>
+                        50+
+                    </strong>
 
-      <div class="hero-buttons">
+                    <span id="statCategories">
+                        Categories
+                    </span>
 
-        <a
-          href="#websites"
-          class="primary-btn">
+                </div>
 
-          Explore Websites →
+                <div class="hero-stat">
 
-        </a>
+                    <strong>
+                        4.9/5
+                    </strong>
 
+                    <span id="statRating">
+                        Rating
+                    </span>
 
-        <a
-          href="#how"
-          class="secondary-btn">
+                </div>
 
-          How It Works
-
-        </a>
-
-      </div>
-
-
-      <div class="hero-trust">
-
-        <div>
-
-          <strong>
-            500+
-          </strong>
-
-          <span>
-            Premium designs
-          </span>
-
-        </div>
-
-
-        <div>
-
-          <strong>
-            ৳549
-          </strong>
-
-          <span>
-            Starting price
-          </span>
+            </div>
 
         </div>
-
-
-        <div>
-
-          <strong>
-            24/7
-          </strong>
-
-          <span>
-            Support
-          </span>
-
-        </div>
-
-      </div>
 
     </div>
-
-
-    <!-- HERO DASHBOARD -->
-
-    <div class="hero-right">
-
-      <div class="hero-glow"></div>
-
-
-      <div class="dashboard-preview">
-
-        <div class="preview-top">
-
-          <span class="preview-dot"></span>
-          <span class="preview-dot"></span>
-          <span class="preview-dot"></span>
-
-
-          <div class="preview-address">
-
-            websitesdeal.bd
-
-          </div>
-
-        </div>
-
-
-        <div class="preview-content">
-
-          <div class="preview-sidebar">
-
-            <div class="preview-logo">
-              WDeal BD
-            </div>
-
-            <div class="preview-menu active">
-              Dashboard
-            </div>
-
-            <div class="preview-menu">
-              Websites
-            </div>
-
-            <div class="preview-menu">
-              Orders
-            </div>
-
-            <div class="preview-menu">
-              Customers
-            </div>
-
-            <div class="preview-menu">
-              Analytics
-            </div>
-
-          </div>
-
-
-          <div class="preview-main">
-
-            <div class="preview-heading">
-
-              <h3>
-                Marketplace
-              </h3>
-
-              <small>
-                OCT 2026
-              </small>
-
-            </div>
-
-
-            <div class="preview-stats">
-
-              <div class="preview-stat">
-
-                <small>
-                  WEBSITES
-                </small>
-
-                <strong>
-                  500+
-                </strong>
-
-              </div>
-
-
-              <div class="preview-stat">
-
-                <small>
-                  SALES
-                </small>
-
-                <strong>
-                  1,284
-                </strong>
-
-              </div>
-
-
-              <div class="preview-stat">
-
-                <small>
-                  REVENUE
-                </small>
-
-                <strong>
-                  ৳24L+
-                </strong>
-
-              </div>
-
-            </div>
-
-
-            <div class="preview-chart">
-
-              <div class="chart-line"></div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <div class="floating-card floating-price">
-
-        <small>
-          STARTING FROM
-        </small>
-
-        <strong>
-          ৳549
-        </strong>
-
-      </div>
-
-
-      <div class="floating-card floating-sale">
-
-        ✓ <b>Bangladesh Ready</b>
-
-        <br>
-
-        Fast delivery
-
-      </div>
-
-    </div>
-
-  </div>
 
 </section>
 
-
-<!-- =====================================================
+<!-- =========================================================
      TRUST
-====================================================== -->
+========================================================= -->
 
-<div class="trust-bar">
+<section class="section">
 
-  <div class="trust-inner">
+    <div class="container">
 
-    <div class="trust-box">
+        <div class="trust-grid">
 
-      <div class="trust-icon">
-        ◈
-      </div>
+            <div class="trust-card">
 
-      <div>
+                <div class="trust-icon">
+                    ✓
+                </div>
 
-        <strong>
-          Premium Designs
-        </strong>
+                <div>
 
-        <span>
-          Curated website templates
-        </span>
+                    <strong id="trust1Title">
+                        Ready-to-Use Websites
+                    </strong>
 
-      </div>
+                    <span id="trust1Text">
+                        Launch faster
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div class="trust-card">
+
+                <div class="trust-icon">
+                    ⚡
+                </div>
+
+                <div>
+
+                    <strong id="trust2Title">
+                        Fast Delivery
+                    </strong>
+
+                    <span id="trust2Text">
+                        Files delivered quickly
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div class="trust-card">
+
+                <div class="trust-icon">
+                    🔒
+                </div>
+
+                <div>
+
+                    <strong id="trust3Title">
+                        Safe & Trusted
+                    </strong>
+
+                    <span id="trust3Text">
+                        Pakistan Marketplace
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div class="trust-card">
+
+                <div class="trust-icon">
+                    ★
+                </div>
+
+                <div>
+
+                    <strong id="trust4Title">
+                        Premium Quality
+                    </strong>
+
+                    <span id="trust4Text">
+                        Modern design
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
 
     </div>
 
+</section>
 
-    <div class="trust-box">
+<!-- =========================================================
+     PRODUCTS
+========================================================= -->
 
-      <div class="trust-icon">
-        ৳
-      </div>
+<section
+    class="section"
+    id="productsSection">
 
-      <div>
+    <div class="container">
 
-        <strong>
-          BDT Pricing
-        </strong>
+        <div class="section-head">
 
-        <span>
-          Made for Bangladesh
-        </span>
+            <div>
 
-      </div>
+                <h2 id="productsTitle">
+                    Featured Websites
+                </h2>
 
-    </div>
+                <p id="productsDescription">
+                    Premium websites made for Pakistani businesses.
+                </p>
 
+            </div>
 
-    <div class="trust-box">
+            <a
+                href="#"
+                class="view-all"
+                id="viewAllBtn">
+                View All →
+            </a>
 
-      <div class="trust-icon">
-        ⚡
-      </div>
+        </div>
 
-      <div>
-
-        <strong>
-          Fast Delivery
-        </strong>
-
-        <span>
-          Launch without waiting
-        </span>
-
-      </div>
-
-    </div>
-
-
-    <div class="trust-box">
-
-      <div class="trust-icon">
-        ✓
-      </div>
-
-      <div>
-
-        <strong>
-          Support Included
-        </strong>
-
-        <span>
-          WhatsApp assistance
-        </span>
-
-      </div>
+        <div
+            class="product-grid"
+            id="productGrid">
+        </div>
 
     </div>
 
-  </div>
+</section>
 
-</div>
-
-
-<!-- =====================================================
+<!-- =========================================================
      CATEGORIES
-====================================================== -->
+========================================================= -->
 
-<section
-  class="section"
-  id="categories">
+<section class="section">
 
-  <div class="section-header">
+    <div class="container">
 
-    <div>
+        <div class="section-head">
 
-      <div class="section-kicker">
-        BROWSE CATEGORIES
-      </div>
+            <div>
 
-      <h2 class="section-title">
+                <h2 id="categoriesTitle">
+                    Explore Categories
+                </h2>
 
-        Find the right
+                <p id="categoriesDescription">
+                    Find the perfect website for your business.
+                </p>
 
-        <span>
-          website.
-        </span>
-
-      </h2>
-
-    </div>
-
-
-    <a
-      href="#websites"
-      class="view-all">
-
-      View all websites →
-
-    </a>
-
-  </div>
-
-
-  <div class="category-grid">
-
-
-    <div
-      class="category-card"
-      onclick="filterProducts('Business')">
-
-      <div class="category-number">
-        01
-      </div>
-
-      <div class="category-icon">
-        ◈
-      </div>
-
-      <h3>
-        Business
-      </h3>
-
-      <p>
-        Corporate & services
-      </p>
-
-    </div>
-
-
-    <div
-      class="category-card"
-      onclick="filterProducts('Ecommerce')">
-
-      <div class="category-number">
-        02
-      </div>
-
-      <div class="category-icon">
-        ◇
-      </div>
-
-      <h3>
-        E-commerce
-      </h3>
-
-      <p>
-        Stores that sell
-      </p>
-
-    </div>
-
-
-    <div
-      class="category-card"
-      onclick="filterProducts('Restaurant')">
-
-      <div class="category-number">
-        03
-      </div>
-
-      <div class="category-icon">
-        ✦
-      </div>
-
-      <h3>
-        Restaurant
-      </h3>
-
-      <p>
-        Food & hospitality
-      </p>
-
-    </div>
-
-
-    <div
-      class="category-card"
-      onclick="filterProducts('Real Estate')">
-
-      <div class="category-number">
-        04
-      </div>
-
-      <div class="category-icon">
-        ⌂
-      </div>
-
-      <h3>
-        Real Estate
-      </h3>
-
-      <p>
-        Property & builders
-      </p>
-
-    </div>
-
-
-    <div
-      class="category-card"
-      onclick="filterProducts('Portfolio')">
-
-      <div class="category-number">
-        05
-      </div>
-
-      <div class="category-icon">
-        ◎
-      </div>
-
-      <h3>
-        Portfolio
-      </h3>
-
-      <p>
-        Personal & creative
-      </p>
-
-    </div>
-
-
-    <div
-      class="category-card"
-      onclick="filterProducts('Agency')">
-
-      <div class="category-number">
-        06
-      </div>
-
-      <div class="category-icon">
-        ◉
-      </div>
-
-      <h3>
-        Agency
-      </h3>
-
-      <p>
-        Digital & marketing
-      </p>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =====================================================
-     MARKETPLACE
-====================================================== -->
-
-<section
-  class="marketplace"
-  id="websites">
-
-  <div class="marketplace-inner">
-
-
-    <div class="section-header">
-
-      <div>
-
-        <div class="section-kicker">
-          PREMIUM COLLECTION
-        </div>
-
-        <h2 class="section-title">
-
-          Websites people
-
-          <span>
-            want to buy.
-          </span>
-
-        </h2>
-
-      </div>
-
-    </div>
-
-
-    <div class="marketplace-toolbar">
-
-      <div class="filters">
-
-        <button
-          class="filter active"
-          onclick="filterProducts('All',this)">
-
-          All
-
-        </button>
-
-
-        <button
-          class="filter"
-          onclick="filterProducts('Business',this)">
-
-          Business
-
-        </button>
-
-
-        <button
-          class="filter"
-          onclick="filterProducts('Ecommerce',this)">
-
-          E-commerce
-
-        </button>
-
-
-        <button
-          class="filter"
-          onclick="filterProducts('Restaurant',this)">
-
-          Restaurant
-
-        </button>
-
-
-        <button
-          class="filter"
-          onclick="filterProducts('Real Estate',this)">
-
-          Real Estate
-
-        </button>
-
-
-        <button
-          class="filter"
-          onclick="filterProducts('Portfolio',this)">
-
-          Portfolio
-
-        </button>
-
-      </div>
-
-
-      <select
-        class="sort"
-        id="sortSelect"
-        onchange="sortProducts()">
-
-        <option value="featured">
-          Featured
-        </option>
-
-        <option value="low">
-          Price: Low to High
-        </option>
-
-        <option value="high">
-          Price: High to Low
-        </option>
-
-        <option value="name">
-          Name
-        </option>
-
-      </select>
-
-    </div>
-
-
-    <div
-      class="product-grid"
-      id="productGrid">
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =====================================================
-     FEATURED
-====================================================== -->
-
-<section
-  class="feature-banner"
-  id="featured">
-
-  <div class="feature-banner-inner">
-
-    <div class="feature-content">
-
-      <div class="section-kicker">
-        FEATURED COLLECTION
-      </div>
-
-
-      <h2 class="section-title">
-
-        Launch your next
-
-        <span>
-          big idea.
-        </span>
-
-      </h2>
-
-
-      <p>
-
-        Premium business websites designed to make
-        your Bangladeshi brand look established from day one.
-
-      </p>
-
-
-      <a
-        href="#websites"
-        class="primary-btn">
-
-        Explore Featured Designs →
-
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =====================================================
-     HOW
-====================================================== -->
-
-<section
-  class="section"
-  id="how">
-
-  <div class="section-header">
-
-    <div>
-
-      <div class="section-kicker">
-        SIMPLE PROCESS
-      </div>
-
-      <h2 class="section-title">
-
-        From idea to
-
-        <span>
-          live.
-        </span>
-
-      </h2>
-
-    </div>
-
-  </div>
-
-
-  <div class="steps-grid">
-
-
-    <div class="step">
-
-      <div class="step-number">
-        STEP 01
-      </div>
-
-      <div class="step-icon">
-        ◫
-      </div>
-
-      <h3>
-        Choose a website
-      </h3>
-
-      <p>
-
-        Browse our curated collection and choose
-        a design that matches your business.
-
-      </p>
-
-    </div>
-
-
-    <div class="step">
-
-      <div class="step-number">
-        STEP 02
-      </div>
-
-      <div class="step-icon">
-        ✎
-      </div>
-
-      <h3>
-        Customize your brand
-      </h3>
-
-      <p>
-
-        Send your logo, colors, business details,
-        content and required changes.
-
-      </p>
-
-    </div>
-
-
-    <div class="step">
-
-      <div class="step-number">
-        STEP 03
-      </div>
-
-      <div class="step-icon">
-        ↗
-      </div>
-
-      <h3>
-        Launch
-      </h3>
-
-      <p>
-
-        Get your customized website and take
-        your business online.
-
-      </p>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =====================================================
-     PRICING
-====================================================== -->
-
-<section
-  class="pricing-section"
-  id="pricing">
-
-  <div class="pricing-inner">
-
-    <div class="section-kicker">
-      SIMPLE PRICING
-    </div>
-
-
-    <h2 class="section-title">
-
-      Premium websites.
-
-      <span>
-        Fair prices.
-      </span>
-
-    </h2>
-
-
-    <div class="pricing-grid">
-
-
-      <!-- STARTER -->
-
-      <div class="price-card">
-
-        <small>
-          STARTER
-        </small>
-
-
-        <div class="price">
-
-          ৳ <span>549</span>
+            </div>
 
         </div>
 
+        <div class="category-grid">
 
-        <p>
-          Perfect for landing pages and small businesses.
-        </p>
+            <div
+                class="category-card"
+                data-category-card="Business">
 
+                <div class="category-icon">
+                    💼
+                </div>
 
-        <hr>
+                <strong id="businessCardTitle">
+                    Business
+                </strong>
 
+                <span>
+                    120+ Websites
+                </span>
 
-        <ul>
+            </div>
 
-          <li>
-            One-page website
-          </li>
+            <div
+                class="category-card"
+                data-category-card="Ecommerce">
 
-          <li>
-            Responsive design
-          </li>
+                <div class="category-icon">
+                    🛒
+                </div>
 
-          <li>
-            WhatsApp button
-          </li>
+                <strong id="ecommerceCardTitle">
+                    Ecommerce
+                </strong>
 
-          <li>
-            Contact section
-          </li>
+                <span>
+                    95+ Websites
+                </span>
 
-          <li>
-            Basic SEO setup
-          </li>
+            </div>
 
-        </ul>
+            <div
+                class="category-card"
+                data-category-card="Restaurant">
 
+                <div class="category-icon">
+                    🍛
+                </div>
 
-        <button
-          class="secondary-btn"
-          onclick="showToast('Starter plan selected — ৳549')">
+                <strong id="restaurantCardTitle">
+                    Restaurant
+                </strong>
 
-          Choose Starter
+                <span>
+                    70+ Websites
+                </span>
 
-        </button>
+            </div>
 
-      </div>
+            <div
+                class="category-card"
+                data-category-card="Property">
 
+                <div class="category-icon">
+                    🏠
+                </div>
 
-      <!-- BUSINESS -->
+                <strong id="propertyCardTitle">
+                    Property
+                </strong>
 
-      <div class="price-card featured">
+                <span>
+                    55+ Websites
+                </span>
 
-        <div class="popular">
-          MOST POPULAR
-        </div>
+            </div>
 
+            <div
+                class="category-card"
+                data-category-card="Portfolio">
 
-        <small>
-          BUSINESS
-        </small>
+                <div class="category-icon">
+                    🎨
+                </div>
 
+                <strong id="portfolioCardTitle">
+                    Portfolio
+                </strong>
 
-        <div class="price">
+                <span>
+                    80+ Websites
+                </span>
 
-          ৳ <span>1,499</span>
+            </div>
 
-        </div>
+            <div
+                class="category-card"
+                data-category-card="Agency">
 
+                <div class="category-icon">
+                    🚀
+                </div>
 
-        <p>
-          For serious businesses ready to grow.
-        </p>
+                <strong id="agencyCardTitle">
+                    Agency
+                </strong>
 
+                <span>
+                    60+ Websites
+                </span>
 
-        <hr>
-
-
-        <ul>
-
-          <li>
-            Up to 5 pages
-          </li>
-
-          <li>
-            Premium UI design
-          </li>
-
-          <li>
-            WhatsApp integration
-          </li>
-
-          <li>
-            Contact form
-          </li>
-
-          <li>
-            Social integration
-          </li>
-
-          <li>
-            Basic SEO
-          </li>
-
-        </ul>
-
-
-        <button
-          class="primary-btn"
-          onclick="showToast('Business plan selected — ৳1,499')">
-
-          Get Business Website
-
-        </button>
-
-      </div>
-
-
-      <!-- PREMIUM -->
-
-      <div class="price-card">
-
-        <small>
-          PREMIUM
-        </small>
-
-
-        <div class="price">
-
-          ৳ <span>2,999</span>
+            </div>
 
         </div>
-
-
-        <p>
-          Premium multi-page website for growing brands.
-        </p>
-
-
-        <hr>
-
-
-        <ul>
-
-          <li>
-            Up to 8 pages
-          </li>
-
-          <li>
-            Premium animations
-          </li>
-
-          <li>
-            WhatsApp + contact
-          </li>
-
-          <li>
-            Advanced sections
-          </li>
-
-          <li>
-            SEO ready
-          </li>
-
-          <li>
-            Social integration
-          </li>
-
-        </ul>
-
-
-        <button
-          class="secondary-btn"
-          onclick="showToast('Premium plan selected — ৳2,999')">
-
-          Choose Premium
-
-        </button>
-
-      </div>
-
-
-      <!-- ECOMMERCE -->
-
-      <div class="price-card">
-
-        <small>
-          E-COMMERCE
-        </small>
-
-
-        <div class="price">
-
-          ৳ <span>4,999</span>
-
-        </div>
-
-
-        <p>
-          Complete online store experience.
-        </p>
-
-
-        <hr>
-
-
-        <ul>
-
-          <li>
-            Product catalogue
-          </li>
-
-          <li>
-            Shopping cart
-          </li>
-
-          <li>
-            COD-ready flow
-          </li>
-
-          <li>
-            Order management
-          </li>
-
-          <li>
-            WhatsApp orders
-          </li>
-
-          <li>
-            Mobile optimized
-          </li>
-
-        </ul>
-
-
-        <button
-          class="secondary-btn"
-          onclick="showToast('E-commerce plan selected — ৳4,999')">
-
-          Start Selling
-
-        </button>
-
-      </div>
 
     </div>
 
-  </div>
-
 </section>
 
+<!-- =========================================================
+     FEATURE
+========================================================= -->
 
-<!-- =====================================================
-     CTA
-====================================================== -->
+<section class="container">
 
-<section
-  class="cta"
-  id="contact">
+    <div class="feature-banner">
 
-  <div class="cta-inner">
+        <div class="feature-copy">
 
-    <div>
+            <div
+                class="label"
+                id="featureLabel">
+                Pakistan Website Marketplace
+            </div>
 
-      <div class="section-kicker">
-        NEED SOMETHING CUSTOM?
-      </div>
+            <h2 id="featureTitle">
+                Start Your Online Business Today.
+            </h2>
 
+            <p id="featureDescription">
+                Don't start from zero. Choose a ready-made
+                website, complete your purchase and launch
+                your digital business faster.
+            </p>
 
-      <h2>
-        Tell us what
-        you're building.
-      </h2>
+            <button
+                class="btn-primary"
+                id="featureBtn">
+                View Websites
+            </button>
 
+        </div>
 
-      <p>
-
-        Can't find the perfect website?
-        Talk to our team about a custom solution.
-
-      </p>
+        <div class="feature-visual"></div>
 
     </div>
 
+</section>
 
-    <a
-      href="https://wa.me/8801300000000"
-      target="_blank"
-      class="primary-btn">
+<!-- =========================================================
+     HOW IT WORKS
+========================================================= -->
 
-      Chat on WhatsApp ↗
+<section class="section">
 
-    </a>
+    <div class="container">
 
-  </div>
+        <div class="section-head">
+
+            <div>
+
+                <h2 id="howTitle">
+                    How It Works
+                </h2>
+
+                <p id="howDescription">
+                    Buying a premium website is simple.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="steps">
+
+            <div class="step">
+
+                <div class="step-number">
+                    01
+                </div>
+
+                <h3 id="step1Title">
+                    Choose a Website
+                </h3>
+
+                <p id="step1Text">
+                    Browse premium websites and
+                    find the right solution for your business.
+                </p>
+
+            </div>
+
+            <div class="step">
+
+                <div class="step-number">
+                    02
+                </div>
+
+                <h3 id="step2Title">
+                    Complete Purchase
+                </h3>
+
+                <p id="step2Text">
+                    Contact us and complete the
+                    payment process easily.
+                </p>
+
+            </div>
+
+            <div class="step">
+
+                <div class="step-number">
+                    03
+                </div>
+
+                <h3 id="step3Title">
+                    Receive Website
+                </h3>
+
+                <p id="step3Text">
+                    Your website files will be delivered
+                    so you can start using them.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
 
+<!-- =========================================================
+     SELL CTA
+========================================================= -->
 
-<!-- =====================================================
+<section class="container">
+
+    <div class="sell-section">
+
+        <div>
+
+            <h2 id="sellCtaTitle">
+                Have a Website to Sell?
+            </h2>
+
+            <p id="sellCtaText">
+                Join WebsitesDeal Pakistan and offer your
+                websites to customers across Pakistan.
+            </p>
+
+        </div>
+
+        <button
+            class="btn-primary"
+            id="sellCtaBtn">
+            Sell Your Website →
+        </button>
+
+    </div>
+
+</section>
+
+<!-- =========================================================
      FOOTER
-====================================================== -->
+========================================================= -->
 
 <footer>
 
-  <div class="footer-inner">
+    <div class="footer-inner">
 
+        <div class="footer-grid">
 
-    <div class="footer-brand">
+            <div class="footer-brand">
 
-      <a
-        href="#"
-        class="logo">
+                <div class="logo">
 
-        <div class="logo-icon">
-          W
+                    <div class="logo-mark">
+                        WD
+                    </div>
+
+                    <div class="logo-text">
+
+                        <strong style="color:white;">
+                            WebsitesDeal
+                        </strong>
+
+                        <span style="color:#667085;">
+                            Pakistan Marketplace
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <p id="footerDescription">
+                    Premium website marketplace for Pakistani
+                    businesses and digital needs.
+                </p>
+
+            </div>
+
+            <div class="footer-col">
+
+                <h4 id="footerMarketplace">
+                    Marketplace
+                </h4>
+
+                <a href="#productsSection" id="footerWebsite">
+                    Websites
+                </a>
+
+                <a href="#" id="footerCategories">
+                    Categories
+                </a>
+
+                <a href="#" id="footerFeatured">
+                    Featured
+                </a>
+
+                <a href="#" id="footerLatest">
+                    Latest
+                </a>
+
+            </div>
+
+            <div class="footer-col">
+
+                <h4 id="footerHelp">
+                    Help
+                </h4>
+
+                <a href="#" id="footerHowBuy">
+                    How to Buy
+                </a>
+
+                <a href="#" id="footerFaq">
+                    FAQ
+                </a>
+
+                <a href="#" id="footerSupport">
+                    Support
+                </a>
+
+                <a href="#" id="footerPolicy">
+                    Policies
+                </a>
+
+            </div>
+
+            <div class="footer-col">
+
+                <h4 id="footerSeller">
+                    For Sellers
+                </h4>
+
+                <a href="#" id="footerSell">
+                    Sell Website
+                </a>
+
+                <a href="#" id="footerSellerCenter">
+                    Seller Center
+                </a>
+
+                <a href="#" id="footerPricing">
+                    Pricing
+                </a>
+
+                <a href="#" id="footerPartner">
+                    Partners
+                </a>
+
+            </div>
+
         </div>
 
-        <div class="logo-text">
+        <div class="footer-bottom">
 
-          Websites<span>Deal</span>
+            <span id="copyright">
+                © 2026 WebsitesDeal Pakistan. All rights reserved.
+            </span>
 
-          <small>
-            BANGLADESH
-          </small>
+            <span id="madeFor">
+                🇵🇰 Made for Pakistan
+            </span>
 
         </div>
 
-      </a>
-
-
-      <p>
-
-        Premium ready-made websites for ambitious
-        Bangladeshi businesses.
-
-      </p>
-
     </div>
-
-
-    <div class="footer-column">
-
-      <h4>
-        MARKETPLACE
-      </h4>
-
-      <a href="#websites">
-        All Websites
-      </a>
-
-      <a href="#categories">
-        Categories
-      </a>
-
-      <a href="#featured">
-        Featured
-      </a>
-
-      <a href="#pricing">
-        Pricing
-      </a>
-
-    </div>
-
-
-    <div class="footer-column">
-
-      <h4>
-        BUSINESS
-      </h4>
-
-      <a href="#contact">
-        Sell With Us
-      </a>
-
-      <a href="#contact">
-        Become a Partner
-      </a>
-
-      <a href="#contact">
-        Support
-      </a>
-
-      <a href="#contact">
-        Contact
-      </a>
-
-    </div>
-
-
-    <div class="footer-column">
-
-      <h4>
-        ACCOUNT
-      </h4>
-
-      <a href="#">
-        Login
-      </a>
-
-      <a href="#">
-        My Orders
-      </a>
-
-      <a href="#">
-        Wishlist
-      </a>
-
-      <a href="admin-login.html">
-        Admin
-      </a>
-
-    </div>
-
-  </div>
-
-
-  <div class="footer-bottom">
-
-    <span>
-
-      © 2026 WebsitesDeal Bangladesh.
-      All rights reserved.
-
-    </span>
-
-
-    <span>
-
-      Made for Bangladeshi businesses.
-
-    </span>
-
-  </div>
 
 </footer>
 
-
-<!-- =====================================================
-     SEARCH
-====================================================== -->
+<!-- =========================================================
+     SEARCH MODAL
+========================================================= -->
 
 <div
-  class="search-modal"
-  id="searchModal">
+    class="modal"
+    id="searchModal">
 
-  <div class="search-box">
+    <div class="search-modal">
 
-    <input
-      class="search-input"
-      id="searchInput"
-      placeholder="Search websites, categories..."
-      autocomplete="off">
+        <input
+            id="modalSearch"
+            type="text"
+            placeholder="Search websites..."
+        >
 
-
-    <div
-      class="search-results"
-      id="searchResults">
+        <div
+            class="modal-results"
+            id="modalResults">
+        </div>
 
     </div>
 
-  </div>
-
 </div>
 
-
-<!-- =====================================================
+<!-- =========================================================
      TOAST
-====================================================== -->
+========================================================= -->
 
 <div
-  class="toast"
-  id="toast">
-
+    class="toast"
+    id="toast">
 </div>
-
 
 <script>
 
 /* =========================================================
-   PRODUCT DATA
+   PRODUCT DATA — PAKISTAN
 ========================================================= */
 
 const products = [
 
-  {
-    name:"Nexora Corporate",
-    category:"Business",
-    price:1499,
-    description:"Premium corporate website for modern businesses.",
-    pages:"5 Pages",
-    sales:42,
-    image:"https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=85",
-    badge:"BEST SELLER"
-  },
+    {
+        id:1,
+        name:"Nexora Corporate",
+        category:"Business",
+        price:1499,
+        rating:"4.9",
+        badgePK:"Best Seller",
+        badgeEN:"Bestseller",
+        image:"https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80",
+        descPK:"Modern corporate website for Pakistani businesses.",
+        descEN:"Modern corporate website for Pakistani businesses."
+    },
 
-  {
-    name:"LuxeCart",
-    category:"Ecommerce",
-    price:4999,
-    description:"Luxury fashion and online shopping experience.",
-    pages:"Online Store",
-    sales:31,
-    image:"https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=85",
-    badge:"HOT"
-  },
+    {
+        id:2,
+        name:"LuxeCart",
+        category:"Ecommerce",
+        price:4999,
+        rating:"4.9",
+        badgePK:"Popular",
+        badgeEN:"Popular",
+        image:"https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=900&q=80",
+        descPK:"Premium ecommerce website for online stores.",
+        descEN:"Premium ecommerce website for online stores."
+    },
 
-  {
-    name:"Karahi House",
-    category:"Restaurant",
-    price:1999,
-    description:"Modern restaurant website with menu presentation.",
-    pages:"5 Pages",
-    sales:28,
-    image:"https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=85",
-    badge:"POPULAR"
-  },
+    {
+        id:3,
+        name:"Karahi House",
+        category:"Restaurant",
+        price:1999,
+        rating:"4.8",
+        badgePK:"Hot",
+        badgeEN:"Hot",
+        image:"https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=80",
+        descPK:"Restaurant website with menu and reservation features.",
+        descEN:"Restaurant website with menu and reservation features."
+    },
 
-  {
-    name:"EstateHub",
-    category:"Real Estate",
-    price:2499,
-    description:"Property listings and real estate agency website.",
-    pages:"7 Pages",
-    sales:18,
-    image:"https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=85",
-    badge:"NEW"
-  },
+    {
+        id:4,
+        name:"EstateHub",
+        category:"Property",
+        price:2499,
+        rating:"4.9",
+        badgePK:"New",
+        badgeEN:"New",
+        image:"https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=900&q=80",
+        descPK:"Premium property website for agents and developers.",
+        descEN:"Premium property website for agents and developers."
+    },
 
-  {
-    name:"Apex Portfolio",
-    category:"Portfolio",
-    price:999,
-    description:"Elegant personal and creative portfolio website.",
-    pages:"4 Pages",
-    sales:35,
-    image:"https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=85",
-    badge:"CREATIVE"
-  },
+    {
+        id:5,
+        name:"Apex Portfolio",
+        category:"Portfolio",
+        price:999,
+        rating:"4.8",
+        badgePK:"Budget",
+        badgeEN:"Budget",
+        image:"https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=900&q=80",
+        descPK:"Modern portfolio website for designers and freelancers.",
+        descEN:"Modern portfolio website for designers and freelancers."
+    },
 
-  {
-    name:"GrowthLab",
-    category:"Agency",
-    price:1799,
-    description:"Modern digital marketing agency website.",
-    pages:"6 Pages",
-    sales:24,
-    image:"https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=85",
-    badge:"TRENDING"
-  },
+    {
+        id:6,
+        name:"GrowthLab",
+        category:"Agency",
+        price:1799,
+        rating:"4.9",
+        badgePK:"Trending",
+        badgeEN:"Trending",
+        image:"https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80",
+        descPK:"Premium digital marketing agency website.",
+        descEN:"Premium digital marketing agency website."
+    },
 
-  {
-    name:"Urban Store",
-    category:"Ecommerce",
-    price:3499,
-    description:"Premium retail storefront for growing brands.",
-    pages:"Online Store",
-    sales:22,
-    image:"https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&w=1200&q=85",
-    badge:"SALE"
-  },
+    {
+        id:7,
+        name:"Urban Store",
+        category:"Ecommerce",
+        price:3499,
+        rating:"4.8",
+        badgePK:"Popular",
+        badgeEN:"Popular",
+        image:"https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=900&q=80",
+        descPK:"Modern online store for Pakistani brands.",
+        descEN:"Modern online store for Pakistani brands."
+    },
 
-  {
-    name:"Sapphire Clinic",
-    category:"Business",
-    price:1299,
-    description:"Professional clinic and appointment website.",
-    pages:"5 Pages",
-    sales:19,
-    image:"https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200&q=85",
-    badge:"BUSINESS"
-  },
+    {
+        id:8,
+        name:"Sapphire Clinic",
+        category:"Healthcare",
+        price:1299,
+        rating:"4.9",
+        badgePK:"New",
+        badgeEN:"New",
+        image:"https://images.unsplash.com/photo-1538108149393-fbbd81895907?auto=format&fit=crop&w=900&q=80",
+        descPK:"Professional clinic and healthcare website.",
+        descEN:"Professional clinic and healthcare website."
+    },
 
-  {
-    name:"Biryani District",
-    category:"Restaurant",
-    price:1499,
-    description:"Food brand and restaurant presentation website.",
-    pages:"5 Pages",
-    sales:27,
-    image:"https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=85",
-    badge:"FOOD"
-  }
+    {
+        id:9,
+        name:"Biryani District",
+        category:"Restaurant",
+        price:1499,
+        rating:"4.8",
+        badgePK:"Hot",
+        badgeEN:"Hot",
+        image:"https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=900&q=80",
+        descPK:"Food business website with menu and online ordering.",
+        descEN:"Food business website with menu and online ordering."
+    }
 
 ];
 
-
-let currentFilter="All";
-
-
 /* =========================================================
-   PRODUCT RENDER
+   TRANSLATIONS
 ========================================================= */
 
-function renderProducts(){
+const translations = {
 
-  const grid=document.getElementById("productGrid");
+    pk:{
 
-  let list=products.filter(product=>{
+        pageTitle:
+            "WebsitesDeal Pakistan — Premium Website Marketplace",
 
-    return currentFilter==="All"
-      || product.category===currentFilter;
+        pageDescription:
+            "Premium ready-made websites in Pakistan for business, ecommerce, restaurants, property, portfolios and agencies.",
 
-  });
+        searchPlaceholder:
+            "Search websites, online stores, restaurants...",
 
+        searchModalPlaceholder:
+            "Search websites...",
 
-  const sort=document.getElementById("sortSelect").value;
+        sellWebsite:
+            "Sell Website",
 
+        catAll:
+            "All",
 
-  if(sort==="low"){
+        catBusiness:
+            "Business",
 
-    list.sort((a,b)=>a.price-b.price);
+        catEcommerce:
+            "Ecommerce",
 
-  }
+        catRestaurant:
+            "Restaurant",
 
+        catProperty:
+            "Property",
 
-  if(sort==="high"){
+        catPortfolio:
+            "Portfolio",
 
-    list.sort((a,b)=>b.price-a.price);
+        catAgency:
+            "Agency",
 
-  }
+        catHealthcare:
+            "Healthcare",
 
+        catEducation:
+            "Education",
 
-  if(sort==="name"){
+        heroBadge:
+            "🇵🇰 Pakistan Website Marketplace",
 
-    list.sort((a,b)=>a.name.localeCompare(b.name));
+        heroTitle:
+            "Premium Websites.<br><span>Ready for Pakistan.</span>",
 
-  }
+        heroDescription:
+            "Discover ready-made websites for Pakistani businesses, ecommerce stores, restaurants, property agencies, portfolios and digital agencies.",
 
+        explore:
+            "Explore Websites",
 
-  grid.innerHTML=list.map(product=>`
+        sellHero:
+            "Sell Your Website",
 
-    <article class="product-card">
+        statWebsites:
+            "Ready Websites",
 
-      <div class="product-image">
+        statCategories:
+            "Categories",
 
+        statRating:
+            "Rating",
 
-        <div class="product-label">
+        trust1Title:
+            "Ready-to-Use Websites",
 
-          ${product.category.toUpperCase()}
+        trust1Text:
+            "Launch faster",
 
-        </div>
+        trust2Title:
+            "Fast Delivery",
 
+        trust2Text:
+            "Files delivered quickly",
 
-        <div class="product-actions">
+        trust3Title:
+            "Safe & Trusted",
 
-          <button
-            class="product-action"
-            onclick="addWishlist('${product.name}')">
+        trust3Text:
+            "Pakistan Marketplace",
 
-            ♡
+        trust4Title:
+            "Premium Quality",
 
-          </button>
+        trust4Text:
+            "Modern design",
 
+        productsTitle:
+            "Featured Websites",
 
-          <button
-            class="product-action"
-            onclick="compareProduct('${product.name}')">
+        productsDescription:
+            "Premium websites made for Pakistani businesses.",
 
-            ⇄
+        viewAll:
+            "View All →",
 
-          </button>
+        categoriesTitle:
+            "Explore Categories",
 
-        </div>
+        categoriesDescription:
+            "Find the perfect website for your business.",
 
+        featureLabel:
+            "Pakistan Website Marketplace",
 
-        <div class="website-preview">
+        featureTitle:
+            "Start Your Online Business Today.",
 
-          <img
-            src="${product.image}"
-            alt="${product.name}"
-            loading="lazy">
+        featureDescription:
+            "Don't start from zero. Choose a ready-made website, complete your purchase and launch your digital business faster.",
 
-          <div class="demo-overlay"></div>
+        featureButton:
+            "View Websites",
 
-        </div>
+        howTitle:
+            "How It Works",
 
+        howDescription:
+            "Buying a premium website is simple.",
 
-        <div class="product-badge">
+        step1Title:
+            "Choose a Website",
 
-          ${product.badge}
+        step1Text:
+            "Browse premium websites and find the right solution for your business.",
 
-        </div>
+        step2Title:
+            "Complete Purchase",
 
-      </div>
+        step2Text:
+            "Contact us and complete the payment process easily.",
 
+        step3Title:
+            "Receive Website",
 
-      <div class="product-info">
+        step3Text:
+            "Your website files will be delivered so you can start using them.",
 
+        sellCtaTitle:
+            "Have a Website to Sell?",
 
-        <div class="product-title-row">
+        sellCtaText:
+            "Join WebsitesDeal Pakistan and offer your websites to customers across Pakistan.",
 
-          <h3 class="product-title">
+        sellCtaButton:
+            "Sell Your Website →",
 
-            ${product.name}
+        footerDescription:
+            "Premium website marketplace for Pakistani businesses and digital needs.",
 
-          </h3>
+        footerMarketplace:
+            "Marketplace",
 
+        footerWebsite:
+            "Websites",
 
-          <strong class="product-price">
+        footerCategories:
+            "Categories",
 
-            ৳${product.price.toLocaleString("en-BD")}
+        footerFeatured:
+            "Featured",
 
-          </strong>
+        footerLatest:
+            "Latest",
 
-        </div>
+        footerHelp:
+            "Help",
 
+        footerHowBuy:
+            "How to Buy",
 
-        <p class="product-description">
+        footerFaq:
+            "FAQ",
 
-          ${product.description}
+        footerSupport:
+            "Support",
 
-        </p>
+        footerPolicy:
+            "Policies",
 
+        footerSeller:
+            "For Sellers",
 
-        <div class="product-meta">
+        footerSell:
+            "Sell Website",
 
-          <span>
+        footerSellerCenter:
+            "Seller Center",
 
-            ${product.pages}
+        footerPricing:
+            "Pricing",
 
-          </span>
+        footerPartner:
+            "Partners",
 
-          <strong>
+        copyright:
+            "© 2026 WebsitesDeal Pakistan. All rights reserved.",
 
-            ${product.sales} sold
+        madeFor:
+            "🇵🇰 Made for Pakistan"
 
-          </strong>
+    },
 
-        </div>
+    en:{
 
-      </div>
+        pageTitle:
+            "WebsitesDeal Pakistan — Premium Website Marketplace",
 
-    </article>
+        pageDescription:
+            "Premium ready-made websites in Pakistan. Buy business, ecommerce, restaurant, property, portfolio and agency websites.",
 
-  `).join("");
+        searchPlaceholder:
+            "Search websites, online stores, restaurants...",
 
+        searchModalPlaceholder:
+            "Search websites...",
 
-  if(list.length===0){
+        sellWebsite:
+            "Sell Website",
 
-    grid.innerHTML=`
+        catAll:
+            "All",
 
-      <div style="
-        grid-column:1/-1;
-        padding:60px;
-        text-align:center;
-        color:var(--muted);
-      ">
+        catBusiness:
+            "Business",
 
-        No websites found in this category.
+        catEcommerce:
+            "Ecommerce",
 
-      </div>
+        catRestaurant:
+            "Restaurant",
 
-    `;
+        catProperty:
+            "Property",
 
-  }
+        catPortfolio:
+            "Portfolio",
+
+        catAgency:
+            "Agency",
+
+        catHealthcare:
+            "Healthcare",
+
+        catEducation:
+            "Education",
+
+        heroBadge:
+            "🇵🇰 Pakistan Website Marketplace",
+
+        heroTitle:
+            "Premium Websites.<br><span>Ready for Pakistan.</span>",
+
+        heroDescription:
+            "Discover ready-made websites for Pakistani businesses, ecommerce stores, restaurants, property agencies, portfolios and digital agencies.",
+
+        explore:
+            "Explore Websites",
+
+        sellHero:
+            "Sell Your Website",
+
+        statWebsites:
+            "Ready Websites",
+
+        statCategories:
+            "Categories",
+
+        statRating:
+            "Rating",
+
+        trust1Title:
+            "Ready-to-Use Websites",
+
+        trust1Text:
+            "Launch faster",
+
+        trust2Title:
+            "Fast Delivery",
+
+        trust2Text:
+            "Files delivered quickly",
+
+        trust3Title:
+            "Safe & Trusted",
+
+        trust3Text:
+            "Pakistan Marketplace",
+
+        trust4Title:
+            "Premium Quality",
+
+        trust4Text:
+            "Modern design",
+
+        productsTitle:
+            "Featured Websites",
+
+        productsDescription:
+            "Premium websites made for Pakistani businesses.",
+
+        viewAll:
+            "View All →",
+
+        categoriesTitle:
+            "Explore Categories",
+
+        categoriesDescription:
+            "Find the perfect website for your business.",
+
+        featureLabel:
+            "Pakistan Website Marketplace",
+
+        featureTitle:
+            "Start Your Online Business Today.",
+
+        featureDescription:
+            "Don't start from zero. Choose a ready-made website, complete your purchase and launch your digital business faster.",
+
+        featureButton:
+            "View Websites",
+
+        howTitle:
+            "How It Works",
+
+        howDescription:
+            "Buying a premium website is simple.",
+
+        step1Title:
+            "Choose a Website",
+
+        step1Text:
+            "Browse premium websites and find the right solution for your business.",
+
+        step2Title:
+            "Complete Purchase",
+
+        step2Text:
+            "Contact us and complete the payment process easily.",
+
+        step3Title:
+            "Receive Website",
+
+        step3Text:
+            "Your website files will be delivered so you can start using them.",
+
+        sellCtaTitle:
+            "Have a Website to Sell?",
+
+        sellCtaText:
+            "Join WebsitesDeal Pakistan and offer your websites to customers across Pakistan.",
+
+        sellCtaButton:
+            "Sell Your Website →",
+
+        footerDescription:
+            "Premium website marketplace for Pakistani businesses and digital needs.",
+
+        footerMarketplace:
+            "Marketplace",
+
+        footerWebsite:
+            "Websites",
+
+        footerCategories:
+            "Categories",
+
+        footerFeatured:
+            "Featured",
+
+        footerLatest:
+            "Latest",
+
+        footerHelp:
+            "Help",
+
+        footerHowBuy:
+            "How to Buy",
+
+        footerFaq:
+            "FAQ",
+
+        footerSupport:
+            "Support",
+
+        footerPolicy:
+            "Policies",
+
+        footerSeller:
+            "For Sellers",
+
+        footerSell:
+            "Sell Website",
+
+        footerSellerCenter:
+            "Seller Center",
+
+        footerPricing:
+            "Pricing",
+
+        footerPartner:
+            "Partners",
+
+        copyright:
+            "© 2026 WebsitesDeal Pakistan. All rights reserved.",
+
+        madeFor:
+            "🇵🇰 Made for Pakistan"
+
+    }
+
+};
+
+/* =========================================================
+   LANGUAGE STATE
+========================================================= */
+
+let currentLanguage =
+    localStorage.getItem(
+        "wdPakistanLanguage"
+    ) || "pk";
+
+/* =========================================================
+   ELEMENTS
+========================================================= */
+
+const productGrid =
+    document.getElementById("productGrid");
+
+const toast =
+    document.getElementById("toast");
+
+const mainSearch =
+    document.getElementById("mainSearch");
+
+const searchModal =
+    document.getElementById("searchModal");
+
+const modalSearch =
+    document.getElementById("modalSearch");
+
+const modalResults =
+    document.getElementById("modalResults");
+
+/* =========================================================
+   TRANSLATION
+========================================================= */
+
+function t(key){
+
+    return translations[currentLanguage][key]
+        || translations.en[key]
+        || key;
 
 }
 
+/* =========================================================
+   APPLY LANGUAGE
+========================================================= */
+
+function applyLanguage(){
+
+    const data =
+        translations[currentLanguage];
+
+    document.documentElement.lang =
+        "en";
+
+    document.getElementById("metaTitle")
+        .textContent = data.pageTitle;
+
+    document.getElementById("metaDescription")
+        .setAttribute(
+            "content",
+            data.pageDescription
+        );
+
+    document.getElementById("mainSearch")
+        .placeholder =
+        data.searchPlaceholder;
+
+    document.getElementById("modalSearch")
+        .placeholder =
+        data.searchModalPlaceholder;
+
+    document.getElementById("sellBtn")
+        .textContent =
+        data.sellWebsite;
+
+    document.getElementById("catAll")
+        .textContent =
+        data.catAll;
+
+    document.getElementById("catBusiness")
+        .textContent =
+        data.catBusiness;
+
+    document.getElementById("catEcommerce")
+        .textContent =
+        data.catEcommerce;
+
+    document.getElementById("catRestaurant")
+        .textContent =
+        data.catRestaurant;
+
+    document.getElementById("catProperty")
+        .textContent =
+        data.catProperty;
+
+    document.getElementById("catPortfolio")
+        .textContent =
+        data.catPortfolio;
+
+    document.getElementById("catAgency")
+        .textContent =
+        data.catAgency;
+
+    document.getElementById("catHealthcare")
+        .textContent =
+        data.catHealthcare;
+
+    document.getElementById("catEducation")
+        .textContent =
+        data.catEducation;
+
+    document.getElementById("heroBadge")
+        .textContent =
+        data.heroBadge;
+
+    document.getElementById("heroTitle")
+        .innerHTML =
+        data.heroTitle;
+
+    document.getElementById("heroDescription")
+        .textContent =
+        data.heroDescription;
+
+    document.getElementById("exploreBtn")
+        .textContent =
+        data.explore;
+
+    document.getElementById("heroSellBtn")
+        .textContent =
+        data.sellHero;
+
+    document.getElementById("statWebsites")
+        .textContent =
+        data.statWebsites;
+
+    document.getElementById("statCategories")
+        .textContent =
+        data.statCategories;
+
+    document.getElementById("statRating")
+        .textContent =
+        data.statRating;
+
+    document.getElementById("trust1Title")
+        .textContent =
+        data.trust1Title;
+
+    document.getElementById("trust1Text")
+        .textContent =
+        data.trust1Text;
+
+    document.getElementById("trust2Title")
+        .textContent =
+        data.trust2Title;
+
+    document.getElementById("trust2Text")
+        .textContent =
+        data.trust2Text;
+
+    document.getElementById("trust3Title")
+        .textContent =
+        data.trust3Title;
+
+    document.getElementById("trust3Text")
+        .textContent =
+        data.trust3Text;
+
+    document.getElementById("trust4Title")
+        .textContent =
+        data.trust4Title;
+
+    document.getElementById("trust4Text")
+        .textContent =
+        data.trust4Text;
+
+    document.getElementById("productsTitle")
+        .textContent =
+        data.productsTitle;
+
+    document.getElementById("productsDescription")
+        .textContent =
+        data.productsDescription;
+
+    document.getElementById("viewAllBtn")
+        .textContent =
+        data.viewAll;
+
+    document.getElementById("categoriesTitle")
+        .textContent =
+        data.categoriesTitle;
+
+    document.getElementById("categoriesDescription")
+        .textContent =
+        data.categoriesDescription;
+
+    document.getElementById("featureLabel")
+        .textContent =
+        data.featureLabel;
+
+    document.getElementById("featureTitle")
+        .textContent =
+        data.featureTitle;
+
+    document.getElementById("featureDescription")
+        .textContent =
+        data.featureDescription;
+
+    document.getElementById("featureBtn")
+        .textContent =
+        data.featureButton;
+
+    document.getElementById("howTitle")
+        .textContent =
+        data.howTitle;
+
+    document.getElementById("howDescription")
+        .textContent =
+        data.howDescription;
+
+    document.getElementById("step1Title")
+        .textContent =
+        data.step1Title;
+
+    document.getElementById("step1Text")
+        .textContent =
+        data.step1Text;
+
+    document.getElementById("step2Title")
+        .textContent =
+        data.step2Title;
+
+    document.getElementById("step2Text")
+        .textContent =
+        data.step2Text;
+
+    document.getElementById("step3Title")
+        .textContent =
+        data.step3Title;
+
+    document.getElementById("step3Text")
+        .textContent =
+        data.step3Text;
+
+    document.getElementById("sellCtaTitle")
+        .textContent =
+        data.sellCtaTitle;
+
+    document.getElementById("sellCtaText")
+        .textContent =
+        data.sellCtaText;
+
+    document.getElementById("sellCtaBtn")
+        .textContent =
+        data.sellCtaButton;
+
+    document.getElementById("footerDescription")
+        .textContent =
+        data.footerDescription;
+
+    document.getElementById("footerMarketplace")
+        .textContent =
+        data.footerMarketplace;
+
+    document.getElementById("footerWebsite")
+        .textContent =
+        data.footerWebsite;
+
+    document.getElementById("footerCategories")
+        .textContent =
+        data.footerCategories;
+
+    document.getElementById("footerFeatured")
+        .textContent =
+        data.footerFeatured;
+
+    document.getElementById("footerLatest")
+        .textContent =
+        data.footerLatest;
+
+    document.getElementById("footerHelp")
+        .textContent =
+        data.footerHelp;
+
+    document.getElementById("footerHowBuy")
+        .textContent =
+        data.footerHowBuy;
+
+    document.getElementById("footerFaq")
+        .textContent =
+        data.footerFaq;
+
+    document.getElementById("footerSupport")
+        .textContent =
+        data.footerSupport;
+
+    document.getElementById("footerPolicy")
+        .textContent =
+        data.footerPolicy;
+
+    document.getElementById("footerSeller")
+        .textContent =
+        data.footerSeller;
+
+    document.getElementById("footerSell")
+        .textContent =
+        data.footerSell;
+
+    document.getElementById("footerSellerCenter")
+        .textContent =
+        data.footerSellerCenter;
+
+    document.getElementById("footerPricing")
+        .textContent =
+        data.footerPricing;
+
+    document.getElementById("footerPartner")
+        .textContent =
+        data.footerPartner;
+
+    document.getElementById("copyright")
+        .textContent =
+        data.copyright;
+
+    document.getElementById("madeFor")
+        .textContent =
+        data.madeFor;
+
+    document.getElementById("languagePK")
+        .classList.toggle(
+            "active",
+            currentLanguage === "pk"
+        );
+
+    document.getElementById("languageEN")
+        .classList.toggle(
+            "active",
+            currentLanguage === "en"
+        );
+
+    renderProducts(
+        getCurrentFilteredProducts()
+    );
+
+}
+
+/* =========================================================
+   LANGUAGE SWITCH
+========================================================= */
+
+document
+.getElementById("languageBtn")
+.addEventListener(
+    "click",
+    function(){
+
+        currentLanguage =
+            currentLanguage === "pk"
+                ? "en"
+                : "pk";
+
+        localStorage.setItem(
+            "wdPakistanLanguage",
+            currentLanguage
+        );
+
+        applyLanguage();
+
+        showToast(
+            currentLanguage === "pk"
+                ? "Pakistan language selected 🇵🇰"
+                : "English selected 🇬🇧"
+        );
+
+    }
+);
+
+/* =========================================================
+   PRICE
+========================================================= */
+
+function formatPKR(price){
+
+    return "PKR " +
+        new Intl.NumberFormat(
+            "en-PK"
+        ).format(price);
+
+}
+
+/* =========================================================
+   FILTER STATE
+========================================================= */
+
+let currentCategory = "all";
+let currentQuery = "";
 
 /* =========================================================
    FILTER
 ========================================================= */
 
-function filterProducts(category,button){
+function getCurrentFilteredProducts(){
 
-  currentFilter=category;
+    return products.filter(product => {
 
+        const categoryMatch =
+            currentCategory === "all"
+            ||
+            product.category === currentCategory;
 
-  document
-    .querySelectorAll(".filter")
-    .forEach(item=>{
+        const query =
+            currentQuery
+                .toLowerCase()
+                .trim();
 
-      item.classList.remove("active");
+        const searchMatch =
+            !query
+            ||
+            product.name
+                .toLowerCase()
+                .includes(query)
+            ||
+            product.category
+                .toLowerCase()
+                .includes(query)
+            ||
+            product.descPK
+                .toLowerCase()
+                .includes(query)
+            ||
+            product.descEN
+                .toLowerCase()
+                .includes(query);
+
+        return categoryMatch && searchMatch;
 
     });
 
+}
 
-  if(button){
+/* =========================================================
+   RENDER PRODUCTS
+========================================================= */
 
-    button.classList.add("active");
+function renderProducts(list){
 
-  }else{
+    productGrid.innerHTML = "";
 
-    const matching=document.querySelector(
-      `.filter[onclick*="'${category}'"]`
-    );
+    if(!list.length){
 
-    if(matching){
+        productGrid.innerHTML = `
 
-      matching.classList.add("active");
+            <div style="
+                grid-column:1/-1;
+                background:#fff;
+                padding:50px;
+                border-radius:18px;
+                text-align:center;
+                border:1px solid var(--border);
+            ">
+
+                <strong>
+                    No websites found.
+                </strong>
+
+                <p style="
+                    color:#667085;
+                    font-size:12px;
+                    margin-top:6px;
+                ">
+                    Try another keyword or category.
+                </p>
+
+            </div>
+
+        `;
+
+        return;
 
     }
 
-  }
+    list.forEach(product => {
 
+        const card =
+            document.createElement("article");
 
-  renderProducts();
+        card.className =
+            "product-card";
 
+        const badge =
+            currentLanguage === "pk"
+                ? product.badgePK
+                : product.badgeEN;
 
-  document
-    .getElementById("websites")
-    .scrollIntoView({
-      behavior:"smooth"
+        const description =
+            currentLanguage === "pk"
+                ? product.descPK
+                : product.descEN;
+
+        const onceText =
+            currentLanguage === "pk"
+                ? "/ one-time"
+                : "/ one-time";
+
+        card.innerHTML = `
+
+            <div class="product-image">
+
+                <img
+                    src="${product.image}"
+                    alt="${product.name}"
+                    loading="lazy"
+                >
+
+                <div class="product-badge">
+                    ${badge}
+                </div>
+
+                <button
+                    class="wishlist"
+                    onclick="toggleWishlist(${product.id})">
+                    ♡
+                </button>
+
+            </div>
+
+            <div class="product-content">
+
+                <div class="product-category">
+                    ${product.category}
+                </div>
+
+                <div class="product-title">
+                    ${product.name}
+                </div>
+
+                <div class="product-desc">
+                    ${description}
+                </div>
+
+                <div class="product-meta">
+
+                    <div class="price">
+
+                        ${formatPKR(product.price)}
+
+                        <small>
+                            ${onceText}
+                        </small>
+
+                    </div>
+
+                    <div class="rating">
+                        ★ ${product.rating}
+                    </div>
+
+                </div>
+
+            </div>
+
+        `;
+
+        productGrid.appendChild(card);
+
     });
 
 }
 
-
 /* =========================================================
-   SORT
+   CATEGORY BUTTONS
 ========================================================= */
 
-function sortProducts(){
+document
+.querySelectorAll(".category-btn")
+.forEach(button => {
 
-  renderProducts();
+    button.addEventListener(
+        "click",
+        function(){
+
+            document
+            .querySelectorAll(".category-btn")
+            .forEach(btn =>
+                btn.classList.remove("active")
+            );
+
+            this.classList.add("active");
+
+            currentCategory =
+                this.dataset.category;
+
+            renderProducts(
+                getCurrentFilteredProducts()
+            );
+
+            scrollToProducts();
+
+        }
+    );
+
+});
+
+/* =========================================================
+   CATEGORY CARDS
+========================================================= */
+
+document
+.querySelectorAll("[data-category-card]")
+.forEach(card => {
+
+    card.addEventListener(
+        "click",
+        function(){
+
+            const category =
+                this.dataset.categoryCard;
+
+            const target =
+                document.querySelector(
+                    `[data-category="${category}"]`
+                );
+
+            if(target){
+                target.click();
+            }
+
+        }
+    );
+
+});
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+mainSearch.addEventListener(
+    "input",
+    function(){
+
+        currentQuery =
+            this.value;
+
+        renderProducts(
+            getCurrentFilteredProducts()
+        );
+
+    }
+);
+
+/* =========================================================
+   SEARCH MODAL
+========================================================= */
+
+mainSearch.addEventListener(
+    "focus",
+    function(){
+
+        if(window.innerWidth > 700){
+
+            searchModal.classList.add("show");
+
+            modalSearch.value =
+                mainSearch.value;
+
+            modalSearch.focus();
+
+            renderModalResults(
+                mainSearch.value
+            );
+
+        }
+
+    }
+);
+
+modalSearch.addEventListener(
+    "input",
+    function(){
+
+        mainSearch.value =
+            this.value;
+
+        currentQuery =
+            this.value;
+
+        renderProducts(
+            getCurrentFilteredProducts()
+        );
+
+        renderModalResults(
+            this.value
+        );
+
+    }
+);
+
+function renderModalResults(value){
+
+    const query =
+        value.toLowerCase().trim();
+
+    const results =
+        products.filter(product =>
+
+            product.name
+            .toLowerCase()
+            .includes(query)
+
+            ||
+
+            product.category
+            .toLowerCase()
+            .includes(query)
+
+        );
+
+    modalResults.innerHTML =
+        results.map(product => `
+
+            <div
+                class="result-item"
+                onclick="selectSearchResult('${product.name}')">
+
+                <strong>
+                    ${product.name}
+                </strong>
+
+                <span>
+                    ${product.category}
+                    · ${formatPKR(product.price)}
+                </span>
+
+            </div>
+
+        `).join("");
 
 }
 
+function selectSearchResult(name){
+
+    searchModal.classList.remove("show");
+
+    mainSearch.value =
+        name;
+
+    currentQuery =
+        name;
+
+    renderProducts(
+        getCurrentFilteredProducts()
+    );
+
+    scrollToProducts();
+
+}
+
+searchModal.addEventListener(
+    "click",
+    function(e){
+
+        if(e.target === searchModal){
+
+            searchModal.classList.remove(
+                "show"
+            );
+
+        }
+
+    }
+);
 
 /* =========================================================
    WISHLIST
 ========================================================= */
 
-function addWishlist(name){
+function toggleWishlist(id){
 
-  showToast(
-    name+" added to wishlist"
-  );
+    let wishlist =
+        JSON.parse(
+            localStorage.getItem(
+                "wdPakistanWishlist"
+            ) || "[]"
+        );
+
+    if(wishlist.includes(id)){
+
+        wishlist =
+            wishlist.filter(
+                item => item !== id
+            );
+
+        showToast(
+            currentLanguage === "pk"
+                ? "Removed from wishlist"
+                : "Removed from wishlist"
+        );
+
+    }else{
+
+        wishlist.push(id);
+
+        showToast(
+            currentLanguage === "pk"
+                ? "Added to wishlist ❤️"
+                : "Added to wishlist ❤️"
+        );
+
+    }
+
+    localStorage.setItem(
+        "wdPakistanWishlist",
+        JSON.stringify(wishlist)
+    );
 
 }
-
 
 /* =========================================================
-   COMPARE
+   HEADER BUTTONS
 ========================================================= */
 
-function compareProduct(name){
+document
+.getElementById("wishlistBtn")
+.addEventListener(
+    "click",
+    function(){
 
-  showToast(
-    name+" added to comparison"
-  );
+        showToast(
+            "Wishlist will be available after login."
+        );
+
+    }
+);
+
+document
+.getElementById("compareBtn")
+.addEventListener(
+    "click",
+    function(){
+
+        showToast(
+            "Compare feature is coming soon."
+        );
+
+    }
+);
+
+document
+.getElementById("themeBtn")
+.addEventListener(
+    "click",
+    function(){
+
+        showToast(
+            "Dark Mode is coming soon."
+        );
+
+    }
+);
+
+document
+.getElementById("adminBtn")
+.addEventListener(
+    "click",
+    function(){
+
+        window.location.href =
+            "admin-login.html";
+
+    }
+);
+
+document
+.getElementById("sellBtn")
+.addEventListener(
+    "click",
+    showSellMessage
+);
+
+document
+.getElementById("heroSellBtn")
+.addEventListener(
+    "click",
+    showSellMessage
+);
+
+document
+.getElementById("sellCtaBtn")
+.addEventListener(
+    "click",
+    showSellMessage
+);
+
+function showSellMessage(){
+
+    showToast(
+        "Seller Center is coming soon."
+    );
 
 }
 
+/* =========================================================
+   EXPLORE
+========================================================= */
+
+document
+.getElementById("exploreBtn")
+.addEventListener(
+    "click",
+    scrollToProducts
+);
+
+document
+.getElementById("featureBtn")
+.addEventListener(
+    "click",
+    scrollToProducts
+);
+
+function scrollToProducts(){
+
+    document
+    .getElementById("productsSection")
+    .scrollIntoView({
+        behavior:"smooth"
+    });
+
+}
 
 /* =========================================================
    TOAST
@@ -4064,211 +3416,135 @@ let toastTimer;
 
 function showToast(message){
 
-  const toast=document.getElementById("toast");
+    clearTimeout(toastTimer);
 
-  toast.textContent=message;
+    toast.textContent =
+        message;
 
-  toast.classList.add("show");
+    toast.classList.add("show");
 
-  clearTimeout(toastTimer);
+    toastTimer =
+        setTimeout(
+            () => {
 
-  toastTimer=setTimeout(()=>{
+                toast.classList.remove(
+                    "show"
+                );
 
-    toast.classList.remove("show");
-
-  },2500);
+            },
+            2500
+        );
 
 }
 
-
 /* =========================================================
-   SEARCH
+   ADMIN BRANDING
 ========================================================= */
 
-const searchModal=
-  document.getElementById("searchModal");
+function loadAdminBranding(){
 
-const searchInput=
-  document.getElementById("searchInput");
+    try{
 
-const searchResults=
-  document.getElementById("searchResults");
+        const savedLogo =
+            localStorage.getItem(
+                "wdPakistanLogo"
+            );
 
+        const savedSettings =
+            JSON.parse(
+                localStorage.getItem(
+                    "wdPakistanSettings"
+                ) || "{}"
+            );
 
-document
-  .getElementById("openSearch")
-  .addEventListener("click",()=>{
+        if(savedLogo){
 
-    searchModal.classList.add("show");
+            document
+            .querySelectorAll(".logo-mark")
+            .forEach(mark => {
 
-    searchInput.value="";
+                mark.innerHTML = `
 
-    searchResults.innerHTML="";
+                    <img
+                        src="${savedLogo}"
+                        alt="Logo"
+                    >
 
-    searchInput.focus();
+                `;
 
-  });
+            });
 
+        }
 
-searchModal.addEventListener("click",e=>{
+        if(savedSettings.name){
 
-  if(e.target===searchModal){
+            document
+            .querySelectorAll(
+                ".logo-text strong"
+            )
+            .forEach(item => {
 
-    searchModal.classList.remove("show");
+                item.textContent =
+                    savedSettings.name;
 
-  }
+            });
 
-});
+        }
 
+        if(savedSettings.description){
 
-document.addEventListener("keydown",e=>{
+            const footerDescription =
+                document.getElementById(
+                    "footerDescription"
+                );
 
-  if(e.key==="Escape"){
+            if(footerDescription){
 
-    searchModal.classList.remove("show");
+                footerDescription.textContent =
+                    savedSettings.description;
 
-  }
+            }
 
-});
+        }
 
+    }catch(error){
 
-searchInput.addEventListener("input",()=>{
+        console.log(
+            "Branding error:",
+            error
+        );
 
-  const value=
-    searchInput.value
-      .trim()
-      .toLowerCase();
-
-
-  if(!value){
-
-    searchResults.innerHTML="";
-
-    return;
-
-  }
-
-
-  const results=
-    products.filter(product=>{
-
-      return (
-
-        product.name.toLowerCase().includes(value)
-
-        ||
-
-        product.category.toLowerCase().includes(value)
-
-        ||
-
-        product.description.toLowerCase().includes(value)
-
-      );
-
-    });
-
-
-  searchResults.innerHTML=
-    results.map(product=>`
-
-      <div
-        class="search-result"
-        onclick="
-          filterProducts('${product.category}');
-          searchModal.classList.remove('show');
-        ">
-
-        <strong>
-
-          ${product.name}
-
-        </strong>
-
-        · ${product.category}
-
-        · ৳${product.price.toLocaleString("en-BD")}
-
-      </div>
-
-    `).join("");
-
-
-  if(!results.length){
-
-    searchResults.innerHTML=`
-
-      <div class="search-result">
-
-        No matching website found.
-
-      </div>
-
-    `;
-
-  }
-
-});
-
-
-/* =========================================================
-   DARK / LIGHT MODE
-========================================================= */
-
-const themeToggle=
-  document.getElementById("themeToggle");
-
-
-function setTheme(theme){
-
-  if(theme==="light"){
-
-    document.documentElement.classList.add("light");
-
-    themeToggle.textContent="☾";
-
-  }else{
-
-    document.documentElement.classList.remove("light");
-
-    themeToggle.textContent="☀";
-
-  }
-
-  localStorage.setItem(
-    "websitesDealTheme",
-    theme
-  );
+    }
 
 }
 
+/* =========================================================
+   ADMIN BRANDING LIVE UPDATE
+========================================================= */
 
-const savedTheme=
-  localStorage.getItem("websitesDealTheme");
+window.addEventListener(
+    "storage",
+    function(event){
 
+        if(
+            event.key ===
+            "wdPakistanBrandingUpdated"
+        ){
 
-setTheme(
-  savedTheme || "dark"
+            loadAdminBranding();
+
+        }
+
+    }
 );
 
-
-themeToggle.addEventListener("click",()=>{
-
-  const isLight=
-    document.documentElement.classList.contains("light");
-
-  setTheme(
-    isLight ? "dark" : "light"
-  );
-
-});
-
-
 /* =========================================================
-   INITIAL LOAD
+   INIT
 ========================================================= */
 
-renderProducts();
+loadAdminBranding();
+
+applyLanguage();
 
 </script>
 

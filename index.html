@@ -1,218 +1,145 @@
+```html
 <!DOCTYPE html>
 <html lang="ur" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f8f4">
+  <meta name="description" content="Discover modern website designs for businesses, portfolios, online stores and more with WebsitesDeal Pakistan.">
+  <title>WebsitesDeal Pakistan — Modern Website Designs</title>
 
-  <title>WebsitesDeal — Premium Websites for Every Business</title>
-  <meta name="description" content="Discover premium website templates for your business, store, portfolio and more.">
-
-  <meta name="theme-color" content="#080b10">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+Arabic:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Noto+Sans+Arabic:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
 </head>
 
-<body>
-  <div class="ambient ambient-one" aria-hidden="true"></div>
-  <div class="ambient ambient-two" aria-hidden="true"></div>
+<body class="light-theme">
+
+  <div class="announcement">
+    <span data-i18n="announcement">آپ کے کاروبار کے لیے جدید ویب سائٹ ڈیزائن</span>
+    <a href="#templates" data-i18n="explore">ڈیزائن دیکھیں ↗</a>
+  </div>
 
   <header class="site-header" id="siteHeader">
-    <nav class="navbar container" aria-label="Main navigation">
-      <a class="brand" href="#home" aria-label="WebsitesDeal home">
-        <span class="brand-icon">W<span>.</span></span>
-        <span class="brand-name">Websites<span>Deal</span></span>
+    <div class="container nav-wrap">
+
+      <a class="brand" href="#" aria-label="WebsitesDeal Pakistan home">
+        <span class="brand-mark">W<span>D</span></span>
+        <span class="brand-copy">
+          Websites<span>Deal</span>
+          <small>PAKISTAN</small>
+        </span>
       </a>
 
-      <button class="mobile-menu-toggle" id="menuBtn"
-        aria-label="Toggle navigation" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-
-      <div class="nav-links" id="navLinks">
-        <a href="#home" data-en="Home" data-ur="ہوم">ہوم</a>
-        <a href="#templates" data-en="Templates" data-ur="ٹیمپلیٹس">ٹیمپلیٹس</a>
-        <a href="#features" data-en="Why Us" data-ur="ہم کیوں؟">ہم کیوں؟</a>
-        <a href="#process" data-en="How It Works" data-ur="طریقہ کار">طریقہ کار</a>
-      </div>
+      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+        <a href="#" data-i18n="navHome">ہوم</a>
+        <a href="#templates" data-i18n="navTemplates">ٹیمپلیٹس</a>
+        <a href="#benefits" data-i18n="navBenefits">ہم کیوں؟</a>
+        <a href="#process" data-i18n="navProcess">طریقہ کار</a>
+      </nav>
 
       <div class="nav-actions">
-        <button class="icon-button" id="languageBtn" type="button"
-          aria-label="Change language">EN</button>
-        <button class="icon-button theme-toggle" id="themeBtn" type="button"
-          aria-label="Toggle theme">☼</button>
-        <a class="button button-small button-primary nav-cta"
-          href="#templates" data-en="Explore Templates" data-ur="ٹیمپلیٹس دیکھیں">
-          ٹیمپلیٹس دیکھیں
-        </a>
+        <button class="icon-button" id="languageBtn" type="button" aria-label="Switch language">EN</button>
+        <button class="icon-button" id="themeBtn" type="button" aria-label="Switch theme">☼</button>
+        <a class="button button-primary nav-cta" href="#templates" data-i18n="navCta">ڈیزائن دیکھیں ↗</a>
+        <button class="menu-toggle" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
       </div>
-    </nav>
+
+    </div>
   </header>
 
   <main>
+
     <!-- HERO -->
-    <section class="hero section" id="home">
-      <div class="hero-grid container">
-        <div class="hero-copy reveal">
-          <div class="eyebrow">
-            <span class="status-dot"></span>
-            <span data-en="YOUR NEXT WEBSITE STARTS HERE"
-              data-ur="آپ کی نئی ویب سائٹ یہاں سے شروع ہوتی ہے">
-              آپ کی نئی ویب سائٹ یہاں سے شروع ہوتی ہے
-            </span>
-          </div>
+    <section class="hero">
+      <div class="hero-glow glow-one"></div>
+      <div class="hero-glow glow-two"></div>
 
-          <h1>
-            <span data-en="A better website." data-ur="ایک بہتر ویب سائٹ۔">
-              ایک بہتر ویب سائٹ۔
-            </span>
-            <span class="gradient-text"
-              data-en="A bigger future."
-              data-ur="ایک روشن مستقبل۔">
-              ایک روشن مستقبل۔
-            </span>
-          </h1>
+      <div class="container">
+        <div class="hero-grid">
 
-          <p class="hero-description"
-            data-en="Discover beautiful, modern website templates built to help your business stand out. Choose your design and bring your next big idea to life."
-            data-ur="اپنے کاروبار کو نمایاں کرنے کے لیے خوبصورت اور جدید ویب سائٹ ٹیمپلیٹس دریافت کریں۔ اپنا ڈیزائن منتخب کریں اور اپنے نئے خیال کو حقیقت بنائیں۔">
-            اپنے کاروبار کو نمایاں کرنے کے لیے خوبصورت اور جدید ویب سائٹ ٹیمپلیٹس دریافت کریں۔ اپنا ڈیزائن منتخب کریں اور اپنے نئے خیال کو حقیقت بنائیں۔
-          </p>
-
-          <div class="hero-actions">
-            <a class="button button-primary button-large" href="#templates">
-              <span data-en="Explore Templates" data-ur="ٹیمپلیٹس دیکھیں">
-                ٹیمپلیٹس دیکھیں
-              </span>
-              <span class="button-arrow" aria-hidden="true">↗</span>
-            </a>
-            <a class="button button-ghost button-large" href="#process"
-              data-en="How it works" data-ur="یہ کیسے کام کرتا ہے؟">
-              یہ کیسے کام کرتا ہے؟
-            </a>
-          </div>
-
-          <div class="hero-proof">
-            <div class="proof-avatars" aria-hidden="true">
-              <span>W</span><span>D</span><span>+</span>
-            </div>
-            <div>
-              <strong data-en="Built for ambitious businesses"
-                data-ur="ترقی کے خواہش مند کاروباروں کے لیے">
-                ترقی کے خواہش مند کاروباروں کے لیے
-              </strong>
-              <p data-en="Modern design. Simple choices."
-                data-ur="جدید ڈیزائن، آسان انتخاب">
-                جدید ڈیزائن، آسان انتخاب
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- ANIMATED WEBSITE PREVIEW -->
-        <div class="hero-visual reveal" id="heroVisual">
-          <div class="visual-orbit orbit-one"></div>
-          <div class="visual-orbit orbit-two"></div>
-
-          <div class="floating-label floating-label-top">
-            <span class="mini-check">✓</span>
-            <span data-en="Beautiful by design"
-              data-ur="خوبصورت ڈیزائن">خوبصورت ڈیزائن</span>
-          </div>
-
-          <div class="browser-window main-browser tilt-card">
-            <div class="browser-topbar">
-              <div class="browser-dots"><i></i><i></i><i></i></div>
-              <div class="browser-address">yourbusiness.com</div>
-              <span class="browser-menu">•••</span>
+          <div class="hero-copy reveal">
+            <div class="eyebrow">
+              <span class="live-dot"></span>
+              <span data-i18n="heroEyebrow">آپ کے اگلے بڑے خیال کے لیے</span>
             </div>
 
-            <div class="preview-site">
-              <div class="preview-nav">
-                <div class="preview-brand"><span></span> studio.</div>
-                <div class="preview-nav-lines"><i></i><i></i><i></i></div>
+            <h1 data-i18n="heroTitle">
+              ایک بہتر ویب سائٹ۔<br>
+              <span>ایک روشن مستقبل۔</span>
+            </h1>
+
+            <p class="hero-description" data-i18n="heroText">
+              اپنے کاروبار کو نمایاں کرنے کے لیے خوبصورت اور جدید ویب سائٹ ڈیزائن دریافت کریں۔ اپنا پسندیدہ ڈیزائن منتخب کریں اور اگلا قدم اٹھائیں۔
+            </p>
+
+            <div class="hero-actions">
+              <a href="#templates" class="button button-primary button-large" data-i18n="heroCta">ٹیمپلیٹس دیکھیں</a>
+              <a href="#process" class="button button-outline button-large" data-i18n="heroSecondary">یہ کیسے کام کرتا ہے؟</a>
+            </div>
+
+            <div class="hero-trust">
+              <div class="trust-icon">✦</div>
+              <div>
+                <strong data-i18n="trustTitle">آپ کے کاروبار کے لیے</strong>
+                <small data-i18n="trustText">جدید ڈیزائن، آسان انتخاب</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual reveal" id="heroVisual">
+            <div class="visual-orbit"></div>
+
+            <div class="floating-chip chip-top">
+              <span class="chip-dot"></span>
+              <span data-i18n="chipModern">Modern design</span>
+            </div>
+
+            <div class="hero-browser">
+              <div class="browser-bar">
+                <div class="browser-dots"><i></i><i></i><i></i></div>
+                <span>yourbrand.com</span>
+                <span>↗</span>
               </div>
 
-              <div class="preview-content">
-                <div class="preview-copy">
-                  <span class="preview-kicker">CREATIVE STUDIO</span>
-                  <h3>Make your<br><em>ideas happen.</em></h3>
-                  <p>Thoughtful design for ambitious brands.</p>
-                  <div class="preview-cta">Explore our work ↗</div>
+              <div class="browser-content">
+                <div class="mock-nav">
+                  <b>STUDIO.</b>
+                  <span>ABOUT　 WORK　 CONTACT</span>
                 </div>
 
-                <div class="preview-art">
-                  <div class="art-shape shape-large"></div>
-                  <div class="art-shape shape-small"></div>
-                  <div class="art-sun"></div>
-                  <span class="art-star">✳</span>
+                <div class="mock-hero">
+                  <span class="mock-label">DESIGN YOUR FUTURE</span>
+                  <h2>Make your<br>brand matter.</h2>
+                  <p>Thoughtful digital experiences for modern businesses.</p>
+                  <span class="mock-link">Explore our work ↗</span>
                 </div>
               </div>
 
-              <div class="preview-bottom">
-                <span>BRANDING</span>
-                <span>DESIGN</span>
-                <span>CREATIVE</span>
+              <div class="mock-art">
+                <span class="art-shape shape-a"></span>
+                <span class="art-shape shape-b"></span>
+                <span class="shape-c">✳</span>
+                <span class="art-art-label">BUILT FOR<br>WHAT'S NEXT.</span>
               </div>
             </div>
-          </div>
 
-          <div class="floating-card floating-card-left">
-            <div class="floating-card-icon purple-icon">✳</div>
-            <div>
-              <strong data-en="Creative Portfolio"
-                data-ur="تخلیقی پورٹ فولیو">تخلیقی پورٹ فولیو</strong>
-              <span data-en="Made to stand out"
-                data-ur="نمایاں ڈیزائن">نمایاں ڈیزائن</span>
+            <div class="floating-chip chip-bottom">
+              <span class="chip-star">✦</span>
+              <span data-i18n="chipReady">Built for your next step</span>
             </div>
           </div>
 
-          <div class="floating-card floating-card-right">
-            <div class="floating-card-icon green-icon">↗</div>
-            <div>
-              <strong data-en="Business Ready"
-                data-ur="کاروبار کے لیے تیار">کاروبار کے لیے تیار</strong>
-              <span data-en="Your next big move"
-                data-ur="آپ کا اگلا قدم">آپ کا اگلا قدم</span>
-            </div>
-          </div>
-
-          <div class="floating-label floating-label-bottom">
-            <span class="pulse-dot"></span>
-            <span data-en="Designed for the next generation"
-              data-ur="نئی نسل کے لیے جدید ڈیزائن">
-              نئی نسل کے لیے جدید ڈیزائن
-            </span>
-          </div>
         </div>
-      </div>
 
-      <div class="hero-bottom container">
-        <span data-en="FIND THE RIGHT DESIGN FOR YOUR NEXT MOVE"
-          data-ur="اپنے اگلے قدم کے لیے بہترین ڈیزائن منتخب کریں">
-          اپنے اگلے قدم کے لیے بہترین ڈیزائن منتخب کریں
-        </span>
-        <a href="#templates" class="scroll-cue" aria-label="Scroll to templates">
-          <span></span>
-        </a>
-      </div>
-    </section>
-
-    <!-- TRUST STRIP -->
-    <section class="trust-strip">
-      <div class="container trust-inner reveal">
-        <span data-en="ONE PLACE. MANY POSSIBILITIES."
-          data-ur="ایک جگہ، بے شمار امکانات">
-          ایک جگہ، بے شمار امکانات
-        </span>
-        <div class="trust-items">
-          <span>✳ <b>Business</b></span>
-          <span>▧ <b>Portfolio</b></span>
-          <span>◈ <b>E-commerce</b></span>
-          <span>⌘ <b>Education</b></span>
+        <div class="category-strip">
+          <span data-i18n="categoryIntro">اپنی ضرورت کے مطابق منتخب کریں</span>
+          <a href="#templates" data-category-link="business">◈ <span data-i18n="business">Business</span></a>
+          <a href="#templates" data-category-link="portfolio">✳ <span data-i18n="portfolio">Portfolio</span></a>
+          <a href="#templates" data-category-link="store">▣ <span data-i18n="store">E-commerce</span></a>
+          <a href="#templates" data-category-link="education">⌘ <span data-i18n="education">Education</span></a>
         </div>
       </div>
     </section>
@@ -220,333 +147,251 @@
     <!-- TEMPLATES -->
     <section class="section templates-section" id="templates">
       <div class="container">
+
         <div class="section-heading reveal">
           <div>
             <div class="eyebrow">
-              <span class="status-dot"></span>
-              <span data-en="THE TEMPLATE COLLECTION"
-                data-ur="ٹیمپلیٹس کا مجموعہ">ٹیمپلیٹس کا مجموعہ</span>
+              <span class="eyebrow-line"></span>
+              <span data-i18n="templateEyebrow">WEBSITESDEAL COLLECTION</span>
             </div>
-            <h2>
-              <span data-en="Your vision," data-ur="آپ کا وژن،">آپ کا وژن،</span>
-              <span class="gradient-text" data-en=" beautifully built."
-                data-ur=" خوبصورت انداز میں۔"> خوبصورت انداز میں۔</span>
+
+            <h2 data-i18n="templateTitle">
+              آپ کا وژن، <span>خوبصورت انداز میں۔</span>
             </h2>
-            <p data-en="Explore designs made for your next big idea."
-              data-ur="اپنے اگلے بڑے خیال کے لیے بہترین ڈیزائن منتخب کریں۔">
+
+            <p data-i18n="templateText">
               اپنے اگلے بڑے خیال کے لیے بہترین ڈیزائن منتخب کریں۔
             </p>
           </div>
-          <a href="#templates" class="text-link">
-            <span data-en="Discover all designs"
-              data-ur="تمام ڈیزائن دیکھیں">تمام ڈیزائن دیکھیں</span>
-            <span aria-hidden="true">↗</span>
-          </a>
+
+          <div class="collection-count">
+            <span id="resultCount">6</span>
+            <span data-i18n="designs">ڈیزائن</span>
+          </div>
         </div>
 
         <div class="template-toolbar reveal">
           <label class="search-box">
-            <span aria-hidden="true">⌕</span>
-            <input id="searchInput" type="search"
+            <span class="search-icon">⌕</span>
+            <input
+              type="search"
+              id="searchInput"
+              data-i18n-placeholder="searchPlaceholder"
               placeholder="ٹیمپلیٹس تلاش کریں..."
-              aria-label="Search templates">
+              autocomplete="off"
+              aria-label="Search templates"
+            >
             <kbd>/</kbd>
           </label>
 
-          <div class="toolbar-right">
-            <label class="sort-label" for="sortSelect"
-              data-en="Sort by" data-ur="ترتیب">ترتیب</label>
+          <label class="sort-control">
+            <span data-i18n="sortLabel">ترتیب</span>
             <select id="sortSelect" aria-label="Sort templates">
-              <option value="featured" data-en="Featured" data-ur="نمایاں">نمایاں</option>
-              <option value="price-low" data-en="Price: Low to High" data-ur="کم قیمت پہلے">کم قیمت پہلے</option>
-              <option value="price-high" data-en="Price: High to Low" data-ur="زیادہ قیمت پہلے">زیادہ قیمت پہلے</option>
-              <option value="name" data-en="Name" data-ur="نام">نام</option>
+              <option value="featured" data-i18n="sortFeatured">Featured</option>
+              <option value="price-low" data-i18n="sortLow">Price: low to high</option>
+              <option value="price-high" data-i18n="sortHigh">Price: high to low</option>
+              <option value="name" data-i18n="sortName">Name</option>
             </select>
-          </div>
+          </label>
         </div>
 
         <div class="filter-row reveal" id="filterButtons">
-          <button class="filter-button active" data-category="all"
-            data-en="All Templates" data-ur="تمام ٹیمپلیٹس">تمام ٹیمپلیٹس</button>
-          <button class="filter-button" data-category="business"
-            data-en="Business" data-ur="کاروبار">کاروبار</button>
-          <button class="filter-button" data-category="store"
-            data-en="Online Store" data-ur="آن لائن اسٹور">آن لائن اسٹور</button>
-          <button class="filter-button" data-category="portfolio"
-            data-en="Portfolio" data-ur="پورٹ فولیو">پورٹ فولیو</button>
-          <button class="filter-button" data-category="restaurant"
-            data-en="Restaurant" data-ur="ریسٹورنٹ">ریسٹورنٹ</button>
-          <button class="filter-button" data-category="education"
-            data-en="Education" data-ur="تعلیم">تعلیم</button>
+          <button class="filter-button active" type="button" data-filter="all" data-i18n="filterAll">تمام ڈیزائن</button>
+          <button class="filter-button" type="button" data-filter="business" data-i18n="filterBusiness">کاروبار</button>
+          <button class="filter-button" type="button" data-filter="store" data-i18n="filterStore">آن لائن اسٹور</button>
+          <button class="filter-button" type="button" data-filter="portfolio" data-i18n="filterPortfolio">پورٹ فولیو</button>
+          <button class="filter-button" type="button" data-filter="restaurant" data-i18n="filterRestaurant">ریسٹورنٹ</button>
+          <button class="filter-button" type="button" data-filter="education" data-i18n="filterEducation">تعلیم</button>
         </div>
 
-        <div class="template-count-row">
-          <span id="resultCount" aria-live="polite"></span>
-          <span class="live-indicator">
-            <span class="status-dot"></span>
-            <span data-en="Curated designs"
-              data-ur="منتخب ڈیزائن">منتخب ڈیزائن</span>
-          </span>
-        </div>
-
-        <div class="template-grid" id="templateGrid">
-          <!-- Cards are rendered by script.js -->
+        <div class="template-grid" id="templateGrid" aria-live="polite">
+          <!-- Template cards are generated by script.js -->
         </div>
 
         <div class="empty-state" id="emptyState" hidden>
           <div class="empty-icon">⌕</div>
-          <h3 data-en="No templates found"
-            data-ur="کوئی ٹیمپلیٹ نہیں ملا">کوئی ٹیمپلیٹ نہیں ملا</h3>
-          <p data-en="Try another search or category."
-            data-ur="دوسری تلاش یا کیٹیگری منتخب کریں۔">
-            دوسری تلاش یا کیٹیگری منتخب کریں۔
-          </p>
-          <button class="button button-primary" id="resetFilters"
-            data-en="Reset filters" data-ur="فلٹرز ری سیٹ کریں">
-            فلٹرز ری سیٹ کریں
-          </button>
+          <h3 data-i18n="emptyTitle">کوئی ٹیمپلیٹ نہیں ملا</h3>
+          <p data-i18n="emptyText">دوسری تلاش یا کیٹیگری منتخب کریں۔</p>
+          <button class="button button-primary" type="button" id="resetFilters" data-i18n="reset">فلٹرز ری سیٹ کریں</button>
         </div>
+
+        <p class="demo-note" data-i18n="demoNote">
+          یہ نمائشی ڈیزائن اور مثال کے لیے قیمتیں ہیں، تصدیق شدہ مصنوعات نہیں۔ آرڈر سے پہلے حتمی قیمت اور کام کی تفصیل کی تصدیق کریں۔
+        </p>
+
       </div>
     </section>
 
-    <!-- FEATURES -->
-    <section class="section features-section" id="features">
+    <!-- BENEFITS -->
+    <section class="section benefits-section" id="benefits">
       <div class="container">
-        <div class="section-heading centered-heading reveal">
+
+        <div class="section-heading centered reveal">
           <div class="eyebrow">
-            <span class="status-dot"></span>
-            <span data-en="THE WEBSITESDEAL DIFFERENCE"
-              data-ur="WebsitesDeal کی خصوصیات">
-              WebsitesDeal کی خصوصیات
-            </span>
+            <span class="eyebrow-line"></span>
+            <span data-i18n="benefitEyebrow">WHY WEBSITESDEAL</span>
           </div>
-          <h2>
-            <span data-en="Less complexity." data-ur="کم پیچیدگی۔">کم پیچیدگی۔</span>
-            <span class="gradient-text" data-en=" More possibility."
-              data-ur=" زیادہ امکانات۔"> زیادہ امکانات۔</span>
-          </h2>
-          <p data-en="Finding your next website should feel simple, inspiring and exciting."
-            data-ur="اپنی اگلی ویب سائٹ تلاش کرنا آسان، متاثر کن اور دلچسپ ہونا چاہیے۔">
-            اپنی اگلی ویب سائٹ تلاش کرنا آسان، متاثر کن اور دلچسپ ہونا چاہیے۔
+
+          <h2 data-i18n="benefitTitle">کم پیچیدگی۔ <span>زیادہ امکانات۔</span></h2>
+
+          <p data-i18n="benefitText">
+            اپنی اگلی ویب سائٹ تلاش کرنا آسان اور متاثر کن ہونا چاہیے۔
           </p>
         </div>
 
-        <div class="feature-grid">
-          <article class="feature-card reveal">
-            <div class="feature-icon icon-lime">✳</div>
-            <span class="feature-number">01</span>
-            <h3 data-en="Design that stands out"
-              data-ur="نمایاں اور جدید ڈیزائن">نمایاں اور جدید ڈیزائن</h3>
-            <p data-en="Explore polished layouts with a modern visual identity."
-              data-ur="جدید انداز اور خوبصورت لے آؤٹس دریافت کریں۔">
-              جدید انداز اور خوبصورت لے آؤٹس دریافت کریں۔
-            </p>
-            <div class="feature-line"></div>
+        <div class="benefit-grid">
+
+          <article class="benefit-card reveal">
+            <span class="benefit-number">01</span>
+            <div class="benefit-icon">✳</div>
+            <h3 data-i18n="benefit1Title">نمایاں اور جدید ڈیزائن</h3>
+            <p data-i18n="benefit1Text">جدید انداز اور خوبصورت لے آؤٹس دریافت کریں۔</p>
           </article>
 
-          <article class="feature-card reveal">
-            <div class="feature-icon icon-purple">⌕</div>
-            <span class="feature-number">02</span>
-            <h3 data-en="Find your perfect fit"
-              data-ur="اپنی ضرورت کا ڈیزائن">اپنی ضرورت کا ڈیزائن</h3>
-            <p data-en="Search, filter and compare templates to find your direction."
-              data-ur="اپنی پسند کے ٹیمپلیٹس تلاش کریں اور موازنہ کریں۔">
-              اپنی پسند کے ٹیمپلیٹس تلاش کریں اور موازنہ کریں۔
-            </p>
-            <div class="feature-line"></div>
+          <article class="benefit-card reveal">
+            <span class="benefit-number">02</span>
+            <div class="benefit-icon">⌕</div>
+            <h3 data-i18n="benefit2Title">اپنی ضرورت کا ڈیزائن</h3>
+            <p data-i18n="benefit2Text">اپنی پسند کے ڈیزائن تلاش کریں اور موازنہ کریں۔</p>
           </article>
 
-          <article class="feature-card reveal">
-            <div class="feature-icon icon-blue">↗</div>
-            <span class="feature-number">03</span>
-            <h3 data-en="Built for your next step"
-              data-ur="آپ کے اگلے قدم کے لیے">آپ کے اگلے قدم کے لیے</h3>
-            <p data-en="Choose a design that matches your goals and ambition."
-              data-ur="اپنے مقصد اور کاروباری وژن کے مطابق ڈیزائن منتخب کریں۔">
-              اپنے مقصد اور کاروباری وژن کے مطابق ڈیزائن منتخب کریں۔
-            </p>
-            <div class="feature-line"></div>
+          <article class="benefit-card reveal">
+            <span class="benefit-number">03</span>
+            <div class="benefit-icon">↗</div>
+            <h3 data-i18n="benefit3Title">آپ کے اگلے قدم کے لیے</h3>
+            <p data-i18n="benefit3Text">اپنے کاروباری مقصد کے مطابق ڈیزائن منتخب کریں۔</p>
           </article>
+
         </div>
       </div>
     </section>
 
-    <!-- HOW IT WORKS -->
+    <!-- PROCESS -->
     <section class="section process-section" id="process">
-      <div class="container process-layout">
+      <div class="container process-grid">
+
         <div class="process-copy reveal">
           <div class="eyebrow">
-            <span class="status-dot"></span>
-            <span data-en="A SIMPLE PROCESS" data-ur="آسان طریقہ">
-              آسان طریقہ
-            </span>
+            <span class="eyebrow-line"></span>
+            <span data-i18n="processEyebrow">SIMPLE PROCESS</span>
           </div>
-          <h2>
-            <span data-en="From idea" data-ur="خیال سے">خیال سے</span><br>
-            <span class="gradient-text" data-en="to online."
-              data-ur="آن لائن تک۔">آن لائن تک۔</span>
-          </h2>
-          <p data-en="Your next website starts with a few simple steps."
-            data-ur="آپ کی نئی ویب سائٹ چند آسان مراحل سے شروع ہوتی ہے۔">
+
+          <h2 data-i18n="processTitle">خیال سے<br><span>آن لائن تک۔</span></h2>
+
+          <p data-i18n="processText">
             آپ کی نئی ویب سائٹ چند آسان مراحل سے شروع ہوتی ہے۔
           </p>
-          <a href="#templates" class="button button-primary button-large">
-            <span data-en="Find your template"
-              data-ur="اپنا ٹیمپلیٹ منتخب کریں">اپنا ٹیمپلیٹ منتخب کریں</span>
-            <span aria-hidden="true">↗</span>
-          </a>
+
+          <a href="#templates" class="button button-primary button-large" data-i18n="processCta">اپنا ٹیمپلیٹ منتخب کریں ↗</a>
         </div>
 
-        <div class="process-steps">
-          <article class="process-step reveal">
+        <div class="process-list reveal">
+
+          <article class="process-step">
             <span class="step-number">01</span>
             <div>
-              <h3 data-en="Explore the collection"
-                data-ur="ٹیمپلیٹس دیکھیں">ٹیمپلیٹس دیکھیں</h3>
-              <p data-en="Browse designs for your business, brand or project."
-                data-ur="اپنے کاروبار، برانڈ یا پروجیکٹ کے لیے ڈیزائن دیکھیں۔">
-                اپنے کاروبار، برانڈ یا پروجیکٹ کے لیے ڈیزائن دیکھیں۔
-              </p>
+              <h3 data-i18n="step1Title">ٹیمپلیٹس دیکھیں</h3>
+              <p data-i18n="step1Text">اپنے کاروبار، برانڈ یا پروجیکٹ کے لیے ڈیزائن دیکھیں۔</p>
             </div>
-            <span class="step-symbol">⌕</span>
+            <span class="step-symbol">↗</span>
           </article>
 
-          <article class="process-step reveal">
+          <article class="process-step">
             <span class="step-number">02</span>
             <div>
-              <h3 data-en="Choose your favourite"
-                data-ur="اپنی پسند منتخب کریں">اپنی پسند منتخب کریں</h3>
-              <p data-en="Compare designs and find the right fit for your goals."
-                data-ur="ڈیزائن کا موازنہ کریں اور اپنے لیے بہترین انتخاب کریں۔">
-                ڈیزائن کا موازنہ کریں اور اپنے لیے بہترین انتخاب کریں۔
-              </p>
+              <h3 data-i18n="step2Title">اپنی پسند منتخب کریں</h3>
+              <p data-i18n="step2Text">ڈیزائن کا موازنہ کریں اور بہترین انتخاب کریں۔</p>
             </div>
             <span class="step-symbol">✳</span>
           </article>
 
-          <article class="process-step reveal">
+          <article class="process-step">
             <span class="step-number">03</span>
             <div>
-              <h3 data-en="Take the next step"
-                data-ur="اگلا قدم اٹھائیں">اگلا قدم اٹھائیں</h3>
-              <p data-en="Contact our team to discuss the template you selected."
-                data-ur="منتخب کردہ ٹیمپلیٹ کے بارے میں ہماری ٹیم سے رابطہ کریں۔">
-                منتخب کردہ ٹیمپلیٹ کے بارے میں ہماری ٹیم سے رابطہ کریں۔
-              </p>
+              <h3 data-i18n="step3Title">اگلا قدم اٹھائیں</h3>
+              <p data-i18n="step3Text">منتخب ڈیزائن کے بارے میں ہماری ٹیم سے رابطہ کریں۔</p>
             </div>
-            <span class="step-symbol">↗</span>
+            <span class="step-symbol">→</span>
           </article>
+
         </div>
       </div>
     </section>
 
-    <!-- FINAL CTA -->
-    <section class="section final-cta-section">
+    <!-- CTA -->
+    <section class="final-cta">
       <div class="container">
-        <div class="final-cta reveal">
-          <div class="cta-glow cta-glow-one"></div>
-          <div class="cta-glow cta-glow-two"></div>
-          <div class="cta-content">
-            <span class="cta-label">
-              <span class="status-dot"></span>
-              <span data-en="YOUR NEXT CHAPTER STARTS NOW"
-                data-ur="آپ کا اگلا سفر اب شروع ہوتا ہے">
-                آپ کا اگلا سفر اب شروع ہوتا ہے
-              </span>
-            </span>
-            <h2>
-              <span data-en="Ready to build something"
-                data-ur="کچھ نیا بنانے کے لیے">کچھ نیا بنانے کے لیے</span>
-              <span class="gradient-text" data-en=" remarkable?"
-                data-ur=" تیار ہیں؟"> تیار ہیں؟</span>
-            </h2>
-            <p data-en="Explore the collection and find a design that feels like you."
-              data-ur="ٹیمپلیٹس دیکھیں اور اپنی پسند کا بہترین ڈیزائن منتخب کریں۔">
-              ٹیمپلیٹس دیکھیں اور اپنی پسند کا بہترین ڈیزائن منتخب کریں۔
-            </p>
-            <a href="#templates" class="button button-primary button-large">
-              <span data-en="Explore Templates"
-                data-ur="ٹیمپلیٹس دیکھیں">ٹیمپلیٹس دیکھیں</span>
-              <span aria-hidden="true">↗</span>
-            </a>
+        <div class="cta-panel reveal">
+          <div class="cta-spark">✳</div>
+
+          <div class="eyebrow">
+            <span data-i18n="ctaEyebrow">YOUR NEXT CHAPTER STARTS HERE</span>
           </div>
-          <div class="cta-decoration" aria-hidden="true">
-            <span class="deco-ring ring-one"></span>
-            <span class="deco-ring ring-two"></span>
-            <span class="deco-star">✳</span>
-          </div>
+
+          <h2 data-i18n="ctaTitle">کچھ نیا بنانے کے لیے تیار ہیں؟</h2>
+
+          <p data-i18n="ctaText">
+            ڈیزائن دیکھیں اور اپنے اگلے پروجیکٹ کے لیے انتخاب کریں۔
+          </p>
+
+          <a href="#templates" class="button button-primary button-large" data-i18n="ctaButton">ٹیمپلیٹس دیکھیں ↗</a>
         </div>
       </div>
     </section>
+
   </main>
 
-  <!-- PREVIEW MODAL -->
-  <div class="modal" id="previewModal" aria-hidden="true">
-    <div class="modal-backdrop" data-close-modal></div>
-    <div class="modal-dialog" role="dialog" aria-modal="true"
-      aria-labelledby="modalTitle">
-      <button class="modal-close" id="closeModal" type="button"
-        aria-label="Close preview">×</button>
-      <div class="modal-preview" id="modalPreview"></div>
-      <div class="modal-body">
-        <div class="modal-category" id="modalCategory"></div>
-        <h2 id="modalTitle"></h2>
-        <p id="modalDescription"></p>
-        <div class="modal-footer">
-          <strong id="modalPrice"></strong>
-          <a href="https://support.websitesdeal.com/"
-            class="button button-primary" id="modalContact"
-            target="_blank" rel="noopener noreferrer">
-            <span data-en="Contact to get started"
-              data-ur="شروع کرنے کے لیے رابطہ کریں">
-              شروع کرنے کے لیے رابطہ کریں
-            </span>
-            <span aria-hidden="true">↗</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- TOAST -->
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
-
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container footer-main">
-      <div class="footer-brand">
-        <a class="brand" href="#home">
-          <span class="brand-icon">W<span>.</span></span>
-          <span class="brand-name">Websites<span>Deal</span></span>
-        </a>
-        <p data-en="Beautiful website designs for ambitious ideas."
-          data-ur="بڑے خوابوں کے لیے خوبصورت ویب سائٹ ڈیزائن۔">
-          بڑے خوابوں کے لیے خوبصورت ویب سائٹ ڈیزائن۔
-        </p>
-      </div>
+
+      <a class="brand" href="#" aria-label="WebsitesDeal Pakistan home">
+        <span class="brand-mark">W<span>D</span></span>
+        <span class="brand-copy">
+          Websites<span>Deal</span>
+          <small>PAKISTAN</small>
+        </span>
+      </a>
+
+      <p data-i18n="footerText">بڑے خوابوں کے لیے خوبصورت ویب سائٹ ڈیزائن۔</p>
 
       <div class="footer-links">
-        <strong data-en="Explore" data-ur="دریافت کریں">دریافت کریں</strong>
-        <a href="#templates" data-en="Templates" data-ur="ٹیمپلیٹس">ٹیمپلیٹس</a>
-        <a href="#features" data-en="Why WebsitesDeal" data-ur="ہمیں کیوں منتخب کریں">ہمیں کیوں منتخب کریں</a>
-        <a href="#process" data-en="How It Works" data-ur="طریقہ کار">طریقہ کار</a>
+        <a href="#templates" data-i18n="navTemplates">ٹیمپلیٹس</a>
+        <a href="#benefits" data-i18n="navBenefits">ہم کیوں؟</a>
+        <a href="https://support.websitesdeal.com/" target="_blank" rel="noopener noreferrer" data-i18n="support">کسٹمر سپورٹ ↗</a>
       </div>
 
-      <div class="footer-links">
-        <strong data-en="Get in touch" data-ur="رابطہ کریں">رابطہ کریں</strong>
-        <a href="https://support.websitesdeal.com/"
-          target="_blank" rel="noopener noreferrer"
-          data-en="Customer Support" data-ur="کسٹمر سپورٹ">کسٹمر سپورٹ</a>
-      </div>
     </div>
 
     <div class="container footer-bottom">
-      <span>© <span id="currentYear"></span> WebsitesDeal.</span>
-      <span data-en="Designed for your next big idea."
-        data-ur="آپ کے اگلے بڑے خیال کے لیے۔">
-        آپ کے اگلے بڑے خیال کے لیے۔
-      </span>
-      <a href="#home" class="back-to-top" aria-label="Back to top">↑</a>
+      <span>© <span id="currentYear">2026</span> WebsitesDeal Pakistan</span>
+      <a href="#top" data-i18n="backTop">اوپر جائیں ↑</a>
     </div>
   </footer>
+
+  <!-- TEMPLATE PREVIEW MODAL -->
+  <div class="modal-backdrop" id="previewModal" hidden>
+    <section class="preview-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+
+      <button class="modal-close" id="closeModal" type="button" aria-label="Close preview">×</button>
+
+      <div class="modal-art" id="modalPreview"></div>
+
+      <div class="modal-content">
+        <span class="template-category" id="modalCategory"></span>
+        <h2 id="modalTitle">Template preview</h2>
+        <p id="modalDescription"></p>
+        <div class="modal-price" id="modalPrice"></div>
+        <p class="modal-note" data-i18n="modalNote">یہ ایک نمونہ پری ویو ہے، مکمل ویب سائٹ نہیں۔</p>
+        <a class="button button-primary button-large" id="modalContact" href="https://support.websitesdeal.com/" target="_blank" rel="noopener noreferrer" data-i18n="modalContact">اس ڈیزائن کے بارے میں رابطہ کریں ↗</a>
+      </div>
+
+    </section>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
+```

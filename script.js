@@ -1,967 +1,1064 @@
 /* =========================================================
-   WebsitesDeal Pakistan — Main JavaScript
-   File: script.js
-   Features: Urdu/English, templates, search, filters,
-   sorting, preview modal, theme, mobile menu, animations.
+   WEBSITESDEAL PAKISTAN — COMPLETE SCRIPT.JS
+   Language: Urdu / English
+   Currency: PKR
+   Compatible with the current index.html
    ========================================================= */
 
 "use strict";
 
-document.addEventListener("DOMContentLoaded", () => {
-  const $ = (selector, root = document) => root.querySelector(selector);
-  const $$ = (selector, root = document) =>
-    Array.from(root.querySelectorAll(selector));
+/* =========================
+   1. TRANSLATIONS
+========================= */
 
-  const body = document.body;
+const translations = {
+  ur: {
+    pageTitle: "WebsitesDeal پاکستان",
+    navHome: "ہوم",
+    navTemplates: "ویب سائٹ ٹیمپلیٹس",
+    navBenefits: "فوائد",
+    navProcess: "طریقۂ کار",
+    navCta: "ویب سائٹ بنوائیں",
 
-  /* ======================================================
-     1. TEMPLATE DATA
-     These are demo listings and sample prices in PKR.
-     ====================================================== */
+    announcement: "اپنے کاروبار کو آن لائن لے جائیں",
+    explore: "ابھی دیکھیں",
 
-  const templates = [
+    heroEyebrow: "آپ کے کاروبار کے لیے ڈیجیٹل حل",
+    heroTitle: 'آپ کی ویب سائٹ،<br><span>آپ کی پہچان</span>',
+    heroText: "اپنے کاروبار، اسٹور یا ذاتی برانڈ کے لیے ایک خوبصورت، جدید اور موبائل فرینڈلی ویب سائٹ منتخب کریں۔",
+    heroCta: "ٹیمپلیٹس دیکھیں",
+    heroSecondary: "ہم کیسے کام کرتے ہیں؟",
+    trustTitle: "آپ کے کاروبار کے لیے تیار",
+    trustText: "جدید ڈیزائن، موبائل فرینڈلی لے آؤٹ اور آسان حسبِ ضرورت تبدیلیاں",
+    chipModern: "جدید ڈیزائن",
+    chipReady: "موبائل فرینڈلی",
+    categoryIntro: "اپنی ضرورت منتخب کریں",
+
+    business: "کاروبار",
+    portfolio: "پورٹ فولیو",
+    store: "آن لائن اسٹور",
+    education: "تعلیم",
+
+    templateEyebrow: "منتخب ڈیزائن",
+    templateTitle: 'اپنی پسند کا <span>ٹیمپلیٹ</span> منتخب کریں',
+    templateText: "مختلف شعبوں کے لیے بنائے گئے ڈیزائن دیکھیں اور اپنے پسندیدہ ڈیزائن کے بارے میں معلومات حاصل کریں۔",
+    designs: "ڈیزائن",
+    searchPlaceholder: "ٹیمپلیٹ تلاش کریں...",
+    sortLabel: "ترتیب:",
+    sortFeatured: "نمایاں",
+    sortLow: "کم قیمت پہلے",
+    sortHigh: "زیادہ قیمت پہلے",
+    sortName: "نام کے مطابق",
+
+    filterAll: "تمام ڈیزائن",
+    filterBusiness: "کاروبار",
+    filterStore: "آن لائن اسٹور",
+    filterPortfolio: "پورٹ فولیو",
+    filterRestaurant: "ریسٹورنٹ",
+    filterEducation: "تعلیم",
+
+    emptyTitle: "کوئی ڈیزائن نہیں ملا",
+    emptyText: "تلاش یا فلٹر تبدیل کرکے دوبارہ کوشش کریں۔",
+    reset: "فلٹر ری سیٹ کریں",
+    demoNote: "قیمتیں نمونہ جاتی ہیں۔ حتمی قیمت اور خصوصیات کی تصدیق سپورٹ سے کریں۔",
+
+    benefitEyebrow: "ہمیں کیوں منتخب کریں؟",
+    benefitTitle: 'آپ کے لیے <span>آسان ویب سائٹ حل</span>',
+    benefitText: "ہم آپ کے کاروبار کے لیے مناسب ویب سائٹ منتخب کرنے کے عمل کو آسان بناتے ہیں۔",
+    benefit1Title: "جدید ڈیزائن",
+    benefit1Text: "پیشہ ورانہ اور خوبصورت ڈیزائن جو آپ کے برانڈ کی شناخت بہتر بنانے میں مدد دے۔",
+    benefit2Title: "موبائل فرینڈلی",
+    benefit2Text: "ایسا لے آؤٹ جو موبائل، ٹیبلٹ اور ڈیسک ٹاپ پر بہتر انداز میں نظر آئے۔",
+    benefit3Title: "آسان رابطہ",
+    benefit3Text: "اپنی ضرورت بتائیں اور مناسب ڈیزائن، قیمت اور اگلے مراحل کے بارے میں معلومات لیں۔",
+
+    processEyebrow: "کام کرنے کا طریقہ",
+    processTitle: 'صرف تین مراحل میں<br><span>اپنی ویب سائٹ کا آغاز کریں</span>',
+    processText: "اپنی ضرورت بتائیں، ڈیزائن منتخب کریں اور اگلے مراحل کے لیے ہم سے رابطہ کریں۔",
+    processCta: "سپورٹ سے رابطہ کریں",
+    step1Title: "اپنی ضرورت بتائیں",
+    step1Text: "اپنے کاروبار اور ویب سائٹ کے مقصد کے بارے میں بتائیں۔",
+    step2Title: "ڈیزائن منتخب کریں",
+    step2Text: "موجودہ ڈیزائن دیکھیں اور اپنی پسند کا ٹیمپلیٹ منتخب کریں۔",
+    step3Title: "اگلے مراحل طے کریں",
+    step3Text: "قیمت، خصوصیات اور ویب سائٹ کی تیاری کے بارے میں سپورٹ سے بات کریں۔",
+
+    ctaEyebrow: "اپنا کاروبار آن لائن لائیں",
+    ctaTitle: "کیا آپ اپنی ویب سائٹ شروع کرنے کے لیے تیار ہیں؟",
+    ctaText: "اپنی ضرورت کے مطابق ویب سائٹ منتخب کرنے کے لیے ہماری ٹیم سے رابطہ کریں۔",
+    ctaButton: "ابھی رابطہ کریں",
+
+    footerText: "آپ کے کاروبار کے لیے جدید ویب سائٹ ڈیزائن اور ڈیجیٹل حل۔",
+    support: "سپورٹ",
+    backTop: "اوپر جائیں",
+
+    modalNote: "یہ ایک نمونہ ٹیمپلیٹ ہے۔ حتمی قیمت، دستیابی اور فیچرز سپورٹ سے تصدیق کریں۔",
+    modalContact: "سپورٹ سے رابطہ کریں",
+
+    preview: "پری ویو",
+    details: "تفصیلات",
+    priceFrom: "قیمت",
+    categoryLabel: "قسم",
+    noPrice: "قیمت کی تصدیق کریں",
+    toastLanguage: "زبان تبدیل ہوگئی",
+    toastTheme: "تھیم تبدیل ہوگئی",
+    toastReset: "فلٹر ری سیٹ ہوگئے",
+    toastPreview: "ٹیمپلیٹ کی تفصیلات کھول دی گئی ہیں",
+    toastError: "کچھ غلط ہوگیا۔ دوبارہ کوشش کریں۔",
+
+    categoryBusiness: "کاروبار",
+    categoryPortfolio: "پورٹ فولیو",
+    categoryStore: "آن لائن اسٹور",
+    categoryRestaurant: "ریسٹورنٹ",
+    categoryEducation: "تعلیم"
+  },
+
+  en: {
+    pageTitle: "WebsitesDeal Pakistan",
+    navHome: "Home",
+    navTemplates: "Templates",
+    navBenefits: "Benefits",
+    navProcess: "How It Works",
+    navCta: "Get a Website",
+
+    announcement: "Take your business online",
+    explore: "Explore Now",
+
+    heroEyebrow: "Digital solutions for your business",
+    heroTitle: 'Your Website,<br><span>Your Identity</span>',
+    heroText: "Choose a beautiful, modern and mobile-friendly website for your business, online store or personal brand.",
+    heroCta: "Explore Templates",
+    heroSecondary: "How It Works",
+    trustTitle: "Built for Your Business",
+    trustText: "Modern designs, mobile-friendly layouts and customization options",
+    chipModern: "Modern Design",
+    chipReady: "Mobile Friendly",
+    categoryIntro: "Choose Your Category",
+
+    business: "Business",
+    portfolio: "Portfolio",
+    store: "Online Store",
+    education: "Education",
+
+    templateEyebrow: "Curated Designs",
+    templateTitle: 'Choose Your <span>Template</span>',
+    templateText: "Explore website designs for different industries and discover the right starting point for your project.",
+    designs: "designs",
+    searchPlaceholder: "Search templates...",
+    sortLabel: "Sort:",
+    sortFeatured: "Featured",
+    sortLow: "Price: Low to High",
+    sortHigh: "Price: High to Low",
+    sortName: "Name",
+
+    filterAll: "All Designs",
+    filterBusiness: "Business",
+    filterStore: "Online Store",
+    filterPortfolio: "Portfolio",
+    filterRestaurant: "Restaurant",
+    filterEducation: "Education",
+
+    emptyTitle: "No templates found",
+    emptyText: "Try changing your search or filters.",
+    reset: "Reset Filters",
+    demoNote: "Prices are illustrative. Confirm final pricing and features with support.",
+
+    benefitEyebrow: "Why Choose Us?",
+    benefitTitle: 'A Simpler <span>Website Solution</span>',
+    benefitText: "We make it easier to find a suitable website design for your business.",
+    benefit1Title: "Modern Designs",
+    benefit1Text: "Professional, attractive designs that help strengthen your brand identity.",
+    benefit2Title: "Mobile Friendly",
+    benefit2Text: "Layouts designed to work across mobile phones, tablets and desktop screens.",
+    benefit3Title: "Easy Support",
+    benefit3Text: "Tell us what you need and get guidance on designs, pricing and next steps.",
+
+    processEyebrow: "How It Works",
+    processTitle: 'Start Your Website in<br><span>Just Three Steps</span>',
+    processText: "Tell us what you need, choose a design and contact our team about the next steps.",
+    processCta: "Contact Support",
+    step1Title: "Tell Us Your Needs",
+    step1Text: "Explain your business and the purpose of your website.",
+    step2Title: "Choose a Design",
+    step2Text: "Browse available designs and select the template you like.",
+    step3Title: "Plan the Next Steps",
+    step3Text: "Discuss pricing, features and website development with support.",
+
+    ctaEyebrow: "Bring Your Business Online",
+    ctaTitle: "Ready to Start Your Website?",
+    ctaText: "Contact our team to find a website solution that fits your needs.",
+    ctaButton: "Contact Us Today",
+
+    footerText: "Modern website designs and digital solutions for your business.",
+    support: "Support",
+    backTop: "Back to top",
+
+    modalNote: "This is a sample template. Confirm final pricing, availability and features with support.",
+    modalContact: "Contact Support",
+
+    preview: "Preview",
+    details: "Details",
+    priceFrom: "Price",
+    categoryLabel: "Category",
+    noPrice: "Contact for pricing",
+    toastLanguage: "Language changed",
+    toastTheme: "Theme changed",
+    toastReset: "Filters have been reset",
+    toastPreview: "Template details opened",
+    toastError: "Something went wrong. Please try again.",
+
+    categoryBusiness: "Business",
+    categoryPortfolio: "Portfolio",
+    categoryStore: "Online Store",
+    categoryRestaurant: "Restaurant",
+    categoryEducation: "Education"
+  }
+};
+
+
+/* =========================
+   2. TEMPLATE DATA
+   Prices are illustrative PKR amounts.
+========================= */
+
+const templates = [
+  {
+    id: 1,
+    name: "Business Pro",
+    nameUr: "بزنس پرو",
+    category: "business",
+    price: 549,
+    featured: 1,
+    icon: "▦",
+    color: "blue",
+    description: "A professional website concept for companies, service providers and small businesses.",
+    descriptionUr: "کمپنیوں، سروس فراہم کرنے والوں اور چھوٹے کاروباروں کے لیے ایک پیشہ ورانہ ویب سائٹ ڈیزائن۔",
+    tags: ["company", "corporate", "services", "business"]
+  },
+  {
+    id: 2,
+    name: "Creative Portfolio",
+    nameUr: "کری ایٹو پورٹ فولیو",
+    category: "portfolio",
+    price: 799,
+    featured: 2,
+    icon: "✳",
+    color: "purple",
+    description: "A creative portfolio concept for designers, freelancers, photographers and personal brands.",
+    descriptionUr: "ڈیزائنرز، فری لانسرز، فوٹوگرافرز اور ذاتی برانڈز کے لیے تخلیقی پورٹ فولیو۔",
+    tags: ["designer", "freelancer", "portfolio", "personal"]
+  },
+  {
+    id: 3,
+    name: "Online Store",
+    nameUr: "آن لائن اسٹور",
+    category: "store",
+    price: 1499,
+    featured: 3,
+    icon: "🛍",
+    color: "green",
+    description: "An e-commerce website concept for showcasing products and building an online shop.",
+    descriptionUr: "مصنوعات دکھانے اور آن لائن اسٹور بنانے کے لیے ای کامرس ویب سائٹ ڈیزائن۔",
+    tags: ["shop", "ecommerce", "products", "store"]
+  },
+  {
+    id: 4,
+    name: "Restaurant Menu",
+    nameUr: "ریسٹورنٹ مینو",
+    category: "restaurant",
+    price: 999,
+    featured: 4,
+    icon: "✦",
+    color: "orange",
+    description: "A restaurant website concept for menus, food photography, contact details and reservations.",
+    descriptionUr: "مینو، کھانوں کی تصاویر، رابطے اور بکنگ کے لیے ریسٹورنٹ ویب سائٹ ڈیزائن۔",
+    tags: ["food", "cafe", "restaurant", "menu"]
+  },
+  {
+    id: 5,
+    name: "Education Hub",
+    nameUr: "ایجوکیشن ہب",
+    category: "education",
+    price: 1299,
+    featured: 5,
+    icon: "⌘",
+    color: "cyan",
+    description: "An education website concept for institutes, online courses and learning programs.",
+    descriptionUr: "اداروں، آن لائن کورسز اور تعلیمی پروگراموں کے لیے ویب سائٹ ڈیزائن۔",
+    tags: ["school", "academy", "courses", "education"]
+  },
+  {
+    id: 6,
+    name: "Creative Agency",
+    nameUr: "کری ایٹو ایجنسی",
+    category: "business",
+    price: 1199,
+    featured: 6,
+    icon: "◇",
+    color: "pink",
+    description: "A modern agency website concept for showcasing services, projects and team expertise.",
+    descriptionUr: "سروسز، پروجیکٹس اور ٹیم کی مہارت دکھانے کے لیے جدید ایجنسی ویب سائٹ ڈیزائن۔",
+    tags: ["agency", "marketing", "creative", "business"]
+  }
+];
+
+
+/* =========================
+   3. ELEMENTS AND STATE
+========================= */
+
+const $ = (selector, root = document) => root.querySelector(selector);
+const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
+
+const elements = {
+  body: document.body,
+  header: $("#siteHeader"),
+  navLinks: $("#navLinks"),
+  languageBtn: $("#languageBtn"),
+  themeBtn: $("#themeBtn"),
+  menuBtn: $("#menuBtn"),
+  searchInput: $("#searchInput"),
+  sortSelect: $("#sortSelect"),
+  filterButtons: $("#filterButtons"),
+  templateGrid: $("#templateGrid"),
+  resultCount: $("#resultCount"),
+  emptyState: $("#emptyState"),
+  resetFilters: $("#resetFilters"),
+  modal: $("#previewModal"),
+  modalPreview: $("#modalPreview"),
+  modalCategory: $("#modalCategory"),
+  modalTitle: $("#modalTitle"),
+  modalDescription: $("#modalDescription"),
+  modalPrice: $("#modalPrice"),
+  closeModal: $("#closeModal"),
+  toast: $("#toast"),
+  currentYear: $("#currentYear")
+};
+
+let currentLanguage = "ur";
+let activeCategory = "all";
+let searchQuery = "";
+let sortMode = "featured";
+let lastFocusedElement = null;
+let toastTimer = null;
+
+
+/* =========================
+   4. SAFE HELPERS
+========================= */
+
+function getTranslation(key) {
+  return translations[currentLanguage]?.[key]
+    ?? translations.en[key]
+    ?? key;
+}
+
+function escapeHTML(value) {
+  return String(value).replace(/[&<>"']/g, character => ({
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&#39;"
+  })[character]);
+}
+
+function formatPrice(price) {
+  return new Intl.NumberFormat(
+    currentLanguage === "ur" ? "ur-PK" : "en-PK",
     {
-      id: 1,
-      title: "Business Pro",
-      category: "business",
-      price: 549,
-      description: "A professional website template for businesses, consultants and service providers.",
-      descriptionUr: "کاروبار، کنسلٹنٹس اور سروس فراہم کرنے والوں کے لیے پروفیشنل ویب سائٹ ٹیمپلیٹ۔",
-      tags: ["Business", "Responsive", "Modern"],
-      style: "linear-gradient(135deg,#e5f0d7,#a9ce8a)",
-      accent: "#b7ff00",
-      label: "POPULAR"
-    },
-    {
-      id: 2,
-      title: "Creative Portfolio",
-      category: "portfolio",
-      price: 799,
-      description: "Showcase your projects, skills and creative work with a modern portfolio.",
-      descriptionUr: "اپنے پروجیکٹس، مہارتوں اور تخلیقی کام کو جدید پورٹ فولیو میں دکھائیں۔",
-      tags: ["Portfolio", "Designer", "Creative"],
-      style: "linear-gradient(135deg,#e9d9ff,#a9a4ff)",
-      accent: "#7d67f7",
-      label: "CREATIVE"
-    },
-    {
-      id: 3,
-      title: "Online Store",
-      category: "ecommerce",
-      price: 1499,
-      description: "A stylish storefront concept for product collections and online shopping.",
-      descriptionUr: "مصنوعات اور آن لائن شاپنگ کے لیے جدید ای کامرس اسٹور ڈیزائن۔",
-      tags: ["E-commerce", "Products", "Shop"],
-      style: "linear-gradient(135deg,#ffe3c3,#ffb56b)",
-      accent: "#e98a39",
-      label: "STORE"
-    },
-    {
-      id: 4,
-      title: "Restaurant Menu",
-      category: "restaurant",
-      price: 999,
-      description: "Present your menu, restaurant story and customer favourites beautifully.",
-      descriptionUr: "اپنا مینو، ریسٹورنٹ کی معلومات اور پسندیدہ کھانے خوبصورتی سے پیش کریں۔",
-      tags: ["Restaurant", "Food", "Menu"],
-      style: "linear-gradient(135deg,#ffd6d2,#f28e80)",
-      accent: "#e95b49",
-      label: "FOOD"
-    },
-    {
-      id: 5,
-      title: "Education Hub",
-      category: "education",
-      price: 1299,
-      description: "A clean education website concept for courses, institutes and learning.",
-      descriptionUr: "کورسز، تعلیمی اداروں اور آن لائن تعلیم کے لیے جدید ویب سائٹ ڈیزائن۔",
-      tags: ["Education", "Courses", "Learning"],
-      style: "linear-gradient(135deg,#cceaff,#7eb8e9)",
-      accent: "#3886c5",
-      label: "LEARNING"
-    },
-    {
-      id: 6,
-      title: "Creative Agency",
-      category: "business",
-      price: 1199,
-      description: "A bold agency layout for showcasing services, case studies and results.",
-      descriptionUr: "سروسز، کیس اسٹڈیز اور کامیابیوں کو نمایاں کرنے کے لیے ایجنسی ویب سائٹ۔",
-      tags: ["Agency", "Services", "Branding"],
-      style: "linear-gradient(135deg,#d0f2dc,#78c6a0)",
-      accent: "#299568",
-      label: "AGENCY"
+      style: "currency",
+      currency: "PKR",
+      maximumFractionDigits: 0
     }
-  ];
+  ).format(price);
+}
 
-  const categoryLabels = {
-    all: { en: "All Templates", ur: "تمام ٹیمپلیٹس" },
-    business: { en: "Business", ur: "کاروبار" },
-    portfolio: { en: "Portfolio", ur: "پورٹ فولیو" },
-    ecommerce: { en: "E-commerce", ur: "ای کامرس" },
-    restaurant: { en: "Restaurant", ur: "ریسٹورنٹ" },
-    education: { en: "Education", ur: "تعلیم" }
+function getTemplateName(template) {
+  return currentLanguage === "ur" ? template.nameUr : template.name;
+}
+
+function getTemplateDescription(template) {
+  return currentLanguage === "ur"
+    ? template.descriptionUr
+    : template.description;
+}
+
+function getCategoryName(category) {
+  const keyMap = {
+    business: "categoryBusiness",
+    portfolio: "categoryPortfolio",
+    store: "categoryStore",
+    restaurant: "categoryRestaurant",
+    education: "categoryEducation"
   };
 
-  /* ======================================================
-     2. TRANSLATIONS
-     ====================================================== */
+  return getTranslation(keyMap[category] || "business");
+}
 
-  const translations = {
-    en: {
-      announcement: "Launch your online presence with WebsitesDeal Pakistan",
-      home: "Home",
-      templates: "Templates",
-      benefits: "Why Us",
-      process: "How It Works",
-      contact: "Contact",
-      getStarted: "Get Started",
-      heroEyebrow: "SMART WEBSITE SOLUTIONS",
-      heroTitle: "Your next website starts <span>here.</span>",
-      heroDescription: "Discover modern website templates for your business, portfolio, online store and more. Find a design that fits your vision.",
-      exploreTemplates: "Explore Templates",
-      howItWorks: "How It Works",
-      trustOne: "Modern designs",
-      trustTwo: "Mobile friendly",
-      trustThree: "PKR pricing",
-      chipOne: "Easy to explore",
-      chipTwo: "Made for your goals",
-      quickCategories: "Explore categories",
-      collectionEyebrow: "OUR COLLECTION",
-      collectionTitle: "Find your perfect template",
-      collectionDescription: "Explore our sample website designs and choose a starting point for your next project.",
-      searchPlaceholder: "Search templates...",
-      sortDefault: "Sort: Featured",
-      sortLow: "Price: Low to High",
-      sortHigh: "Price: High to Low",
-      sortAZ: "Name: A to Z",
-      allTemplates: "All Templates",
-      noResultsTitle: "No templates found",
-      noResultsText: "Try another keyword or choose a different category.",
-      resetFilters: "Reset Filters",
-      demoNote: "Demo collection with sample prices in PKR. Final pricing depends on the agreed scope.",
-      preview: "Preview",
-      details: "View Details",
-      samplePrice: "Sample price",
-      benefitEyebrow: "WHY WEBSITESDEAL",
-      benefitTitle: "A smarter way to start online",
-      benefitDescription: "Explore website concepts designed to make your next step easier.",
-      benefitOneTitle: "Modern Design",
-      benefitOneText: "Explore clean layouts and contemporary visual styles.",
-      benefitTwoTitle: "Responsive Layouts",
-      benefitTwoText: "Discover designs intended to adapt to different screen sizes.",
-      benefitThreeTitle: "Clear Pricing",
-      benefitThreeText: "Browse sample prices in Pakistani rupees.",
-      benefitFourTitle: "Multiple Categories",
-      benefitFourText: "Find concepts for business, education, food and more.",
-      benefitFiveTitle: "Explore Easily",
-      benefitFiveText: "Search, filter and sort the sample collection in seconds.",
-      benefitSixTitle: "Project Flexibility",
-      benefitSixText: "Discuss your requirements before confirming a final scope.",
-      processEyebrow: "SIMPLE PROCESS",
-      processTitle: "From idea to website",
-      processDescription: "Start with a design direction, discuss your needs and agree on the work before moving forward.",
-      stepOneTitle: "Choose a Template",
-      stepOneText: "Explore the collection and shortlist a design you like.",
-      stepTwoTitle: "Discuss Your Project",
-      stepTwoText: "Share your requirements, pages, features and content.",
-      stepThreeTitle: "Confirm the Scope",
-      stepThreeText: "Agree on deliverables, timeline and final price before work begins.",
-      stepFourTitle: "Start Building",
-      stepFourText: "Proceed with the project once the details are confirmed.",
-      ctaEyebrow: "READY TO GET STARTED?",
-      ctaTitle: "Have a website idea in mind?",
-      ctaDescription: "Tell us what you want to build and discuss the best next step for your project.",
-      ctaButton: "Discuss Your Project",
-      footerDescription: "Website design concepts and digital solutions for businesses, creators and growing brands.",
-      footerExplore: "Explore",
-      footerSupport: "Information",
-      footerHome: "Home",
-      footerTemplates: "Templates",
-      footerBenefits: "Why Us",
-      footerProcess: "How It Works",
-      footerContact: "Contact",
-      footerNotice: "Prices and template listings shown here are examples, not a confirmed checkout offer.",
-      modalContact: "Discuss This Template",
-      modalNote: "This is a sample design listing. Confirm the final features, delivery and price before ordering.",
-      copied: "Template details copied.",
-      searchCleared: "Filters reset.",
-      themeLight: "Switch to light mode",
-      themeDark: "Switch to dark mode",
-      menuOpen: "Open menu",
-      menuClose: "Close menu",
-      close: "Close",
-      toastLanguage: "Language changed.",
-      noContact: "Add your official contact or order link in script.js before accepting enquiries."
-    },
-    ur: {
-      announcement: "ویب سائٹس ڈیل پاکستان کے ساتھ اپنی آن لائن موجودگی شروع کریں",
-      home: "ہوم",
-      templates: "ٹیمپلیٹس",
-      benefits: "ہمیں کیوں چنیں",
-      process: "طریقۂ کار",
-      contact: "رابطہ",
-      getStarted: "شروع کریں",
-      heroEyebrow: "اسمارٹ ویب سائٹ سلوشنز",
-      heroTitle: "آپ کی اگلی ویب سائٹ <span>یہاں سے۔</span>",
-      heroDescription: "کاروبار، پورٹ فولیو، آن لائن اسٹور اور دیگر ضروریات کے لیے جدید ویب سائٹ ڈیزائن دیکھیں۔ اپنی پسند کا ڈیزائن منتخب کریں۔",
-      exploreTemplates: "ٹیمپلیٹس دیکھیں",
-      howItWorks: "طریقۂ کار",
-      trustOne: "جدید ڈیزائن",
-      trustTwo: "موبائل فرینڈلی",
-      trustThree: "پاکستانی روپے میں قیمت",
-      chipOne: "آسان انتخاب",
-      chipTwo: "آپ کے مقصد کے لیے",
-      quickCategories: "کیٹیگریز دیکھیں",
-      collectionEyebrow: "ہمارا کلیکشن",
-      collectionTitle: "اپنی پسند کا ٹیمپلیٹ تلاش کریں",
-      collectionDescription: "نمونہ ویب سائٹ ڈیزائن دیکھیں اور اپنے اگلے پروجیکٹ کے لیے ایک مناسب آغاز منتخب کریں۔",
-      searchPlaceholder: "ٹیمپلیٹس تلاش کریں...",
-      sortDefault: "ترتیب: نمایاں",
-      sortLow: "قیمت: کم سے زیادہ",
-      sortHigh: "قیمت: زیادہ سے کم",
-      sortAZ: "نام: الف سے ی",
-      allTemplates: "تمام ٹیمپلیٹس",
-      noResultsTitle: "کوئی ٹیمپلیٹ نہیں ملا",
-      noResultsText: "دوسرا لفظ لکھیں یا مختلف کیٹیگری منتخب کریں۔",
-      resetFilters: "فلٹر ختم کریں",
-      demoNote: "یہ نمونہ کلیکشن ہے۔ قیمتیں پاکستانی روپے میں مثال کے طور پر دی گئی ہیں۔ حتمی قیمت کام کے دائرۂ کار پر منحصر ہوگی۔",
-      preview: "پیش نظارہ",
-      details: "تفصیلات دیکھیں",
-      samplePrice: "نمونہ قیمت",
-      benefitEyebrow: "ویب سائٹس ڈیل کیوں؟",
-      benefitTitle: "آن لائن آغاز کا بہتر طریقہ",
-      benefitDescription: "اپنے اگلے قدم کو آسان بنانے کے لیے ویب سائٹ ڈیزائن کے نمونے دیکھیں۔",
-      benefitOneTitle: "جدید ڈیزائن",
-      benefitOneText: "صاف ستھرے لے آؤٹس اور جدید بصری انداز دیکھیں۔",
-      benefitTwoTitle: "ریسپانسیو لے آؤٹس",
-      benefitTwoText: "مختلف اسکرین سائز کے لیے بنائے گئے ڈیزائن دیکھیں۔",
-      benefitThreeTitle: "واضح قیمتیں",
-      benefitThreeText: "پاکستانی روپے میں نمونہ قیمتیں دیکھیں۔",
-      benefitFourTitle: "مختلف کیٹیگریز",
-      benefitFourText: "کاروبار، تعلیم، کھانے اور دیگر شعبوں کے ڈیزائن دیکھیں۔",
-      benefitFiveTitle: "آسان تلاش",
-      benefitFiveText: "چند سیکنڈ میں ٹیمپلیٹس تلاش، فلٹر اور ترتیب دیں۔",
-      benefitSixTitle: "پروجیکٹ میں لچک",
-      benefitSixText: "حتمی فیصلہ کرنے سے پہلے اپنی ضروریات پر بات کریں۔",
-      processEyebrow: "آسان طریقۂ کار",
-      processTitle: "خیال سے ویب سائٹ تک",
-      processDescription: "ڈیزائن منتخب کریں، اپنی ضروریات بتائیں اور کام شروع ہونے سے پہلے تفصیلات طے کریں۔",
-      stepOneTitle: "ٹیمپلیٹ منتخب کریں",
-      stepOneText: "کلیکشن دیکھیں اور اپنی پسند کا ڈیزائن منتخب کریں۔",
-      stepTwoTitle: "پروجیکٹ پر بات کریں",
-      stepTwoText: "اپنی ضروریات، صفحات، فیچرز اور مواد کی تفصیل بتائیں۔",
-      stepThreeTitle: "کام کی تفصیلات طے کریں",
-      stepThreeText: "کام، مدت اور حتمی قیمت پر اتفاق کریں۔",
-      stepFourTitle: "کام شروع کریں",
-      stepFourText: "تمام تفصیلات کی تصدیق کے بعد پروجیکٹ شروع کریں۔",
-      ctaEyebrow: "کیا آپ تیار ہیں؟",
-      ctaTitle: "کیا آپ کے ذہن میں ویب سائٹ کا کوئی خیال ہے؟",
-      ctaDescription: "اپنا آئیڈیا بتائیں اور اپنے پروجیکٹ کے اگلے قدم پر بات کریں۔",
-      ctaButton: "پروجیکٹ پر بات کریں",
-      footerDescription: "کاروبار، تخلیق کاروں اور ترقی کرتی برانڈز کے لیے ویب ڈیزائن اور ڈیجیٹل سلوشنز۔",
-      footerExplore: "دیکھیں",
-      footerSupport: "معلومات",
-      footerHome: "ہوم",
-      footerTemplates: "ٹیمپلیٹس",
-      footerBenefits: "ہمیں کیوں چنیں",
-      footerProcess: "طریقۂ کار",
-      footerContact: "رابطہ",
-      footerNotice: "یہاں دکھائی گئی قیمتیں اور ٹیمپلیٹس مثالیں ہیں، تصدیق شدہ چیک آؤٹ آفر نہیں۔",
-      modalContact: "اس ٹیمپلیٹ پر بات کریں",
-      modalNote: "یہ ایک نمونہ ڈیزائن ہے۔ آرڈر سے پہلے فیچرز، ڈیلیوری اور حتمی قیمت کی تصدیق کریں۔",
-      copied: "ٹیمپلیٹ کی تفصیلات کاپی ہوگئیں۔",
-      searchCleared: "فلٹر ختم کردیئے گئے۔",
-      themeLight: "لائٹ موڈ منتخب کریں",
-      themeDark: "ڈارک موڈ منتخب کریں",
-      menuOpen: "مینو کھولیں",
-      menuClose: "مینو بند کریں",
-      close: "بند کریں",
-      toastLanguage: "زبان تبدیل ہوگئی۔",
-      noContact: "انکوائری لینے سے پہلے script.js میں اپنا آفیشل رابطہ یا آرڈر لنک شامل کریں۔"
+function showToast(message) {
+  if (!elements.toast) return;
+
+  if (toastTimer) {
+    clearTimeout(toastTimer);
+  }
+
+  elements.toast.textContent = message;
+  elements.toast.classList.add("show");
+  elements.toast.setAttribute("role", "status");
+
+  toastTimer = setTimeout(() => {
+    elements.toast.classList.remove("show");
+  }, 2600);
+}
+
+
+/* =========================
+   5. LANGUAGE SWITCH
+========================= */
+
+function applyTranslations() {
+  const dictionary = translations[currentLanguage];
+
+  document.documentElement.lang = currentLanguage;
+  document.documentElement.dir = currentLanguage === "ur" ? "rtl" : "ltr";
+
+  document.title = dictionary.pageTitle;
+
+  $$("[data-i18n]").forEach(element => {
+    const key = element.dataset.i18n;
+    if (!(key in dictionary)) return;
+
+    // These headings intentionally contain <br> and <span>.
+    const htmlKeys = [
+      "heroTitle",
+      "templateTitle",
+      "benefitTitle",
+      "processTitle"
+    ];
+
+    if (htmlKeys.includes(key)) {
+      element.innerHTML = dictionary[key];
+    } else {
+      element.textContent = dictionary[key];
     }
-  };
-
-  let currentLanguage = body.dataset.language || "ur";
-  if (!translations[currentLanguage]) currentLanguage = "ur";
-
-  let activeCategory = "all";
-  let searchTerm = "";
-  let sortMode = "featured";
-  let activeTemplateId = null;
-  let toastTimer = null;
-  let lastFocusedElement = null;
-
-  /* ======================================================
-     3. HELPERS
-     ====================================================== */
-
-  function t(key) {
-    return translations[currentLanguage][key]
-      || translations.en[key]
-      || key;
-  }
-
-  function escapeHTML(value) {
-    return String(value).replace(/[&<>"']/g, character => ({
-      "&": "&amp;",
-      "<": "&lt;",
-      ">": "&gt;",
-      '"': "&quot;",
-      "'": "&#39;"
-    })[character]);
-  }
-
-  function formatPrice(price) {
-    return new Intl.NumberFormat(
-      currentLanguage === "ur" ? "ur-PK" : "en-PK",
-      {
-        style: "currency",
-        currency: "PKR",
-        maximumFractionDigits: 0
-      }
-    ).format(price);
-  }
-
-  function showToast(message) {
-    const toast = $("#toast");
-    if (!toast) return;
-
-    toast.textContent = message;
-    toast.classList.add("show");
-
-    window.clearTimeout(toastTimer);
-    toastTimer = window.setTimeout(() => {
-      toast.classList.remove("show");
-    }, 2800);
-  }
-
-  function closeMobileMenu() {
-    const nav = $("#navLinks");
-    const menuButton = $("#menuBtn");
-
-    nav?.classList.remove("open");
-    menuButton?.setAttribute("aria-expanded", "false");
-
-    if (menuButton) {
-      menuButton.setAttribute("aria-label", t("menuOpen"));
-    }
-  }
-
-  /* ======================================================
-     4. LANGUAGE SWITCH
-     ====================================================== */
-
-  function setLanguage(language, showMessage = false) {
-    if (!translations[language]) return;
-
-    currentLanguage = language;
-
-    const isUrdu = language === "ur";
-    body.dataset.language = language;
-    body.setAttribute("lang", language);
-    body.setAttribute("dir", isUrdu ? "rtl" : "ltr");
-
-    $$("[data-i18n]").forEach(element => {
-      const key = element.dataset.i18n;
-      const value = t(key);
-
-      // Only use HTML for the controlled hero heading,
-      // where translations intentionally include a span.
-      if (key === "heroTitle") {
-        element.innerHTML = value;
-      } else {
-        element.textContent = value;
-      }
-    });
-
-    $$("[data-i18n-placeholder]").forEach(element => {
-      element.setAttribute(
-        "placeholder",
-        t(element.dataset.i18nPlaceholder)
-      );
-    });
-
-    $$("[data-i18n-aria-label]").forEach(element => {
-      element.setAttribute(
-        "aria-label",
-        t(element.dataset.i18nAriaLabel)
-      );
-    });
-
-    const languageButton = $("#languageBtn");
-    if (languageButton) {
-      languageButton.textContent = isUrdu ? "EN" : "اردو";
-      languageButton.setAttribute(
-        "aria-label",
-        isUrdu ? "Switch to English" : "اردو میں تبدیل کریں"
-      );
-    }
-
-    const sortSelect = $("#sortSelect");
-    if (sortSelect) {
-      Array.from(sortSelect.options).forEach(option => {
-        const key = option.dataset.i18n;
-        if (key) option.textContent = t(key);
-      });
-    }
-
-    renderFilters();
-    renderTemplates();
-    updateThemeButton();
-    closeMobileMenu();
-
-    if (showMessage) showToast(t("toastLanguage"));
-  }
-
-  $("#languageBtn")?.addEventListener("click", () => {
-    setLanguage(currentLanguage === "ur" ? "en" : "ur", true);
   });
 
-  /* ======================================================
-     5. TEMPLATE CARD PREVIEW ART
-     ====================================================== */
+  $$("[data-i18n-placeholder]").forEach(element => {
+    const key = element.dataset.i18nPlaceholder;
+    if (key in dictionary) {
+      element.setAttribute("placeholder", dictionary[key]);
+    }
+  });
 
-  function createPreviewArt(template, large = false) {
-    const style = escapeHTML(template.style);
-    const accent = escapeHTML(template.accent);
+  $$("option[data-i18n]").forEach(option => {
+    const key = option.dataset.i18n;
+    if (key in dictionary) {
+      option.textContent = dictionary[key];
+    }
+  });
 
-    return `
-      <div class="art-mockup" style="background:#f5f7ef">
-        <div class="art-browser"></div>
-        <div class="art-screen">
-          <div style="
-            height:7px;width:35%;border-radius:8px;
-            background:${accent};margin-bottom:14px
-          "></div>
-          <div class="art-preview-content">
-            <div>
-              <div class="art-preview-line long"></div>
-              <div class="art-preview-line"></div>
-              <div class="art-preview-line short"></div>
-              <div style="
-                height:17px;width:58%;border-radius:5px;
-                background:#1c2c1e;margin-top:13px
-              "></div>
-            </div>
-            <div class="art-preview-block" style="background:${style}"></div>
+  if (elements.languageBtn) {
+    elements.languageBtn.textContent =
+      currentLanguage === "ur" ? "EN" : "اردو";
+
+    elements.languageBtn.setAttribute(
+      "aria-label",
+      currentLanguage === "ur"
+        ? "Switch to English"
+        : "اردو میں تبدیل کریں"
+    );
+  }
+
+  if (elements.searchInput) {
+    elements.searchInput.setAttribute(
+      "aria-label",
+      getTranslation("searchPlaceholder")
+    );
+  }
+
+  updateThemeButton();
+  updateFilterLabels();
+  renderTemplates();
+}
+
+function toggleLanguage() {
+  currentLanguage = currentLanguage === "ur" ? "en" : "ur";
+
+  try {
+    localStorage.setItem("wd-language", currentLanguage);
+  } catch (error) {
+    // The page continues to work when storage is unavailable.
+  }
+
+  applyTranslations();
+  showToast(getTranslation("toastLanguage"));
+}
+
+
+/* =========================
+   6. THEME SWITCH
+========================= */
+
+function applyTheme(theme) {
+  const isLight = theme === "light";
+
+  elements.body.classList.toggle("light-theme", isLight);
+  elements.body.classList.toggle("dark-theme", !isLight);
+
+  updateThemeButton();
+
+  try {
+    localStorage.setItem("wd-theme", theme);
+  } catch (error) {
+    // Ignore unavailable browser storage.
+  }
+}
+
+function updateThemeButton() {
+  if (!elements.themeBtn) return;
+
+  const isLight = elements.body.classList.contains("light-theme");
+
+  elements.themeBtn.textContent = isLight ? "☾" : "☼";
+  elements.themeBtn.setAttribute(
+    "aria-label",
+    isLight ? "Switch to dark theme" : "Switch to light theme"
+  );
+  elements.themeBtn.setAttribute("title", elements.themeBtn.getAttribute("aria-label"));
+}
+
+function toggleTheme() {
+  const isLight = elements.body.classList.contains("light-theme");
+  applyTheme(isLight ? "dark" : "light");
+  showToast(getTranslation("toastTheme"));
+}
+
+
+/* =========================
+   7. FILTER BUTTON LABELS
+========================= */
+
+function updateFilterLabels() {
+  $$("#filterButtons [data-filter]").forEach(button => {
+    const category = button.dataset.filter;
+
+    const keyMap = {
+      all: "filterAll",
+      business: "filterBusiness",
+      store: "filterStore",
+      portfolio: "filterPortfolio",
+      restaurant: "filterRestaurant",
+      education: "filterEducation"
+    };
+
+    const key = keyMap[category];
+
+    if (key) {
+      button.textContent = getTranslation(key);
+    }
+
+    const isActive = category === activeCategory;
+
+    button.classList.toggle("active", isActive);
+    button.setAttribute("aria-pressed", String(isActive));
+  });
+}
+
+function setActiveCategory(category) {
+  const validCategories = [
+    "all",
+    "business",
+    "store",
+    "portfolio",
+    "restaurant",
+    "education"
+  ];
+
+  activeCategory = validCategories.includes(category) ? category : "all";
+
+  updateFilterLabels();
+  renderTemplates();
+
+  const templatesSection = $("#templates");
+
+  if (templatesSection) {
+    templatesSection.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+  }
+}
+
+
+/* =========================
+   8. SEARCH AND SORT
+========================= */
+
+function getFilteredTemplates() {
+  let results = templates.filter(template => {
+    const matchesCategory =
+      activeCategory === "all" ||
+      template.category === activeCategory;
+
+    const searchableText = [
+      template.name,
+      template.nameUr,
+      template.description,
+      template.descriptionUr,
+      template.category,
+      getCategoryName(template.category),
+      ...template.tags
+    ].join(" ").toLowerCase();
+
+    const query = searchQuery.trim().toLowerCase();
+    const matchesSearch = !query || searchableText.includes(query);
+
+    return matchesCategory && matchesSearch;
+  });
+
+  switch (sortMode) {
+    case "price-low":
+      results.sort((a, b) => a.price - b.price);
+      break;
+
+    case "price-high":
+      results.sort((a, b) => b.price - a.price);
+      break;
+
+    case "name":
+      results.sort((a, b) =>
+        getTemplateName(a).localeCompare(
+          getTemplateName(b),
+          currentLanguage
+        )
+      );
+      break;
+
+    default:
+      results.sort((a, b) => a.featured - b.featured);
+  }
+
+  return results;
+}
+
+
+/* =========================
+   9. TEMPLATE CARD RENDERING
+========================= */
+
+function renderTemplateCard(template) {
+  const name = escapeHTML(getTemplateName(template));
+  const description = escapeHTML(getTemplateDescription(template));
+  const category = escapeHTML(getCategoryName(template.category));
+  const price = escapeHTML(formatPrice(template.price));
+
+  return `
+    <article class="template-card" data-template-id="${template.id}">
+      <div class="template-card-visual visual-${template.color}">
+        <div class="template-browser">
+          <div class="browser-dots">
+            <span></span><span></span><span></span>
           </div>
-          <div style="
-            display:flex;gap:7px;margin-top:7px
-          ">
-            <span style="height:25px;flex:1;border-radius:5px;background:#e5eadd"></span>
-            <span style="height:25px;flex:1;border-radius:5px;background:#e5eadd"></span>
-            <span style="height:25px;flex:1;border-radius:5px;background:#e5eadd"></span>
+
+          <div class="template-artwork">
+            <div class="artwork-icon">${template.icon}</div>
+            <div class="artwork-line artwork-line-long"></div>
+            <div class="artwork-line artwork-line-short"></div>
+            <div class="artwork-block"></div>
+            <div class="artwork-block artwork-block-small"></div>
           </div>
+        </div>
+
+        <span class="template-category">${category}</span>
+      </div>
+
+      <div class="template-card-content">
+        <div class="template-card-heading">
+          <h3>${name}</h3>
+          <span class="template-price">${price}</span>
+        </div>
+
+        <p class="template-description">${description}</p>
+
+        <div class="template-card-actions">
+          <button
+            type="button"
+            class="template-preview-btn"
+            data-preview-id="${template.id}"
+          >${escapeHTML(getTranslation("preview"))}</button>
+
+          <button
+            type="button"
+            class="template-details-btn"
+            data-preview-id="${template.id}"
+            aria-label="${escapeHTML(getTranslation("details"))}: ${name}"
+            title="${escapeHTML(getTranslation("details"))}"
+          >↗</button>
+        </div>
+      </div>
+    </article>
+  `;
+}
+
+function renderTemplates() {
+  if (!elements.templateGrid) return;
+
+  const results = getFilteredTemplates();
+
+  elements.templateGrid.innerHTML = results
+    .map(renderTemplateCard)
+    .join("");
+
+  if (elements.resultCount) {
+    elements.resultCount.textContent = String(results.length);
+  }
+
+  if (elements.emptyState) {
+    elements.emptyState.hidden = results.length !== 0;
+  }
+
+  elements.templateGrid.hidden = results.length === 0;
+
+  updateFilterLabels();
+}
+
+
+/* =========================
+   10. TEMPLATE PREVIEW MODAL
+========================= */
+
+function openPreview(templateId, triggerElement) {
+  const template = templates.find(
+    item => item.id === Number(templateId)
+  );
+
+  if (!template || !elements.modal) return;
+
+  lastFocusedElement = triggerElement || document.activeElement;
+
+  if (elements.modalTitle) {
+    elements.modalTitle.textContent = getTemplateName(template);
+  }
+
+  if (elements.modalDescription) {
+    elements.modalDescription.textContent =
+      getTemplateDescription(template);
+  }
+
+  if (elements.modalPrice) {
+    elements.modalPrice.textContent = formatPrice(template.price);
+  }
+
+  if (elements.modalCategory) {
+    elements.modalCategory.textContent =
+      getCategoryName(template.category);
+  }
+
+  if (elements.modalPreview) {
+    const color = template.color;
+
+    elements.modalPreview.className = "modal-preview visual-" + color;
+
+    elements.modalPreview.innerHTML = `
+      <div class="modal-demo-browser">
+        <div class="browser-dots">
+          <span></span><span></span><span></span>
+        </div>
+        <div class="modal-demo-content">
+          <div class="modal-demo-icon">${template.icon}</div>
+          <h3>${escapeHTML(getTemplateName(template))}</h3>
+          <p>${escapeHTML(getCategoryName(template.category))}</p>
+          <div class="artwork-line artwork-line-long"></div>
+          <div class="artwork-line artwork-line-short"></div>
+          <div class="artwork-block"></div>
         </div>
       </div>
     `;
   }
 
-  function getCategoryLabel(category) {
-    return categoryLabels[category]?.[currentLanguage]
-      || categoryLabels[category]?.en
-      || category;
+  // Remove hidden first; CSS cannot display an element with [hidden].
+  elements.modal.hidden = false;
+  elements.modal.classList.add("show");
+  elements.body.classList.add("modal-open");
+
+  const closeButton = elements.closeModal;
+
+  if (closeButton) {
+    closeButton.focus();
   }
 
-  /* ======================================================
-     6. CATEGORY FILTER BUTTONS
-     ====================================================== */
+  showToast(getTranslation("toastPreview"));
+}
 
-  function renderFilters() {
-    const container = $("#filterButtons");
-    if (!container) return;
+function closePreview() {
+  if (!elements.modal || elements.modal.hidden) return;
 
-    const usedCategories = [
-      "all",
-      ...new Set(templates.map(template => template.category))
-    ];
+  elements.modal.classList.remove("show");
+  elements.modal.hidden = true;
+  elements.body.classList.remove("modal-open");
 
-    container.innerHTML = usedCategories.map(category => {
-      const label = category === "all"
-        ? t("allTemplates")
-        : getCategoryLabel(category);
+  if (lastFocusedElement && typeof lastFocusedElement.focus === "function") {
+    lastFocusedElement.focus();
+  }
+}
 
-      return `
-        <button
-          type="button"
-          class="filter-button ${activeCategory === category ? "active" : ""}"
-          data-category="${escapeHTML(category)}"
-          aria-pressed="${activeCategory === category}"
-        >${escapeHTML(label)}</button>
-      `;
-    }).join("");
+
+/* =========================
+   11. MOBILE NAVIGATION
+========================= */
+
+function closeMobileMenu() {
+  if (!elements.navLinks || !elements.menuBtn) return;
+
+  elements.navLinks.classList.remove("active", "open");
+  elements.menuBtn.classList.remove("active");
+  elements.menuBtn.setAttribute("aria-expanded", "false");
+}
+
+function toggleMobileMenu() {
+  if (!elements.navLinks || !elements.menuBtn) return;
+
+  const isOpen = !elements.navLinks.classList.contains("active");
+
+  elements.navLinks.classList.toggle("active", isOpen);
+  elements.navLinks.classList.toggle("open", isOpen);
+  elements.menuBtn.classList.toggle("active", isOpen);
+  elements.menuBtn.setAttribute("aria-expanded", String(isOpen));
+}
+
+
+/* =========================
+   12. HEADER SCROLL EFFECT
+========================= */
+
+function handleScroll() {
+  if (!elements.header) return;
+
+  elements.header.classList.toggle(
+    "scrolled",
+    window.scrollY > 20
+  );
+}
+
+
+/* =========================
+   13. SCROLL REVEAL
+========================= */
+
+function setupRevealAnimations() {
+  const selectors = [
+    ".benefit-card",
+    ".process-step",
+    ".template-card",
+    ".section-heading",
+    ".cta-content"
+  ];
+
+  const nodes = $$(selectors.join(","));
+
+  if (!("IntersectionObserver" in window)) {
+    nodes.forEach(node => node.classList.add("is-visible"));
+    return;
   }
 
-  $("#filterButtons")?.addEventListener("click", event => {
-    const button = event.target.closest("[data-category]");
-    if (!button) return;
-
-    activeCategory = button.dataset.category || "all";
-    renderFilters();
-    renderTemplates();
-  });
-
-  $$("[data-category-link]").forEach(link => {
-    link.addEventListener("click", () => {
-      const category = link.dataset.categoryLink;
-
-      if (categoryLabels[category]) {
-        activeCategory = category;
-        renderFilters();
-        renderTemplates();
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        obs.unobserve(entry.target);
       }
     });
+  }, {
+    threshold: 0.12
   });
 
-  /* ======================================================
-     7. TEMPLATE SEARCH AND SORT
-     ====================================================== */
+  nodes.forEach(node => observer.observe(node));
+}
 
-  function getFilteredTemplates() {
-    let results = templates.filter(template => {
-      const matchesCategory =
-        activeCategory === "all" ||
-        template.category === activeCategory;
 
-      const searchableText = [
-        template.title,
-        template.category,
-        template.description,
-        template.descriptionUr,
-        ...template.tags
-      ].join(" ").toLowerCase();
+/* =========================
+   14. RESET FILTERS
+========================= */
 
-      const matchesSearch = searchableText.includes(
-        searchTerm.trim().toLowerCase()
-      );
+function resetFilters() {
+  activeCategory = "all";
+  searchQuery = "";
+  sortMode = "featured";
 
-      return matchesCategory && matchesSearch;
+  if (elements.searchInput) {
+    elements.searchInput.value = "";
+  }
+
+  if (elements.sortSelect) {
+    elements.sortSelect.value = "featured";
+  }
+
+  renderTemplates();
+  showToast(getTranslation("toastReset"));
+}
+
+
+/* =========================
+   15. EVENT LISTENERS
+========================= */
+
+function bindEvents() {
+  // Language toggle
+  elements.languageBtn?.addEventListener("click", toggleLanguage);
+
+  // Theme toggle
+  elements.themeBtn?.addEventListener("click", toggleTheme);
+
+  // Mobile menu
+  elements.menuBtn?.addEventListener("click", toggleMobileMenu);
+
+  // Close mobile menu when a nav link is selected
+  elements.navLinks?.addEventListener("click", event => {
+    const link = event.target.closest("a");
+
+    if (link) {
+      closeMobileMenu();
+    }
+  });
+
+  // Category filters
+  elements.filterButtons?.addEventListener("click", event => {
+    const button = event.target.closest("[data-filter]");
+    if (!button) return;
+
+    setActiveCategory(button.dataset.filter);
+  });
+
+  // Hero category links
+  $$("[data-category-link]").forEach(link => {
+    link.addEventListener("click", () => {
+      setActiveCategory(link.dataset.categoryLink);
     });
+  });
 
-    if (sortMode === "price-low") {
-      results.sort((a, b) => a.price - b.price);
-    } else if (sortMode === "price-high") {
-      results.sort((a, b) => b.price - a.price);
-    } else if (sortMode === "name") {
-      results.sort((a, b) => a.title.localeCompare(b.title));
-    }
-
-    return results;
-  }
-
-  function renderTemplates() {
-    const grid = $("#templateGrid");
-    if (!grid) return;
-
-    const results = getFilteredTemplates();
-    const count = $("#resultCount");
-    const emptyState = $("#emptyState");
-
-    if (count) {
-      count.textContent = currentLanguage === "ur"
-        ? `${results.length} ٹیمپلیٹس`
-        : `${results.length} template${results.length === 1 ? "" : "s"}`;
-    }
-
-    if (emptyState) {
-      emptyState.hidden = results.length > 0;
-    }
-
-    grid.hidden = results.length === 0;
-
-    grid.innerHTML = results.map(template => {
-      const title = escapeHTML(template.title);
-      const category = escapeHTML(getCategoryLabel(template.category));
-      const description = escapeHTML(
-        currentLanguage === "ur"
-          ? template.descriptionUr
-          : template.description
-      );
-      const tags = template.tags.slice(0, 3).map(tag =>
-        `<span class="template-tag">${escapeHTML(tag)}</span>`
-      ).join("");
-
-      return `
-        <article class="template-card reveal is-visible"
-          data-template-id="${template.id}">
-          <div class="template-art" style="background:${escapeHTML(template.style)}">
-            <span class="art-badge">${escapeHTML(template.label)}</span>
-            ${createPreviewArt(template)}
-          </div>
-
-          <div class="template-card-body">
-            <div class="template-card-top">
-              <span class="template-category">${category}</span>
-              <span class="template-price">${formatPrice(template.price)}</span>
-            </div>
-
-            <h3>${title}</h3>
-            <p class="template-description">${description}</p>
-
-            <div class="template-tags">${tags}</div>
-
-            <div class="template-card-actions">
-              <button type="button"
-                class="button button-outline"
-                data-preview="${template.id}">
-                ${escapeHTML(t("preview"))}
-              </button>
-              <button type="button"
-                class="button button-primary"
-                data-details="${template.id}">
-                ${escapeHTML(t("details"))}
-              </button>
-            </div>
-          </div>
-        </article>
-      `;
-    }).join("");
-  }
-
-  $("#searchInput")?.addEventListener("input", event => {
-    searchTerm = event.target.value || "";
+  // Template search
+  elements.searchInput?.addEventListener("input", event => {
+    searchQuery = event.target.value || "";
     renderTemplates();
   });
 
-  $("#sortSelect")?.addEventListener("change", event => {
+  // Sorting
+  elements.sortSelect?.addEventListener("change", event => {
     sortMode = event.target.value || "featured";
     renderTemplates();
   });
 
-  $("#resetFilters")?.addEventListener("click", () => {
-    activeCategory = "all";
-    searchTerm = "";
-    sortMode = "featured";
+  // Open template preview using event delegation
+  elements.templateGrid?.addEventListener("click", event => {
+    const trigger = event.target.closest("[data-preview-id]");
+    if (!trigger) return;
 
-    const search = $("#searchInput");
-    const sort = $("#sortSelect");
-
-    if (search) search.value = "";
-    if (sort) sort.value = "featured";
-
-    renderFilters();
-    renderTemplates();
-    showToast(t("searchCleared"));
+    openPreview(trigger.dataset.previewId, trigger);
   });
 
-  /* ======================================================
-     8. TEMPLATE PREVIEW MODAL
-     ====================================================== */
+  // Close modal button
+  elements.closeModal?.addEventListener("click", closePreview);
 
-  function openModal(templateId) {
-    const template = templates.find(item => item.id === Number(templateId));
-    const modal = $("#previewModal");
-
-    if (!template || !modal) {
-      showToast("Template preview is unavailable.");
-      return;
-    }
-
-    activeTemplateId = template.id;
-    lastFocusedElement = document.activeElement;
-
-    const modalTitle = $("#modalTitle");
-    const modalCategory = $("#modalCategory");
-    const modalDescription = $("#modalDescription");
-    const modalPrice = $("#modalPrice");
-    const modalPreview = $("#modalPreview");
-
-    if (modalTitle) modalTitle.textContent = template.title;
-    if (modalCategory) {
-      modalCategory.textContent = getCategoryLabel(template.category);
-    }
-    if (modalDescription) {
-      modalDescription.textContent = currentLanguage === "ur"
-        ? template.descriptionUr
-        : template.description;
-    }
-    if (modalPrice) modalPrice.textContent = formatPrice(template.price);
-
-    if (modalPreview) {
-      modalPreview.innerHTML = createPreviewArt(template, true);
-      modalPreview.style.background = template.style;
-    }
-
-    modal.classList.add("show");
-    modal.setAttribute("aria-hidden", "false");
-    body.style.overflow = "hidden";
-
-    $("#closeModal")?.focus();
-  }
-
-  function closeModal() {
-    const modal = $("#previewModal");
-    if (!modal) return;
-
-    modal.classList.remove("show");
-    modal.setAttribute("aria-hidden", "true");
-    body.style.overflow = "";
-
-    activeTemplateId = null;
-
-    if (lastFocusedElement && typeof lastFocusedElement.focus === "function") {
-      lastFocusedElement.focus();
-    }
-  }
-
-  $("#templateGrid")?.addEventListener("click", event => {
-    const previewButton = event.target.closest("[data-preview]");
-    const detailsButton = event.target.closest("[data-details]");
-
-    if (previewButton) {
-      openModal(previewButton.dataset.preview);
-    } else if (detailsButton) {
-      openModal(detailsButton.dataset.details);
+  // Close modal by clicking the backdrop
+  elements.modal?.addEventListener("click", event => {
+    if (event.target === elements.modal) {
+      closePreview();
     }
   });
 
-  $("#closeModal")?.addEventListener("click", closeModal);
+  // Reset search and filters
+  elements.resetFilters?.addEventListener("click", resetFilters);
 
-  $("#previewModal")?.addEventListener("click", event => {
-    if (event.target.id === "previewModal") closeModal();
-  });
+  // Header scroll state
+  window.addEventListener("scroll", handleScroll, { passive: true });
 
+  // Keyboard shortcuts
   document.addEventListener("keydown", event => {
     if (event.key === "Escape") {
-      closeModal();
+      closePreview();
       closeMobileMenu();
     }
 
-    // Basic focus containment while the preview dialog is open.
-    const modal = $("#previewModal");
+    // "/" focuses search unless typing in an input.
+    const tag = document.activeElement?.tagName;
+    const isTyping = ["INPUT", "TEXTAREA", "SELECT"].includes(tag)
+      || document.activeElement?.isContentEditable;
+
     if (
-      event.key === "Tab" &&
-      modal?.classList.contains("show")
+      event.key === "/" &&
+      !isTyping &&
+      !event.ctrlKey &&
+      !event.metaKey &&
+      !event.altKey
     ) {
-      const focusable = $$(
-        'button:not([disabled]), a[href], input:not([disabled]), select:not([disabled])',
-        modal
-      );
-
-      if (!focusable.length) return;
-
-      const first = focusable[0];
-      const last = focusable[focusable.length - 1];
-
-      if (event.shiftKey && document.activeElement === first) {
-        event.preventDefault();
-        last.focus();
-      } else if (!event.shiftKey && document.activeElement === last) {
-        event.preventDefault();
-        first.focus();
-      }
+      event.preventDefault();
+      elements.searchInput?.focus();
     }
   });
 
-  /* ======================================================
-     9. CONTACT / ORDER ACTION
-     ====================================================== */
-
-  // IMPORTANT:
-  // Set this to your verified official WhatsApp or enquiry URL
-  // before accepting real customer enquiries.
-  // Example format:
-  // const CONTACT_URL = "https://wa.me/923001234567";
-  const CONTACT_URL = "";
-
-  function contactAboutTemplate(templateId = activeTemplateId) {
-    const template = templates.find(item => item.id === Number(templateId));
-
-    if (!template) {
-      showToast("Please select a template first.");
-      return;
-    }
-
-    if (!CONTACT_URL) {
-      const details = [
-        `Template: ${template.title}`,
-        `Category: ${getCategoryLabel(template.category)}`,
-        `Sample price: ${formatPrice(template.price)}`,
-        template.description
-      ].join("\n");
-
-      if (navigator.clipboard?.writeText) {
-        navigator.clipboard.writeText(details)
-          .then(() => showToast(t("copied")))
-          .catch(() => showToast(t("noContact")));
-      } else {
-        showToast(t("noContact"));
-      }
-
-      return;
-    }
-
-    const message = [
-      "Hello WebsitesDeal Pakistan,",
-      `I am interested in: ${template.title}`,
-      `Category: ${getCategoryLabel(template.category)}`,
-      `Listed sample price: ${formatPrice(template.price)}`,
-      "Please confirm the final scope and price."
-    ].join("\n");
-
-    const separator = CONTACT_URL.includes("?") ? "&" : "?";
-    const url = CONTACT_URL + separator + "text=" + encodeURIComponent(message);
-
-    window.open(url, "_blank", "noopener,noreferrer");
-  }
-
-  $("#modalContact")?.addEventListener("click", () => {
-    contactAboutTemplate();
-  });
-
-  /* ======================================================
-     10. DARK / LIGHT THEME
-     ====================================================== */
-
-  function updateThemeButton() {
-    const button = $("#themeBtn");
-    if (!button) return;
-
-    const isLight = body.classList.contains("light-theme");
-
-    button.textContent = isLight ? "☾" : "☀";
-    button.setAttribute(
-      "aria-label",
-      isLight ? t("themeDark") : t("themeLight")
-    );
-    button.setAttribute("aria-pressed", String(isLight));
-    button.title = isLight ? t("themeDark") : t("themeLight");
-  }
-
-  function setTheme(theme) {
-    const isLight = theme === "light";
-
-    body.classList.toggle("light-theme", isLight);
-    body.classList.toggle("dark-theme", !isLight);
-
-    try {
-      localStorage.setItem("wd-theme", isLight ? "light" : "dark");
-    } catch (_) {
-      // The theme still works if browser storage is unavailable.
-    }
-
-    updateThemeButton();
-  }
-
-  let savedTheme = null;
-
-  try {
-    savedTheme = localStorage.getItem("wd-theme");
-  } catch (_) {
-    savedTheme = null;
-  }
-
-  setTheme(savedTheme === "light" ? "light" : "dark");
-
-  $("#themeBtn")?.addEventListener("click", () => {
-    const currentlyLight = body.classList.contains("light-theme");
-    setTheme(currentlyLight ? "dark" : "light");
-  });
-
-  /* ======================================================
-     11. MOBILE NAVIGATION
-     ====================================================== */
-
-  $("#menuBtn")?.addEventListener("click", () => {
-    const nav = $("#navLinks");
-    const button = $("#menuBtn");
-
-    if (!nav || !button) return;
-
-    const isOpen = nav.classList.toggle("open");
-
-    button.setAttribute("aria-expanded", String(isOpen));
-    button.setAttribute(
-      "aria-label",
-      isOpen ? t("menuClose") : t("menuOpen")
-    );
-
-    button.textContent = isOpen ? "✕" : "☰";
-  });
-
-  $$("#navLinks a").forEach(link => {
-    link.addEventListener("click", closeMobileMenu);
-  });
-
-  document.addEventListener("click", event => {
-    const nav = $("#navLinks");
-    const button = $("#menuBtn");
-
-    if (!nav || !button || !nav.classList.contains("open")) return;
-
-    if (!nav.contains(event.target) && !button.contains(event.target)) {
+  // Close mobile navigation when viewport returns to desktop.
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 900) {
       closeMobileMenu();
-      button.textContent = "☰";
     }
   });
+}
 
-  /* ======================================================
-     12. HEADER SCROLL EFFECT
-     ====================================================== */
 
-  const header = $("#siteHeader");
+/* =========================
+   16. LOAD SAVED PREFERENCES
+========================= */
 
-  function updateHeader() {
-    if (!header) return;
-    header.classList.toggle("scrolled", window.scrollY > 12);
+function loadPreferences() {
+  try {
+    const savedLanguage = localStorage.getItem("wd-language");
+    const savedTheme = localStorage.getItem("wd-theme");
+
+    if (savedLanguage && translations[savedLanguage]) {
+      currentLanguage = savedLanguage;
+    }
+
+    if (savedTheme === "dark" || savedTheme === "light") {
+      applyTheme(savedTheme);
+    }
+  } catch (error) {
+    // Default settings are used if storage is unavailable.
+  }
+}
+
+
+/* =========================
+   17. INITIALIZE WEBSITE
+========================= */
+
+function initializeWebsite() {
+  loadPreferences();
+
+  if (elements.currentYear) {
+    elements.currentYear.textContent = String(new Date().getFullYear());
   }
 
-  window.addEventListener("scroll", updateHeader, { passive: true });
-  updateHeader();
-
-  /* ======================================================
-     13. SCROLL REVEAL ANIMATIONS
-     ====================================================== */
-
-  const revealElements = $$(".reveal");
-
-  if ("IntersectionObserver" in window) {
-    const revealObserver = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-          revealObserver.unobserve(entry.target);
-        }
-      });
-    }, {
-      threshold: 0.12,
-      rootMargin: "0px 0px -30px 0px"
-    });
-
-    revealElements.forEach(element => {
-      revealObserver.observe(element);
-    });
-  } else {
-    revealElements.forEach(element => {
-      element.classList.add("is-visible");
-    });
+  if (elements.sortSelect) {
+    sortMode = elements.sortSelect.value || "featured";
   }
 
-  /* ======================================================
-     14. FOOTER YEAR
-     ====================================================== */
-
-  const yearElement = $("#currentYear");
-  if (yearElement) {
-    yearElement.textContent = String(new Date().getFullYear());
+  if (elements.searchInput) {
+    searchQuery = elements.searchInput.value || "";
   }
 
-  /* ======================================================
-     15. INITIALIZE
-     ====================================================== */
-
-  renderFilters();
-  renderTemplates();
-  setLanguage(currentLanguage);
-  updateThemeButton();
-
-  // Make sure the modal begins closed.
-  const modal = $("#previewModal");
-  if (modal) {
-    modal.classList.remove("show");
-    modal.setAttribute("aria-hidden", "true");
-  }
+  bindEvents();
+  applyTranslations();
+  handleScroll();
+  setupRevealAnimations();
 
   console.info("WebsitesDeal Pakistan initialized successfully.");
-});
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initializeWebsite, {
+    once: true
+  });
+} else {
+  initializeWebsite();
+}

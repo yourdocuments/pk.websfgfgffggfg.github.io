@@ -1,12 +1,12 @@
+
 <!DOCTYPE html>
 <html lang="ur" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#101710">
-
+<meta name="description" content="Discover modern website templates for businesses, stores, restaurants, agencies and portfolios.">
 <title>WebsitesDeal — Premium Website Templates</title>
-<meta name="description" content="Discover modern website templates for businesses, online stores, restaurants, agencies and portfolios. Affordable plans in Pakistani Rupees.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,39 +14,16 @@
 
 <style>
 :root{
-  --bg:#101710;
-  --panel:#172219;
-  --panel2:#1d2a20;
-  --text:#f5f8f2;
-  --muted:#aab6a6;
-  --line:#2c3a2d;
-  --accent:#b7ff00;
-  --accent-dark:#263b00;
-  --white:#ffffff;
-  --danger:#ff7777;
-  --radius:18px;
-  --shadow:0 16px 45px #00000022;
+  --bg:#101710;--panel:#172219;--panel2:#1d2a20;
+  --text:#f5f8f2;--muted:#aab6a6;--line:#2c3a2d;
+  --accent:#b7ff00;--danger:#ff7777;
+  --radius:18px;--shadow:0 16px 45px #0003;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:90px}
-body{
-  margin:0;
-  background:var(--bg);
-  color:var(--text);
-  font-family:Inter,Arial,sans-serif;
-  line-height:1.6;
-  transition:background .25s,color .25s;
-}
-body.urdu{
-  font-family:"Noto Nastaliq Urdu",serif;
-  line-height:2;
-}
-body.urdu input,
-body.urdu button,
-body.urdu select,
-body.urdu textarea{
-  font-family:Inter,"Noto Nastaliq Urdu",sans-serif;
-}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,Arial,sans-serif;line-height:1.6;transition:background .25s,color .25s}
+body.urdu{font-family:"Noto Nastaliq Urdu",serif;line-height:2}
+body.urdu input,body.urdu button,body.urdu select{font-family:Inter,"Noto Nastaliq Urdu",sans-serif}
 a{color:inherit;text-decoration:none}
 button,input,select{font:inherit}
 button{cursor:pointer}
@@ -56,1339 +33,702 @@ img{max-width:100%;display:block}
 .accent{color:var(--accent)}
 .hidden{display:none!important}
 
-/* ANNOUNCEMENT */
-.announcement{
-  background:var(--accent);
-  color:#14200b;
-  text-align:center;
-  padding:7px 14px;
-  font-size:12px;
-  font-weight:800;
-}
-.announcement a{text-decoration:underline}
+.announcement{background:var(--accent);color:#14200b;text-align:center;padding:7px 14px;font-size:12px;font-weight:800}
+.announcement a{text-decoration:underline;margin-inline-start:8px}
 
-/* HEADER */
-.header{
-  position:sticky;
-  top:0;
-  z-index:1000;
-  background:color-mix(in srgb,var(--bg) 92%,transparent);
-  backdrop-filter:blur(16px);
-  border-bottom:1px solid var(--line);
-}
-.nav{
-  min-height:76px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:22px;
-}
-.brand{display:flex;align-items:center;gap:11px;min-width:0}
-.brand img{
-  width:48px;height:48px;object-fit:contain;
-  border-radius:12px;background:#fff;
-}
-.brand-name{font-size:20px;font-weight:800;letter-spacing:-.7px}
+.header{position:sticky;top:0;z-index:1000;background:var(--bg);background:color-mix(in srgb,var(--bg) 94%,transparent);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:10px;min-width:0}
+.brand img{width:46px;height:46px;object-fit:contain;border-radius:10px;background:#fff}
+.brand-name{font-size:20px;font-weight:800;letter-spacing:-.7px;white-space:nowrap}
 .brand-name span{color:var(--accent)}
-.nav-links{display:flex;align-items:center;gap:24px}
-.nav-links a{
-  font-size:13px;color:var(--muted);font-weight:600;
-  transition:color .2s;
-}
-.nav-links a:hover{color:var(--accent)}
-.nav-actions{display:flex;align-items:center;gap:9px}
-.icon-btn,.lang-btn,.menu-btn{
-  border:1px solid var(--line);
-  border-radius:10px;
-  background:var(--panel);
-  color:var(--text);
-  padding:9px 12px;
-  font-size:12px;
-}
+.nav-links{display:flex;align-items:center;gap:22px}
+.nav-links a{font-size:12px;color:var(--muted);font-weight:700}
+.nav-links a:hover,.footer-links a:hover{color:var(--accent)}
+.nav-actions{display:flex;align-items:center;gap:8px}
+.icon-btn,.lang-btn,.menu-btn{border:1px solid var(--line);border-radius:10px;background:var(--panel);color:var(--text);padding:9px 12px;font-size:12px}
 .lang-btn{font-weight:800}
-.primary-btn,.secondary-btn{
-  display:inline-flex;
-  justify-content:center;
-  align-items:center;
-  gap:8px;
-  padding:12px 18px;
-  border-radius:11px;
-  border:1px solid transparent;
-  font-size:13px;
-  font-weight:800;
-  transition:transform .2s,opacity .2s;
-}
+.primary-btn,.secondary-btn{display:inline-flex;justify-content:center;align-items:center;gap:8px;padding:12px 18px;border-radius:11px;border:1px solid transparent;font-size:12px;font-weight:800;transition:transform .2s,opacity .2s}
 .primary-btn{background:var(--accent);color:#15200b}
 .secondary-btn{background:var(--panel2);border-color:var(--line);color:var(--text)}
 .primary-btn:hover,.secondary-btn:hover{transform:translateY(-2px)}
 .menu-btn{display:none;font-size:20px}
 
-/* PRAYER / SALAT BAR */
-.prayer-bar{
-  border-bottom:1px solid var(--line);
-  background:var(--panel);
-  padding:8px 0;
-}
-.prayer-inner{
-  display:flex;justify-content:space-between;align-items:center;
-  flex-wrap:wrap;gap:10px;
-}
+.prayer-bar{border-bottom:1px solid var(--line);background:var(--panel);padding:8px 0}
+.prayer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
 .prayer-title{font-size:12px;font-weight:800;color:var(--accent)}
-.prayer-info{font-size:12px;color:var(--muted)}
-.prayer-clock{font-size:12px;font-weight:700}
+.prayer-info,.prayer-clock{font-size:11px;color:var(--muted)}
 
-/* HERO */
-.hero{
-  position:relative;
-  overflow:hidden;
-  padding:90px 0 65px;
-  background:
-    radial-gradient(ellipse at 15% 5%,#b7ff0015,transparent 36%),
-    radial-gradient(ellipse at 90% 65%,#387a3618,transparent 35%),
-    var(--bg);
-}
-.hero-grid{
-  display:grid;
-  grid-template-columns:1.08fr .92fr;
-  align-items:center;
-  gap:55px;
-}
-.eyebrow{
-  display:inline-flex;align-items:center;gap:8px;
-  border:1px solid #50602e;
-  background:#b7ff000b;
-  color:var(--accent);
-  border-radius:30px;
-  padding:7px 13px;
-  font-size:11px;font-weight:800;letter-spacing:1px;
-}
-.hero h1{
-  margin:23px 0 18px;
-  font-size:clamp(38px,5vw,66px);
-  line-height:1.12;
-  letter-spacing:-2.5px;
-  font-weight:800;
-}
+.hero{position:relative;overflow:hidden;padding:85px 0 65px;background:radial-gradient(ellipse at 15% 5%,#b7ff0015,transparent 36%),radial-gradient(ellipse at 90% 65%,#387a3618,transparent 35%),var(--bg)}
+.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;align-items:center;gap:52px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;border:1px solid #50602e;background:#b7ff000b;color:var(--accent);border-radius:30px;padding:7px 13px;font-size:11px;font-weight:800;letter-spacing:.5px}
+.hero h1{margin:22px 0 18px;font-size:clamp(38px,5vw,65px);line-height:1.25;letter-spacing:-2px;font-weight:800}
 .hero h1 span{color:var(--accent)}
-.hero-description{
-  color:var(--muted);font-size:15px;
-  max-width:550px;margin:0 0 28px;
-}
+.hero-description{color:var(--muted);font-size:14px;max-width:550px;margin:0 0 27px}
 .hero-buttons{display:flex;flex-wrap:wrap;gap:12px}
-.hero-trust{
-  display:flex;flex-wrap:wrap;gap:18px;
-  margin-top:27px;color:var(--muted);font-size:11px;
-}
-.hero-trust span::before{content:"✓";color:var(--accent);margin-inline-end:6px}
+.hero-trust{display:flex;flex-wrap:wrap;gap:18px;margin-top:26px;color:var(--muted);font-size:11px}
+.hero-trust span:before{content:"✓";color:var(--accent);margin-inline-end:6px}
 .hero-visual{position:relative;min-width:0}
-.hero-image{
-  width:100%;height:405px;object-fit:cover;
-  border-radius:24px;border:1px solid #ffffff25;
-  box-shadow:0 25px 70px #0007;
-}
-.floating-card{
-  position:absolute;
-  bottom:22px;
-  inset-inline-start:-18px;
-  background:var(--panel);
-  border:1px solid var(--line);
-  border-radius:16px;
-  padding:15px 18px;
-  box-shadow:var(--shadow);
-  max-width:230px;
-}
-.floating-card strong{display:block;font-size:14px}
-.floating-card small{display:block;color:var(--muted);font-size:11px;margin-top:3px}
-.floating-dot{
-  display:inline-block;width:8px;height:8px;border-radius:50%;
-  background:var(--accent);margin-inline-end:6px;
-}
+.hero-image{width:100%;height:400px;object-fit:cover;border-radius:24px;border:1px solid #ffffff25;box-shadow:0 25px 70px #0007}
+.floating-card{position:absolute;bottom:20px;inset-inline-start:-15px;background:var(--panel);border:1px solid var(--line);border-radius:15px;padding:14px 17px;box-shadow:var(--shadow);max-width:240px}
+.floating-card strong{display:block;font-size:12px}
+.floating-card small{display:block;color:var(--muted);font-size:10px;margin-top:3px}
+.floating-dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--accent);margin-inline-end:6px}
 
-/* SEARCH */
-.search-area{padding:0 0 30px;margin-top:-5px;position:relative;z-index:2}
-.search-box{
-  background:var(--panel);
-  border:1px solid var(--line);
-  border-radius:16px;
-  padding:9px;
-  display:flex;align-items:center;gap:10px;
-  box-shadow:var(--shadow);
-}
+.search-area{padding:0 0 28px;margin-top:-4px;position:relative;z-index:2}
+.search-box{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:9px;display:flex;align-items:center;gap:10px;box-shadow:var(--shadow)}
 .search-symbol{font-size:23px;padding:0 12px;color:var(--accent)}
-.search-box input{
-  flex:1;min-width:0;border:0;outline:0;
-  color:var(--text);background:transparent;
-  padding:12px 3px;font-size:14px;
-}
+.search-box input{flex:1;min-width:0;border:0;outline:0;color:var(--text);background:transparent;padding:12px 3px;font-size:13px}
 .search-box input::placeholder{color:var(--muted)}
 .search-box .primary-btn{white-space:nowrap}
 
-/* COMMON SECTIONS */
-.section{padding:65px 0}
-.section-heading{
-  display:flex;align-items:flex-end;justify-content:space-between;
-  gap:20px;margin-bottom:28px;
-}
-.section-kicker{
-  color:var(--accent);font-size:11px;font-weight:800;
-  text-transform:uppercase;letter-spacing:1.5px;
-}
-.section-heading h2{
-  font-size:clamp(25px,3.5vw,36px);
-  margin:8px 0 5px;line-height:1.3;letter-spacing:-1px;
-}
-.section-heading p{margin:0;color:var(--muted);font-size:13px}
+.section{padding:62px 0}
+.section-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:26px}
+.section-kicker{color:var(--accent);font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:1px}
+.section-heading h2{font-size:clamp(25px,3.5vw,35px);margin:8px 0 5px;line-height:1.45;letter-spacing:-.7px}
+.section-heading p{margin:0;color:var(--muted);font-size:12px}
 .text-link{color:var(--accent);font-size:12px;font-weight:800;white-space:nowrap}
 
-/* CATEGORIES */
-.category-grid{
-  display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:13px;
-}
-.category-card{
-  padding:20px 12px;
-  background:var(--panel);
-  border:1px solid var(--line);
-  border-radius:15px;
-  text-align:center;
-  transition:transform .2s,border-color .2s,background .2s;
-  color:var(--text);
-}
-.category-card:hover,.category-card.active{
-  transform:translateY(-3px);
-  border-color:var(--accent);
-  background:var(--panel2);
-}
-.category-icon{
-  display:flex;align-items:center;justify-content:center;
-  width:46px;height:46px;border-radius:13px;
-  margin:0 auto 10px;background:#b7ff0013;
-  color:var(--accent);font-size:22px;
-}
+.category-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:13px}
+.category-card{padding:19px 10px;background:var(--panel);border:1px solid var(--line);border-radius:15px;text-align:center;transition:.2s;color:var(--text)}
+.category-card:hover,.category-card.active{transform:translateY(-3px);border-color:var(--accent);background:var(--panel2)}
+.category-icon{display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:13px;margin:0 auto 10px;background:#b7ff0013;color:var(--accent);font-size:21px}
 .category-card strong{display:block;font-size:12px}
 .category-card small{display:block;color:var(--muted);font-size:10px;margin-top:3px}
 
-/* TEMPLATE FILTERS */
 .template-section{background:var(--panel);border-block:1px solid var(--line)}
-.filters{
-  display:flex;flex-wrap:wrap;align-items:center;gap:9px;
-  margin-bottom:23px;
-}
-.filter-btn{
-  background:var(--bg);color:var(--muted);
-  border:1px solid var(--line);border-radius:30px;
-  padding:8px 15px;font-size:12px;font-weight:700;
-}
-.filter-btn.active,.filter-btn:hover{
-  background:var(--accent);color:#14200b;border-color:var(--accent);
-}
-.sort-select{
-  margin-inline-start:auto;background:var(--bg);color:var(--text);
-  border:1px solid var(--line);border-radius:10px;
-  padding:9px 12px;font-size:12px;max-width:100%;
-}
-.template-grid{
-  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;
-}
-.template-card{
-  overflow:hidden;background:var(--bg);
-  border:1px solid var(--line);border-radius:17px;
-  transition:transform .25s,border-color .25s;
-}
-.template-card:hover{transform:translateY(-5px);border-color:#79943d}
+.filters{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:22px}
+.filter-btn{background:var(--bg);color:var(--muted);border:1px solid var(--line);border-radius:30px;padding:8px 14px;font-size:11px;font-weight:700}
+.filter-btn.active,.filter-btn:hover{background:var(--accent);color:#14200b;border-color:var(--accent)}
+.sort-select{margin-inline-start:auto;background:var(--bg);color:var(--text);border:1px solid var(--line);border-radius:10px;padding:9px 12px;font-size:11px;max-width:100%}
+.template-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:21px}
+.template-card{overflow:hidden;background:var(--bg);border:1px solid var(--line);border-radius:17px;transition:transform .25s,border-color .25s}
+.template-card:hover{transform:translateY(-4px);border-color:#79943d}
 .template-image-wrap{position:relative;overflow:hidden;background:var(--panel2)}
-.template-image{width:100%;height:215px;object-fit:cover;transition:transform .45s}
+.template-image{width:100%;height:210px;object-fit:cover;transition:transform .45s}
 .template-card:hover .template-image{transform:scale(1.04)}
-.template-badge{
-  position:absolute;top:12px;inset-inline-start:12px;
-  padding:5px 9px;border-radius:7px;
-  background:var(--accent);color:#15200b;font-size:10px;font-weight:800;
-}
-.template-body{padding:18px}
+.template-badge{position:absolute;top:12px;inset-inline-start:12px;padding:5px 9px;border-radius:7px;background:var(--accent);color:#15200b;font-size:10px;font-weight:800}
+.favorite-btn{position:absolute;top:10px;inset-inline-end:10px;width:36px;height:36px;border:1px solid #ffffff40;border-radius:10px;background:#101710dc;color:white;font-size:18px}
+.favorite-btn.active{color:#ff7272}
+.template-body{padding:17px}
 .template-top{display:flex;justify-content:space-between;align-items:center;gap:10px}
-.template-top h3{font-size:17px;margin:0;line-height:1.4}
+.template-top h3{font-size:16px;margin:0;line-height:1.5;overflow-wrap:anywhere}
 .template-category{font-size:10px;color:var(--accent);font-weight:800}
-.template-description{font-size:12px;color:var(--muted);min-height:39px;margin:10px 0 14px}
-.template-meta{
-  display:flex;justify-content:space-between;align-items:center;
-  gap:10px;border-top:1px solid var(--line);padding-top:14px;
-}
-.template-price{font-size:16px;font-weight:800}
-.template-price small{font-size:10px;color:var(--muted);font-weight:500}
-.template-actions{display:flex;gap:7px}
-.small-btn{
-  border:1px solid var(--line);background:var(--panel);
-  color:var(--text);padding:9px 11px;border-radius:9px;
-  font-size:11px;font-weight:800;
-}
+.template-description{font-size:11px;color:var(--muted);min-height:38px;margin:10px 0 14px}
+.template-meta{display:flex;justify-content:space-between;align-items:center;gap:10px;border-top:1px solid var(--line);padding-top:13px}
+.template-price{font-size:14px;font-weight:800;white-space:nowrap}
+.template-price small{font-size:9px;color:var(--muted);font-weight:500}
+.template-actions{display:flex;gap:6px}
+.small-btn{border:1px solid var(--line);background:var(--panel);color:var(--text);padding:8px 10px;border-radius:9px;font-size:10px;font-weight:800}
 .small-btn.demo{background:var(--accent);color:#15200b;border-color:var(--accent)}
-.empty-state{
-  grid-column:1/-1;text-align:center;padding:45px 20px;
-  border:1px dashed var(--line);border-radius:15px;color:var(--muted);
-}
+.empty-state{grid-column:1/-1;text-align:center;padding:40px 20px;border:1px dashed var(--line);border-radius:15px;color:var(--muted)}
+.catalogue-note{font-size:10px;color:var(--muted);margin:18px 0 0}
 
-/* VALUE PROPOSITION */
-.value-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.value-card{
-  padding:25px;background:var(--panel);
-  border:1px solid var(--line);border-radius:16px;
-}
-.value-icon{
-  width:45px;height:45px;border-radius:12px;
-  display:grid;place-items:center;
-  color:var(--accent);background:#b7ff0014;font-size:21px;
-}
-.value-card h3{font-size:16px;margin:17px 0 8px}
-.value-card p{font-size:12px;color:var(--muted);margin:0}
+.value-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.value-card{padding:24px;background:var(--panel);border:1px solid var(--line);border-radius:16px}
+.value-icon{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;color:var(--accent);background:#b7ff0014;font-size:21px}
+.value-card h3{font-size:15px;margin:16px 0 8px}
+.value-card p{font-size:11px;color:var(--muted);margin:0}
 
-/* PRICING */
 .pricing-section{background:var(--panel);border-block:1px solid var(--line)}
-.pricing-grid{
-  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:20px;align-items:stretch;
-}
-.pricing-card{
-  position:relative;display:flex;flex-direction:column;
-  padding:27px 24px;background:var(--bg);
-  border:1px solid var(--line);border-radius:18px;
-}
-.pricing-card.featured{
-  border:2px solid var(--accent);
-  box-shadow:0 15px 45px #b7ff0010;
-}
-.popular-badge{
-  position:absolute;top:14px;inset-inline-end:14px;
-  background:var(--accent);color:#15200b;
-  border-radius:20px;padding:5px 9px;font-size:10px;font-weight:800;
-}
-.pricing-card h3{font-size:21px;margin:0 0 5px}
-.plan-description{color:var(--muted);font-size:12px;min-height:42px}
-.plan-price{font-size:39px;font-weight:800;letter-spacing:-1.5px;margin:17px 0 4px}
-.plan-price .currency{font-size:20px;vertical-align:top;letter-spacing:0}
-.plan-period{font-size:11px;color:var(--muted)}
-.pricing-card ul{list-style:none;padding:0;margin:20px 0 25px;flex:1}
-.pricing-card li{padding:9px 0;border-bottom:1px solid var(--line);font-size:12px}
-.pricing-card li::before{content:"✓";color:var(--accent);font-weight:800;margin-inline-end:9px}
-.plan-button{
-  display:block;text-align:center;padding:12px;
-  border-radius:10px;background:var(--panel2);
-  border:1px solid var(--line);font-size:12px;font-weight:800;
-}
+.pricing-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;align-items:stretch}
+.pricing-card{position:relative;display:flex;flex-direction:column;padding:26px 23px;background:var(--bg);border:1px solid var(--line);border-radius:18px}
+.pricing-card.featured{border:2px solid var(--accent);box-shadow:0 15px 45px #b7ff0010}
+.popular-badge{position:absolute;top:14px;inset-inline-end:14px;background:var(--accent);color:#15200b;border-radius:20px;padding:5px 9px;font-size:9px;font-weight:800}
+.pricing-card h3{font-size:20px;margin:0 0 5px}
+.plan-description{color:var(--muted);font-size:11px;min-height:42px}
+.plan-price{font-size:36px;font-weight:800;letter-spacing:-1px;margin:16px 0 4px}
+.plan-price .currency{font-size:17px;vertical-align:top;letter-spacing:0}
+.plan-period{font-size:10px;color:var(--muted)}
+.pricing-card ul{list-style:none;padding:0;margin:18px 0 24px;flex:1}
+.pricing-card li{padding:8px 0;border-bottom:1px solid var(--line);font-size:11px}
+.pricing-card li:before{content:"✓";color:var(--accent);font-weight:800;margin-inline-end:9px}
+.plan-button{display:block;text-align:center;padding:12px;border-radius:10px;background:var(--panel2);border:1px solid var(--line);font-size:11px;font-weight:800}
 .featured .plan-button{background:var(--accent);color:#15200b;border-color:var(--accent)}
-.pricing-note{text-align:center;color:var(--muted);font-size:11px;margin-top:22px}
+.pricing-note{text-align:center;color:var(--muted);font-size:10px;margin-top:20px}
 
-/* CTA */
-.cta-box{
-  padding:44px 30px;border-radius:22px;
-  border:1px solid #50602e;
-  background:radial-gradient(ellipse at top right,#b7ff0019,transparent 55%),var(--panel);
-  text-align:center;
-}
-.cta-box h2{font-size:clamp(26px,4vw,39px);margin:0 0 10px}
-.cta-box p{color:var(--muted);font-size:13px;margin:0 auto 24px;max-width:600px}
+.cta-box{padding:42px 28px;border-radius:22px;border:1px solid #50602e;background:radial-gradient(ellipse at top right,#b7ff0019,transparent 55%),var(--panel);text-align:center}
+.cta-box h2{font-size:clamp(25px,4vw,38px);margin:0 0 10px}
+.cta-box p{color:var(--muted);font-size:12px;margin:0 auto 22px;max-width:600px}
 .cta-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:12px}
 
-/* FOOTER */
-.footer{padding:48px 0 20px;border-top:1px solid var(--line)}
-.footer-grid{
-  display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;
-  gap:30px;padding-bottom:35px;
-}
-.footer-about p{color:var(--muted);font-size:12px;max-width:300px}
-.footer h4{font-size:13px;margin:0 0 14px}
-.footer-links{display:flex;flex-direction:column;gap:10px}
-.footer-links a{font-size:12px;color:var(--muted)}
-.footer-links a:hover{color:var(--accent)}
-.footer-bottom{
-  display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
-  border-top:1px solid var(--line);padding-top:17px;
-  color:var(--muted);font-size:11px;
-}
+.footer{padding:45px 0 20px;border-top:1px solid var(--line)}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:28px;padding-bottom:32px}
+.footer-about p{color:var(--muted);font-size:11px;max-width:300px}
+.footer h4{font-size:12px;margin:0 0 13px}
+.footer-links{display:flex;flex-direction:column;gap:9px}
+.footer-links a{font-size:11px;color:var(--muted)}
+.footer-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;border-top:1px solid var(--line);padding-top:16px;color:var(--muted);font-size:10px}
 
-/* MODAL DEMO */
-.modal{
-  position:fixed;inset:0;z-index:2000;
-  background:#000b;display:none;align-items:center;justify-content:center;
-  padding:18px;
-}
+.modal{position:fixed;inset:0;z-index:2000;background:#000b;display:none;align-items:center;justify-content:center;padding:18px}
 .modal.open{display:flex}
-.modal-panel{
-  width:min(900px,100%);max-height:90vh;overflow:auto;
-  background:var(--bg);border:1px solid var(--line);
-  border-radius:18px;box-shadow:0 30px 100px #0009;
-}
-.modal-header{
-  display:flex;justify-content:space-between;align-items:center;gap:15px;
-  padding:15px 20px;border-bottom:1px solid var(--line);
-}
-.modal-header h3{font-size:15px;margin:0}
-.modal-close{
-  border:1px solid var(--line);background:var(--panel);
-  color:var(--text);border-radius:9px;padding:7px 12px;
-}
+.modal-panel{width:min(900px,100%);max-height:90vh;overflow:auto;background:var(--bg);border:1px solid var(--line);border-radius:18px;box-shadow:0 30px 100px #0009}
+.modal-header{display:flex;justify-content:space-between;align-items:center;gap:15px;padding:14px 18px;border-bottom:1px solid var(--line)}
+.modal-header h3{font-size:14px;margin:0}
+.modal-close{border:1px solid var(--line);background:var(--panel);color:var(--text);border-radius:9px;padding:7px 11px}
 .demo-frame{width:100%;height:70vh;border:0;background:#fff}
-.toast{
-  position:fixed;bottom:22px;left:50%;transform:translateX(-50%);
-  z-index:3000;background:var(--accent);color:#15200b;
-  padding:12px 18px;border-radius:10px;font-size:12px;font-weight:800;
-  box-shadow:var(--shadow);display:none;max-width:90%;text-align:center;
-}
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);z-index:3000;background:var(--accent);color:#15200b;padding:11px 17px;border-radius:10px;font-size:11px;font-weight:800;box-shadow:var(--shadow);display:none;max-width:90%;text-align:center}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 
-/* LIGHT MODE */
-body.light{
-  --bg:#f4f7f1;
-  --panel:#ffffff;
-  --panel2:#eaf0e4;
-  --text:#17251b;
-  --muted:#657164;
-  --line:#dce5d7;
-  --accent:#8dcc00;
-  --accent-dark:#eaf7d4;
-  --shadow:0 16px 45px #16251b12;
-}
-body.light .hero{
-  background:radial-gradient(ellipse at 15% 5%,#8dcc001c,transparent 36%),var(--bg);
-}
+body.light{--bg:#f4f7f1;--panel:#fff;--panel2:#eaf0e4;--text:#17251b;--muted:#657164;--line:#dce5d7;--accent:#8dcc00;--shadow:0 16px 45px #16251b12}
+body.light .hero{background:radial-gradient(ellipse at 15% 5%,#8dcc001c,transparent 36%),var(--bg)}
 body.light .announcement{background:#a8e600}
-body.light .hero-image{border-color:var(--line)}
-body.light .search-box{background:#fff}
-body.light .template-card{background:var(--panel)}
-body.light .pricing-card{background:var(--panel)}
-body.light .cta-box{background:var(--panel)}
-body.light .floating-card{background:#fff}
-body.light .wd-placeholder{background:#eaf0e4}
+body.light .template-card,body.light .pricing-card,body.light .cta-box,body.light .floating-card{background:var(--panel)}
+body.light .favorite-btn{background:#17251bdc}
 
-/* RESPONSIVE */
 @media(max-width:950px){
-  .nav-links{gap:14px}
-  .nav-links a{font-size:12px}
-  .hero-grid{gap:30px}
-  .hero-image{height:350px}
-  .category-grid{grid-template-columns:repeat(3,1fr)}
-  .template-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .footer-grid{grid-template-columns:repeat(2,1fr)}
+ .nav-links{gap:12px}.nav-links a{font-size:11px}
+ .hero-grid{gap:28px}.hero-image{height:350px}
+ .category-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .template-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .footer-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 @media(max-width:720px){
-  .container{width:min(100% - 28px,560px)}
-  .nav{min-height:66px;gap:10px}
-  .brand img{width:40px;height:40px}
-  .brand-name{font-size:17px}
-  .nav-links{
-    display:none;position:absolute;top:calc(100% + 1px);
-    inset-inline:0;background:var(--bg);border-bottom:1px solid var(--line);
-    padding:18px;flex-direction:column;align-items:stretch;gap:0;
-  }
-  .nav-links.open{display:flex}
-  .nav-links a{padding:12px 5px;border-bottom:1px solid var(--line)}
-  .nav-actions{gap:6px}
-  .nav-actions .secondary-btn{display:none}
-  .icon-btn,.lang-btn,.menu-btn{padding:8px 10px}
-  .menu-btn{display:block}
-  .hero{padding:55px 0 45px}
-  .hero-grid{grid-template-columns:1fr;gap:32px}
-  .hero h1{font-size:clamp(37px,10vw,55px);letter-spacing:-1.5px}
-  .hero-description{font-size:14px}
-  .hero-image{height:290px}
-  .floating-card{inset-inline-start:8px;bottom:12px}
-  .search-box{flex-wrap:wrap;gap:6px}
-  .search-symbol{padding:0 8px}
-  .search-box input{min-height:42px}
-  .search-box .primary-btn{width:100%}
-  .section{padding:48px 0}
-  .section-heading{align-items:flex-start}
-  .section-heading h2{font-size:27px}
-  .category-grid{gap:9px}
-  .category-card{padding:15px 6px}
-  .category-icon{width:40px;height:40px}
-  .template-grid{grid-template-columns:1fr;gap:17px}
-  .template-image{height:230px}
-  .value-grid,.pricing-grid{grid-template-columns:1fr}
-  .pricing-card{padding:25px 22px}
-  .plan-description{min-height:0}
-  .footer-grid{grid-template-columns:1fr 1fr;gap:25px 18px}
-  .cta-box{padding:35px 18px}
+ .container{width:min(calc(100% - 28px),560px)}
+ .nav{min-height:66px;gap:9px}.brand img{width:39px;height:39px}.brand-name{font-size:16px}
+ .nav-links{display:none;position:absolute;top:calc(100% + 1px);inset-inline:0;background:var(--bg);border-bottom:1px solid var(--line);padding:15px;flex-direction:column;align-items:stretch;gap:0}
+ .nav-links.open{display:flex}.nav-links a{padding:11px 5px;border-bottom:1px solid var(--line)}
+ .nav-actions{gap:5px}.nav-actions .secondary-btn{display:none}
+ .icon-btn,.lang-btn,.menu-btn{padding:8px 9px}.menu-btn{display:block}
+ .hero{padding:48px 0 42px}.hero-grid{grid-template-columns:1fr;gap:28px}
+ .hero h1{font-size:clamp(36px,9vw,52px);letter-spacing:-1px}
+ .hero-description{font-size:13px}.hero-image{height:270px}
+ .floating-card{inset-inline-start:8px;bottom:10px}
+ .search-box{flex-wrap:wrap;gap:5px}.search-symbol{padding:0 8px}.search-box input{min-height:40px}
+ .search-box .primary-btn{width:100%}
+ .section{padding:45px 0}.section-heading{align-items:flex-start}
+ .section-heading h2{font-size:26px}.category-grid{gap:8px}
+ .category-card{padding:14px 5px}.category-icon{width:39px;height:39px}
+ .template-grid,.value-grid,.pricing-grid{grid-template-columns:1fr;gap:16px}
+ .template-image{height:225px}.pricing-card{padding:24px 20px}
+ .plan-description{min-height:0}.footer-grid{gap:24px 16px}
+ .cta-box{padding:32px 17px}
 }
 @media(max-width:390px){
-  .brand-name{font-size:15px}
-  .icon-btn{display:none}
-  .category-grid{grid-template-columns:repeat(2,1fr)}
-  .template-meta{align-items:flex-start;flex-direction:column}
-  .template-actions{width:100%}
-  .template-actions button{flex:1}
-  .footer-grid{grid-template-columns:1fr}
+ .brand-name{font-size:14px}.icon-btn{display:none}
+ .category-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .template-meta{align-items:flex-start;flex-direction:column}
+ .template-actions{width:100%}.template-actions button{flex:1}
+ .footer-grid{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){
+ *,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}
 }
 </style>
 </head>
 
 <body class="urdu">
-
 <div class="announcement">
   <span data-en="Build your online presence with WebsitesDeal." data-ur="ویب سائٹس ڈیل کے ساتھ اپنی آن لائن پہچان بنائیں۔">ویب سائٹس ڈیل کے ساتھ اپنی آن لائن پہچان بنائیں۔</span>
   <a href="#pricing" data-en="Explore Plans →" data-ur="پلانز دیکھیں ←">پلانز دیکھیں ←</a>
 </div>
 
 <header class="header">
-  <div class="container nav">
-    <a href="#home" class="brand" aria-label="WebsitesDeal Home">
-      <img src="https://raw.githubusercontent.com/yourdocuments/assets/main/wd1.jpg"
-           alt="WebsitesDeal Logo"
-           onerror="this.style.display='none'">
-      <span class="brand-name">Websites<span>Deal</span></span>
-    </a>
-
-    <nav class="nav-links" id="navLinks">
-      <a href="#home" data-en="Home" data-ur="ہوم">ہوم</a>
-      <a href="#categories" data-en="Categories" data-ur="کیٹیگریز">کیٹیگریز</a>
-      <a href="#templates" data-en="Templates" data-ur="ٹیمپلیٹس">ٹیمپلیٹس</a>
-      <a href="#pricing" data-en="Pricing" data-ur="قیمتیں">قیمتیں</a>
-      <a href="#about" data-en="About Us" data-ur="ہمارے بارے میں">ہمارے بارے میں</a>
-    </nav>
-
-    <div class="nav-actions">
-      <button class="lang-btn" id="languageToggle" type="button">EN</button>
-      <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle theme">☼</button>
-      <a class="secondary-btn" href="https://support.websitesdeal.com"
-         data-en="Support" data-ur="مدد">مدد</a>
-      <button class="menu-btn" id="menuToggle" type="button" aria-label="Open navigation">☰</button>
-    </div>
+ <div class="container nav">
+  <a href="#home" class="brand" aria-label="WebsitesDeal Home">
+   <img src="https://raw.githubusercontent.com/yourdocuments/assets/main/wd1.jpg" alt="WebsitesDeal Logo" onerror="this.hidden=true">
+   <span class="brand-name">Websites<span>Deal</span></span>
+  </a>
+  <nav class="nav-links" id="navLinks">
+   <a href="#home" data-en="Home" data-ur="ہوم">ہوم</a>
+   <a href="#categories" data-en="Categories" data-ur="کیٹیگریز">کیٹیگریز</a>
+   <a href="#templates" data-en="Templates" data-ur="ٹیمپلیٹس">ٹیمپلیٹس</a>
+   <a href="#pricing" data-en="Pricing" data-ur="قیمتیں">قیمتیں</a>
+   <a href="#about" data-en="About Us" data-ur="ہمارے بارے میں">ہمارے بارے میں</a>
+  </nav>
+  <div class="nav-actions">
+   <button class="lang-btn" id="languageToggle" type="button">EN</button>
+   <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle theme">☼</button>
+   <a class="secondary-btn" href="https://support.websitesdeal.com" data-en="Support" data-ur="مدد">مدد</a>
+   <button class="menu-btn" id="menuToggle" type="button" aria-label="Open navigation" aria-expanded="false">☰</button>
   </div>
+ </div>
 </header>
 
-<!-- Prayer time and local clock information -->
 <div class="prayer-bar">
-  <div class="container prayer-inner">
-    <div>
-      <span class="prayer-title" data-en="☾ PRAYER TIME" data-ur="☾ نماز کے اوقات">☾ نماز کے اوقات</span>
-      <span class="prayer-info" id="prayerInfo"
-        data-en="Loading local prayer times..."
-        data-ur="نماز کے اوقات لوڈ ہو رہے ہیں...">نماز کے اوقات لوڈ ہو رہے ہیں...</span>
-    </div>
-    <div class="prayer-clock" id="pakistanClock">Pakistan time: --:--</div>
+ <div class="container prayer-inner">
+  <div>
+   <span class="prayer-title" data-en="☾ PRAYER TIMES" data-ur="☾ نماز کے اوقات">☾ نماز کے اوقات</span>
+   <span class="prayer-info" id="prayerInfo" data-en="Loading Karachi prayer times..." data-ur="کراچی کے نماز کے اوقات لوڈ ہو رہے ہیں...">کراچی کے نماز کے اوقات لوڈ ہو رہے ہیں...</span>
   </div>
+  <div class="prayer-clock" id="pakistanClock">Pakistan time: --:--</div>
+ </div>
 </div>
 
 <main>
-  <!-- HERO -->
-  <section class="hero" id="home">
-    <div class="container hero-grid">
-      <div>
-        <span class="eyebrow"
-          data-en="✦ YOUR DIGITAL BUSINESS STARTS HERE"
-          data-ur="✦ آپ کے ڈیجیٹل کاروبار کی شروعات">✦ آپ کے ڈیجیٹل کاروبار کی شروعات</span>
+<section class="hero" id="home">
+ <div class="container hero-grid">
+  <div>
+   <span class="eyebrow" data-en="✦ YOUR DIGITAL BUSINESS STARTS HERE" data-ur="✦ آپ کے ڈیجیٹل کاروبار کی شروعات">✦ آپ کے ڈیجیٹل کاروبار کی شروعات</span>
+   <h1 data-en="Find Your Perfect Website Template" data-ur="اپنی پسند کا بہترین ویب سائٹ ٹیمپلیٹ تلاش کریں">اپنی پسند کا بہترین <span>ویب سائٹ ٹیمپلیٹ</span> تلاش کریں</h1>
+   <p class="hero-description" data-en="Discover modern website designs for businesses, online stores, restaurants, agencies and portfolios. Find the right starting point for your next project." data-ur="کاروبار، آن لائن اسٹور، ریسٹورنٹ، ایجنسی اور پورٹ فولیو کے لیے جدید ویب سائٹ ڈیزائن دریافت کریں۔ اپنے اگلے پروجیکٹ کے لیے بہترین انتخاب کریں۔">کاروبار، آن لائن اسٹور، ریسٹورنٹ، ایجنسی اور پورٹ فولیو کے لیے جدید ویب سائٹ ڈیزائن دریافت کریں۔ اپنے اگلے پروجیکٹ کے لیے بہترین انتخاب کریں۔</p>
+   <div class="hero-buttons">
+    <a href="#templates" class="primary-btn" data-en="Explore Templates →" data-ur="ٹیمپلیٹس دیکھیں ←">ٹیمپلیٹس دیکھیں ←</a>
+    <a href="#pricing" class="secondary-btn" data-en="View Subscription Plans" data-ur="سبسکرپشن پلانز دیکھیں">سبسکرپشن پلانز دیکھیں</a>
+   </div>
+   <div class="hero-trust">
+    <span data-en="Modern Designs" data-ur="جدید ڈیزائن">جدید ڈیزائن</span>
+    <span data-en="Responsive Layouts" data-ur="موبائل فرینڈلی">موبائل فرینڈلی</span>
+    <span data-en="Prices in PKR" data-ur="پاکستانی روپے میں قیمتیں">پاکستانی روپے میں قیمتیں</span>
+   </div>
+  </div>
+  <div class="hero-visual">
+   <img class="hero-image" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=85" alt="Modern website analytics and business workspace" fetchpriority="high">
+   <div class="floating-card">
+    <strong><span class="floating-dot"></span><span data-en="Your next website starts here" data-ur="آپ کی نئی ویب سائٹ یہاں سے شروع ہوتی ہے">آپ کی نئی ویب سائٹ یہاں سے شروع ہوتی ہے</span></strong>
+    <small data-en="Explore designs for your goals" data-ur="اپنے مقصد کے لیے ڈیزائن منتخب کریں">اپنے مقصد کے لیے ڈیزائن منتخب کریں</small>
+   </div>
+  </div>
+ </div>
+</section>
 
-        <h1 data-en="Find Your Perfect Website Template"
-            data-ur="اپنی پسند کا بہترین ویب سائٹ ٹیمپلیٹ تلاش کریں">
-          اپنی پسند کا بہترین <span>ویب سائٹ ٹیمپلیٹ</span> تلاش کریں
-        </h1>
+<section class="search-area">
+ <div class="container">
+  <form class="search-box" id="searchForm">
+   <span class="search-symbol" aria-hidden="true">⌕</span>
+   <input id="searchInput" type="search" placeholder="کاروبار، ریسٹورنٹ، پورٹ فولیو تلاش کریں..." data-en-placeholder="Search business, restaurant, portfolio..." data-ur-placeholder="کاروبار، ریسٹورنٹ، پورٹ فولیو تلاش کریں..." aria-label="Search website templates">
+   <button class="primary-btn" type="submit" data-en="Search Templates" data-ur="تلاش کریں">تلاش کریں</button>
+  </form>
+ </div>
+</section>
 
-        <p class="hero-description"
-          data-en="Discover modern website designs for businesses, online stores, restaurants, agencies and portfolios. Find the right starting point for your next project."
-          data-ur="کاروبار، آن لائن اسٹور، ریسٹورنٹ، ایجنسی اور پورٹ فولیو کے لیے جدید ویب سائٹ ڈیزائن دریافت کریں۔ اپنے اگلے پروجیکٹ کے لیے بہترین انتخاب کریں۔">
-          کاروبار، آن لائن اسٹور، ریسٹورنٹ، ایجنسی اور پورٹ فولیو کے لیے جدید ویب سائٹ ڈیزائن دریافت کریں۔ اپنے اگلے پروجیکٹ کے لیے بہترین انتخاب کریں۔
-        </p>
+<section class="section" id="categories">
+ <div class="container">
+  <div class="section-heading">
+   <div>
+    <div class="section-kicker" data-en="Browse by Category" data-ur="کیٹیگری کے مطابق دیکھیں">کیٹیگری کے مطابق دیکھیں</div>
+    <h2 data-en="Find a Design for Every Idea" data-ur="ہر آئیڈیا کے لیے ایک ڈیزائن">ہر آئیڈیا کے لیے ایک ڈیزائن</h2>
+    <p data-en="Explore designs made for different types of websites." data-ur="مختلف ویب سائٹس کے لیے بنائے گئے ڈیزائن دیکھیں۔">مختلف ویب سائٹس کے لیے بنائے گئے ڈیزائن دیکھیں۔</p>
+   </div>
+   <a href="#templates" class="text-link" data-en="View all →" data-ur="سب دیکھیں ←">سب دیکھیں ←</a>
+  </div>
+  <div class="category-grid" id="categoryGrid">
+   <button class="category-card" data-category="Business" type="button"><span class="category-icon">▦</span><strong data-en="Business" data-ur="کاروبار">کاروبار</strong><small data-en="Company sites" data-ur="کمپنی ویب سائٹس">کمپنی ویب سائٹس</small></button>
+   <button class="category-card" data-category="E-commerce" type="button"><span class="category-icon">🛍</span><strong data-en="E-commerce" data-ur="آن لائن اسٹور">آن لائن اسٹور</strong><small data-en="Online shopping" data-ur="آن لائن خریداری">آن لائن خریداری</small></button>
+   <button class="category-card" data-category="Restaurant" type="button"><span class="category-icon">♨</span><strong data-en="Restaurant" data-ur="ریسٹورنٹ">ریسٹورنٹ</strong><small data-en="Food & dining" data-ur="کھانے پینے کے لیے">کھانے پینے کے لیے</small></button>
+   <button class="category-card" data-category="Agency" type="button"><span class="category-icon">✳</span><strong data-en="Agency" data-ur="ایجنسی">ایجنسی</strong><small data-en="Creative services" data-ur="تخلیقی خدمات">تخلیقی خدمات</small></button>
+   <button class="category-card" data-category="Portfolio" type="button"><span class="category-icon">▣</span><strong data-en="Portfolio" data-ur="پورٹ فولیو">پورٹ فولیو</strong><small data-en="Show your work" data-ur="اپنا کام دکھائیں">اپنا کام دکھائیں</small></button>
+   <button class="category-card" data-category="Real Estate" type="button"><span class="category-icon">⌂</span><strong data-en="Real Estate" data-ur="رئیل اسٹیٹ">رئیل اسٹیٹ</strong><small data-en="Property listings" data-ur="پراپرٹی لسٹنگ">پراپرٹی لسٹنگ</small></button>
+  </div>
+ </div>
+</section>
 
-        <div class="hero-buttons">
-          <a href="#templates" class="primary-btn"
-            data-en="Explore Templates →" data-ur="ٹیمپلیٹس دیکھیں ←">ٹیمپلیٹس دیکھیں ←</a>
-          <a href="#pricing" class="secondary-btn"
-            data-en="View Subscription Plans" data-ur="سبسکرپشن پلانز دیکھیں">سبسکرپشن پلانز دیکھیں</a>
-        </div>
+<section class="section template-section" id="templates">
+ <div class="container">
+  <div class="section-heading">
+   <div>
+    <div class="section-kicker" data-en="Website Collection" data-ur="ویب سائٹ کلیکشن">ویب سائٹ کلیکشن</div>
+    <h2 data-en="Explore Website Templates" data-ur="ویب سائٹ ٹیمپلیٹس دیکھیں">ویب سائٹ ٹیمپلیٹس دیکھیں</h2>
+    <p data-en="Browse sample designs or preview available published websites." data-ur="نمونہ ڈیزائن دیکھیں یا دستیاب شائع شدہ ویب سائٹس کا پری ویو کھولیں۔">نمونہ ڈیزائن دیکھیں یا دستیاب شائع شدہ ویب سائٹس کا پری ویو کھولیں۔</p>
+   </div>
+  </div>
+  <div class="filters" id="filterBar">
+   <button class="filter-btn active" data-filter="All" type="button" data-en="All Templates" data-ur="تمام ٹیمپلیٹس">تمام ٹیمپلیٹس</button>
+   <button class="filter-btn" data-filter="Favorites" type="button" data-en="♥ Favorites" data-ur="♥ پسندیدہ">♥ پسندیدہ</button>
+   <button class="filter-btn" data-filter="Business" type="button" data-en="Business" data-ur="کاروبار">کاروبار</button>
+   <button class="filter-btn" data-filter="E-commerce" type="button" data-en="E-commerce" data-ur="آن لائن اسٹور">آن لائن اسٹور</button>
+   <button class="filter-btn" data-filter="Restaurant" type="button" data-en="Restaurant" data-ur="ریسٹورنٹ">ریسٹورنٹ</button>
+   <button class="filter-btn" data-filter="Agency" type="button" data-en="Agency" data-ur="ایجنسی">ایجنسی</button>
+   <button class="filter-btn" data-filter="Portfolio" type="button" data-en="Portfolio" data-ur="پورٹ فولیو">پورٹ فولیو</button>
+   <button class="filter-btn" data-filter="Real Estate" type="button" data-en="Real Estate" data-ur="رئیل اسٹیٹ">رئیل اسٹیٹ</button>
+   <select class="sort-select" id="sortSelect" aria-label="Sort templates">
+    <option value="default" data-en="Sort: Featured" data-ur="ترتیب: نمایاں">ترتیب: نمایاں</option>
+    <option value="price-low" data-en="Price: Low to High" data-ur="قیمت: کم سے زیادہ">قیمت: کم سے زیادہ</option>
+    <option value="price-high" data-en="Price: High to Low" data-ur="قیمت: زیادہ سے کم">قیمت: زیادہ سے کم</option>
+    <option value="name" data-en="Name: A to Z" data-ur="نام کے مطابق">نام کے مطابق</option>
+   </select>
+  </div>
+  <div class="template-grid" id="templateGrid" aria-live="polite"></div>
+  <p class="catalogue-note" data-en="Sample catalogue items are illustrative. A live demo opens only when a valid demo URL is configured." data-ur="نمونہ کیٹلاگ آئٹمز صرف مثال ہیں۔ اصل ڈیمو صرف درست ڈیمو URL موجود ہونے پر کھلے گا۔">نمونہ کیٹلاگ آئٹمز صرف مثال ہیں۔ اصل ڈیمو صرف درست ڈیمو URL موجود ہونے پر کھلے گا۔</p>
+ </div>
+</section>
 
-        <div class="hero-trust">
-          <span data-en="Modern Designs" data-ur="جدید ڈیزائن">جدید ڈیزائن</span>
-          <span data-en="Responsive Layouts" data-ur="موبائل فرینڈلی">موبائل فرینڈلی</span>
-          <span data-en="Prices in PKR" data-ur="پاکستانی روپے میں قیمتیں">پاکستانی روپے میں قیمتیں</span>
-        </div>
-      </div>
+<section class="section" id="about">
+ <div class="container">
+  <div class="section-heading"><div><div class="section-kicker" data-en="Why WebsitesDeal" data-ur="ویب سائٹس ڈیل کیوں؟">ویب سائٹس ڈیل کیوں؟</div><h2 data-en="A Better Starting Point for Your Website" data-ur="آپ کی ویب سائٹ کے لیے بہتر آغاز">آپ کی ویب سائٹ کے لیے بہتر آغاز</h2><p data-en="Find a design that suits your project and budget." data-ur="اپنے پروجیکٹ اور بجٹ کے مطابق ڈیزائن منتخب کریں۔">اپنے پروجیکٹ اور بجٹ کے مطابق ڈیزائن منتخب کریں۔</p></div></div>
+  <div class="value-grid">
+   <article class="value-card"><div class="value-icon">✦</div><h3 data-en="Modern Designs" data-ur="جدید ڈیزائن">جدید ڈیزائن</h3><p data-en="Explore clean, professional layouts for different business needs." data-ur="مختلف کاروباری ضروریات کے لیے صاف اور پروفیشنل لے آؤٹس دیکھیں۔">مختلف کاروباری ضروریات کے لیے صاف اور پروفیشنل لے آؤٹس دیکھیں۔</p></article>
+   <article class="value-card"><div class="value-icon">▣</div><h3 data-en="Responsive Experience" data-ur="ہر اسکرین کے لیے موزوں">ہر اسکرین کے لیے موزوں</h3><p data-en="Browse the site on mobile, tablet or desktop." data-ur="موبائل، ٹیبلٹ اور کمپیوٹر پر ویب سائٹ استعمال کریں۔">موبائل، ٹیبلٹ اور کمپیوٹر پر ویب سائٹ استعمال کریں۔</p></article>
+   <article class="value-card"><div class="value-icon">₨</div><h3 data-en="PKR Pricing" data-ur="پاکستانی روپے میں قیمتیں">پاکستانی روپے میں قیمتیں</h3><p data-en="See subscription options priced in Pakistani Rupees." data-ur="سبسکرپشن کے پلان پاکستانی روپے میں دیکھیں۔">سبسکرپشن کے پلان پاکستانی روپے میں دیکھیں۔</p></article>
+  </div>
+ </div>
+</section>
 
-      <div class="hero-visual">
-        <img class="hero-image"
-          src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=85"
-          alt="Modern website analytics and business workspace"
-          fetchpriority="high">
-        <div class="floating-card">
-          <strong><span class="floating-dot"></span>
-            <span data-en="Your next website starts here"
-                  data-ur="آپ کی نئی ویب سائٹ یہاں سے شروع ہوتی ہے">آپ کی نئی ویب سائٹ یہاں سے شروع ہوتی ہے</span>
-          </strong>
-          <small data-en="Explore designs for your goals"
-                 data-ur="اپنے مقصد کے لیے ڈیزائن منتخب کریں">اپنے مقصد کے لیے ڈیزائن منتخب کریں</small>
-        </div>
-      </div>
-    </div>
-  </section>
+<section class="section pricing-section" id="pricing">
+ <div class="container">
+  <div class="section-heading"><div><div class="section-kicker" data-en="Simple Subscription Plans" data-ur="آسان سبسکرپشن پلانز">آسان سبسکرپشن پلانز</div><h2 data-en="Choose Your Plan" data-ur="اپنا پلان منتخب کریں">اپنا پلان منتخب کریں</h2><p data-en="Subscription prices are displayed in Pakistani Rupees (PKR)." data-ur="سبسکرپشن کی قیمتیں پاکستانی روپے میں ہیں۔">سبسکرپشن کی قیمتیں پاکستانی روپے میں ہیں۔</p></div></div>
+  <div class="pricing-grid">
+   <article class="pricing-card"><h3>Starter</h3><p class="plan-description" data-en="For individuals exploring website resources." data-ur="ویب سائٹ کے وسائل استعمال کرنے والے افراد کے لیے۔">ویب سائٹ کے وسائل استعمال کرنے والے افراد کے لیے۔</p><div class="plan-price"><span class="currency">PKR </span>549</div><div class="plan-period" data-en="Per month" data-ur="ماہانہ">ماہانہ</div><ul><li data-en="Access to available templates" data-ur="دستیاب ٹیمپلیٹس تک رسائی">دستیاب ٹیمپلیٹس تک رسائی</li><li data-en="Responsive design previews" data-ur="ریسپانسیو ڈیزائن پری ویو">ریسپانسیو ڈیزائن پری ویو</li><li data-en="Basic support" data-ur="بنیادی مدد">بنیادی مدد</li></ul><a class="plan-button" href="https://support.websitesdeal.com" data-en="Ask About Starter" data-ur="اسٹارٹر کے بارے میں پوچھیں">اسٹارٹر کے بارے میں پوچھیں</a></article>
+   <article class="pricing-card featured"><span class="popular-badge" data-en="POPULAR" data-ur="مقبول">مقبول</span><h3>Professional</h3><p class="plan-description" data-en="For freelancers and growing projects." data-ur="فری لانسرز اور ترقی کرتے پروجیکٹس کے لیے۔">فری لانسرز اور ترقی کرتے پروجیکٹس کے لیے۔</p><div class="plan-price"><span class="currency">PKR </span>999</div><div class="plan-period" data-en="Per month" data-ur="ماہانہ">ماہانہ</div><ul><li data-en="Starter plan benefits" data-ur="اسٹارٹر پلان کی سہولیات">اسٹارٹر پلان کی سہولیات</li><li data-en="Eligible premium resources" data-ur="اہل پریمیم وسائل تک رسائی">اہل پریمیم وسائل تک رسائی</li><li data-en="Priority support requests" data-ur="ترجیحی سپورٹ درخواستیں">ترجیحی سپورٹ درخواستیں</li></ul><a class="plan-button" href="https://support.websitesdeal.com" data-en="Ask About Professional" data-ur="پروفیشنل کے بارے میں پوچھیں">پروفیشنل کے بارے میں پوچھیں</a></article>
+   <article class="pricing-card"><h3>Business</h3><p class="plan-description" data-en="For businesses managing multiple projects." data-ur="متعدد پروجیکٹس سنبھالنے والے کاروبار کے لیے۔">متعدد پروجیکٹس سنبھالنے والے کاروبار کے لیے۔</p><div class="plan-price"><span class="currency">PKR </span>1,999</div><div class="plan-period" data-en="Per month" data-ur="ماہانہ">ماہانہ</div><ul><li data-en="Professional plan benefits" data-ur="پروفیشنل پلان کی سہولیات">پروفیشنل پلان کی سہولیات</li><li data-en="Business-oriented resources" data-ur="کاروباری وسائل">کاروباری وسائل</li><li data-en="Business enquiry support" data-ur="کاروباری سوالات کے لیے سپورٹ">کاروباری سوالات کے لیے سپورٹ</li></ul><a class="plan-button" href="https://support.websitesdeal.com" data-en="Ask About Business" data-ur="بزنس پلان کے بارے میں پوچھیں">بزنس پلان کے بارے میں پوچھیں</a></article>
+  </div>
+  <p class="pricing-note" data-en="Plan benefits are illustrative. Confirm actual features, limits and billing before accepting payments." data-ur="یہ سہولیات نمونہ ہیں۔ ادائیگی شروع کرنے سے پہلے اصل فیچرز، حدود اور بلنگ کی تصدیق کریں۔">یہ سہولیات نمونہ ہیں۔ ادائیگی شروع کرنے سے پہلے اصل فیچرز، حدود اور بلنگ کی تصدیق کریں۔</p>
+ </div>
+</section>
 
-  <!-- SEARCH -->
-  <section class="search-area">
-    <div class="container">
-      <form class="search-box" id="searchForm">
-        <span class="search-symbol">⌕</span>
-        <input id="searchInput" type="search"
-          placeholder="Search website templates..."
-          data-en-placeholder="Search business, restaurant, portfolio..."
-          data-ur-placeholder="کاروبار، ریسٹورنٹ، پورٹ فولیو تلاش کریں..."
-          aria-label="Search website templates">
-        <button class="primary-btn" type="submit"
-          data-en="Search Templates" data-ur="تلاش کریں">تلاش کریں</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- CATEGORIES -->
-  <section class="section" id="categories">
-    <div class="container">
-      <div class="section-heading">
-        <div>
-          <div class="section-kicker" data-en="Browse by Category" data-ur="کیٹیگری کے مطابق دیکھیں">کیٹیگری کے مطابق دیکھیں</div>
-          <h2 data-en="Find a Design for Every Idea" data-ur="ہر آئیڈیا کے لیے ایک ڈیزائن">ہر آئیڈیا کے لیے ایک ڈیزائن</h2>
-          <p data-en="Explore designs made for different types of websites."
-             data-ur="مختلف ویب سائٹس کے لیے بنائے گئے ڈیزائن دیکھیں۔">مختلف ویب سائٹس کے لیے بنائے گئے ڈیزائن دیکھیں۔</p>
-        </div>
-        <a href="#templates" class="text-link" data-en="View all →" data-ur="سب دیکھیں ←">سب دیکھیں ←</a>
-      </div>
-
-      <div class="category-grid" id="categoryGrid">
-        <button class="category-card" data-category="Business" type="button">
-          <span class="category-icon">▦</span>
-          <strong data-en="Business" data-ur="کاروبار">کاروبار</strong>
-          <small data-en="Company sites" data-ur="کمپنی ویب سائٹس">کمپنی ویب سائٹس</small>
-        </button>
-        <button class="category-card" data-category="E-commerce" type="button">
-          <span class="category-icon">🛍</span>
-          <strong data-en="E-commerce" data-ur="آن لائن اسٹور">آن لائن اسٹور</strong>
-          <small data-en="Online shopping" data-ur="آن لائن خریداری">آن لائن خریداری</small>
-        </button>
-        <button class="category-card" data-category="Restaurant" type="button">
-          <span class="category-icon">♨</span>
-          <strong data-en="Restaurant" data-ur="ریسٹورنٹ">ریسٹورنٹ</strong>
-          <small data-en="Food & dining" data-ur="کھانے پینے کے لیے">کھانے پینے کے لیے</small>
-        </button>
-        <button class="category-card" data-category="Agency" type="button">
-          <span class="category-icon">✳</span>
-          <strong data-en="Agency" data-ur="ایجنسی">ایجنسی</strong>
-          <small data-en="Creative services" data-ur="تخلیقی خدمات">تخلیقی خدمات</small>
-        </button>
-        <button class="category-card" data-category="Portfolio" type="button">
-          <span class="category-icon">▣</span>
-          <strong data-en="Portfolio" data-ur="پورٹ فولیو">پورٹ فولیو</strong>
-          <small data-en="Show your work" data-ur="اپنا کام دکھائیں">اپنا کام دکھائیں</small>
-        </button>
-        <button class="category-card" data-category="Real Estate" type="button">
-          <span class="category-icon">⌂</span>
-          <strong data-en="Real Estate" data-ur="رئیل اسٹیٹ">رئیل اسٹیٹ</strong>
-          <small data-en="Property listings" data-ur="پراپرٹی لسٹنگ">پراپرٹی لسٹنگ</small>
-        </button>
-      </div>
-    </div>
-  </section>
-
-  <!-- TEMPLATES -->
-  <section class="section template-section" id="templates">
-    <div class="container">
-      <div class="section-heading">
-        <div>
-          <div class="section-kicker" data-en="Website Collection" data-ur="ویب سائٹ کلیکشن">ویب سائٹ کلیکشن</div>
-          <h2 data-en="Explore Website Templates" data-ur="ویب سائٹ ٹیمپلیٹس دیکھیں">ویب سائٹ ٹیمپلیٹس دیکھیں</h2>
-          <p data-en="Browse our sample designs and preview a layout."
-             data-ur="نمونہ ڈیزائن دیکھیں اور لے آؤٹ کا پری ویو کھولیں۔">نمونہ ڈیزائن دیکھیں اور لے آؤٹ کا پری ویو کھولیں۔</p>
-        </div>
-      </div>
-
-      <div class="filters" id="filterBar">
-        <button class="filter-btn active" data-filter="All" type="button" data-en="All Templates" data-ur="تمام ٹیمپلیٹس">تمام ٹیمپلیٹس</button>
-        <button class="filter-btn" data-filter="Business" type="button" data-en="Business" data-ur="کاروبار">کاروبار</button>
-        <button class="filter-btn" data-filter="E-commerce" type="button" data-en="E-commerce" data-ur="آن لائن اسٹور">آن لائن اسٹور</button>
-        <button class="filter-btn" data-filter="Restaurant" type="button" data-en="Restaurant" data-ur="ریسٹورنٹ">ریسٹورنٹ</button>
-        <button class="filter-btn" data-filter="Agency" type="button" data-en="Agency" data-ur="ایجنسی">ایجنسی</button>
-        <button class="filter-btn" data-filter="Portfolio" type="button" data-en="Portfolio" data-ur="پورٹ فولیو">پورٹ فولیو</button>
-        <button class="filter-btn" data-filter="Real Estate" type="button" data-en="Real Estate" data-ur="رئیل اسٹیٹ">رئیل اسٹیٹ</button>
-
-        <select class="sort-select" id="sortSelect" aria-label="Sort templates">
-          <option value="default" data-en="Sort: Featured" data-ur="ترتیب: نمایاں">ترتیب: نمایاں</option>
-          <option value="price-low" data-en="Price: Low to High" data-ur="قیمت: کم سے زیادہ">قیمت: کم سے زیادہ</option>
-          <option value="price-high" data-en="Price: High to Low" data-ur="قیمت: زیادہ سے کم">قیمت: زیادہ سے کم</option>
-          <option value="name" data-en="Name: A to Z" data-ur="نام کے مطابق">نام کے مطابق</option>
-        </select>
-      </div>
-
-      <div class="template-grid" id="templateGrid" aria-live="polite"></div>
-    </div>
-  </section>
-
-  <!-- WHY WEBSITESDEAL -->
-  <section class="section" id="about">
-    <div class="container">
-      <div class="section-heading">
-        <div>
-          <div class="section-kicker" data-en="Why WebsitesDeal" data-ur="ویب سائٹس ڈیل کیوں؟">ویب سائٹس ڈیل کیوں؟</div>
-          <h2 data-en="A Better Starting Point for Your Website" data-ur="آپ کی ویب سائٹ کے لیے بہتر آغاز">آپ کی ویب سائٹ کے لیے بہتر آغاز</h2>
-          <p data-en="Find a design that suits your project and budget."
-             data-ur="اپنے پروجیکٹ اور بجٹ کے مطابق ڈیزائن منتخب کریں۔">اپنے پروجیکٹ اور بجٹ کے مطابق ڈیزائن منتخب کریں۔</p>
-        </div>
-      </div>
-
-      <div class="value-grid">
-        <article class="value-card">
-          <div class="value-icon">✦</div>
-          <h3 data-en="Modern Designs" data-ur="جدید ڈیزائن">جدید ڈیزائن</h3>
-          <p data-en="Explore clean, professional layouts for different business needs."
-             data-ur="مختلف کاروباری ضروریات کے لیے صاف اور پروفیشنل لے آؤٹس دیکھیں۔">مختلف کاروباری ضروریات کے لیے صاف اور پروفیشنل لے آؤٹس دیکھیں۔</p>
-        </article>
-        <article class="value-card">
-          <div class="value-icon">▣</div>
-          <h3 data-en="Responsive Experience" data-ur="ہر اسکرین کے لیے موزوں">ہر اسکرین کے لیے موزوں</h3>
-          <p data-en="Browse the site on mobile, tablet or desktop with a responsive interface."
-             data-ur="موبائل، ٹیبلٹ اور کمپیوٹر پر ویب سائٹ استعمال کریں۔">موبائل، ٹیبلٹ اور کمپیوٹر پر ویب سائٹ استعمال کریں۔</p>
-        </article>
-        <article class="value-card">
-          <div class="value-icon">₨</div>
-          <h3 data-en="PKR Pricing" data-ur="پاکستانی روپے میں قیمتیں">پاکستانی روپے میں قیمتیں</h3>
-          <p data-en="See subscription options priced in Pakistani Rupees."
-             data-ur="سبسکرپشن کے پلان پاکستانی روپے میں دیکھیں۔">سبسکرپشن کے پلان پاکستانی روپے میں دیکھیں۔</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- SUBSCRIPTION PLANS -->
-  <section class="section pricing-section" id="pricing">
-    <div class="container">
-      <div class="section-heading">
-        <div>
-          <div class="section-kicker" data-en="Simple Subscription Plans" data-ur="آسان سبسکرپشن پلانز">آسان سبسکرپشن پلانز</div>
-          <h2 data-en="Choose Your Plan" data-ur="اپنا پلان منتخب کریں">اپنا پلان منتخب کریں</h2>
-          <p data-en="Subscription prices are displayed in Pakistani Rupees (PKR)."
-             data-ur="سبسکرپشن کی قیمتیں پاکستانی روپے میں ہیں۔">سبسکرپشن کی قیمتیں پاکستانی روپے میں ہیں۔</p>
-        </div>
-      </div>
-
-      <div class="pricing-grid">
-        <article class="pricing-card">
-          <h3>Starter</h3>
-          <p class="plan-description" data-en="For individuals exploring website resources."
-             data-ur="ویب سائٹ کے وسائل استعمال کرنے والے افراد کے لیے۔">ویب سائٹ کے وسائل استعمال کرنے والے افراد کے لیے۔</p>
-          <div class="plan-price"><span class="currency">PKR </span>549</div>
-          <div class="plan-period" data-en="Per month" data-ur="ماہانہ">ماہانہ</div>
-          <ul>
-            <li data-en="Access to available templates" data-ur="دستیاب ٹیمپلیٹس تک رسائی">دستیاب ٹیمپلیٹس تک رسائی</li>
-            <li data-en="Responsive design previews" data-ur="ریسپانسیو ڈیزائن پری ویو">ریسپانسیو ڈیزائن پری ویو</li>
-            <li data-en="Basic support" data-ur="بنیادی مدد">بنیادی مدد</li>
-          </ul>
-          <a class="plan-button" href="https://support.websitesdeal.com"
-             data-en="Ask About Starter" data-ur="اسٹارٹر کے بارے میں پوچھیں">اسٹارٹر کے بارے میں پوچھیں</a>
-        </article>
-
-        <article class="pricing-card featured">
-          <span class="popular-badge" data-en="POPULAR" data-ur="مقبول">مقبول</span>
-          <h3>Professional</h3>
-          <p class="plan-description" data-en="For freelancers and growing projects."
-             data-ur="فری لانسرز اور ترقی کرتے پروجیکٹس کے لیے۔">فری لانسرز اور ترقی کرتے پروجیکٹس کے لیے۔</p>
-          <div class="plan-price"><span class="currency">PKR </span>999</div>
-          <div class="plan-period" data-en="Per month" data-ur="ماہانہ">ماہانہ</div>
-          <ul>
-            <li data-en="Starter plan benefits" data-ur="اسٹارٹر پلان کی سہولیات">اسٹارٹر پلان کی سہولیات</li>
-            <li data-en="Access to eligible premium resources" data-ur="اہل پریمیم وسائل تک رسائی">اہل پریمیم وسائل تک رسائی</li>
-            <li data-en="Priority support requests" data-ur="ترجیحی سپورٹ درخواستیں">ترجیحی سپورٹ درخواستیں</li>
-          </ul>
-          <a class="plan-button" href="https://support.websitesdeal.com"
-             data-en="Ask About Professional" data-ur="پروفیشنل کے بارے میں پوچھیں">پروفیشنل کے بارے میں پوچھیں</a>
-        </article>
-
-        <article class="pricing-card">
-          <h3>Business</h3>
-          <p class="plan-description" data-en="For businesses managing multiple projects."
-             data-ur="متعدد پروجیکٹس سنبھالنے والے کاروبار کے لیے۔">متعدد پروجیکٹس سنبھالنے والے کاروبار کے لیے۔</p>
-          <div class="plan-price"><span class="currency">PKR </span>1,999</div>
-          <div class="plan-period" data-en="Per month" data-ur="ماہانہ">ماہانہ</div>
-          <ul>
-            <li data-en="Professional plan benefits" data-ur="پروفیشنل پلان کی سہولیات">پروفیشنل پلان کی سہولیات</li>
-            <li data-en="Business-oriented resources" data-ur="کاروباری وسائل">کاروباری وسائل</li>
-            <li data-en="Support for business enquiries" data-ur="کاروباری سوالات کے لیے سپورٹ">کاروباری سوالات کے لیے سپورٹ</li>
-          </ul>
-          <a class="plan-button" href="https://support.websitesdeal.com"
-             data-en="Ask About Business" data-ur="بزنس پلان کے بارے میں پوچھیں">بزنس پلان کے بارے میں پوچھیں</a>
-        </article>
-      </div>
-
-      <p class="pricing-note"
-        data-en="Plan benefits shown here are illustrative. Confirm actual access limits, features and billing before accepting payments."
-        data-ur="یہ سہولیات نمونہ ہیں۔ ادائیگی شروع کرنے سے پہلے اصل فیچرز، حدود اور بلنگ کی تصدیق کریں۔">
-        یہ سہولیات نمونہ ہیں۔ ادائیگی شروع کرنے سے پہلے اصل فیچرز، حدود اور بلنگ کی تصدیق کریں۔
-      </p>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="section">
-    <div class="container">
-      <div class="cta-box">
-        <h2 data-en="Ready to Explore Your Next Website?" data-ur="اپنی اگلی ویب سائٹ کے لیے تیار ہیں؟">اپنی اگلی ویب سائٹ کے لیے تیار ہیں؟</h2>
-        <p data-en="Browse the available designs or contact our support team to learn more about WebsitesDeal."
-           data-ur="دستیاب ڈیزائن دیکھیں یا مزید معلومات کے لیے ہماری سپورٹ ٹیم سے رابطہ کریں۔">دستیاب ڈیزائن دیکھیں یا مزید معلومات کے لیے ہماری سپورٹ ٹیم سے رابطہ کریں۔</p>
-        <div class="cta-actions">
-          <a href="#templates" class="primary-btn" data-en="Browse Templates →" data-ur="ٹیمپلیٹس دیکھیں ←">ٹیمپلیٹس دیکھیں ←</a>
-          <a href="https://support.websitesdeal.com" class="secondary-btn" data-en="Contact Support" data-ur="سپورٹ سے رابطہ کریں">سپورٹ سے رابطہ کریں</a>
-        </div>
-      </div>
-    </div>
-  </section>
+<section class="section">
+ <div class="container"><div class="cta-box"><h2 data-en="Ready to Explore Your Next Website?" data-ur="اپنی اگلی ویب سائٹ کے لیے تیار ہیں؟">اپنی اگلی ویب سائٹ کے لیے تیار ہیں؟</h2><p data-en="Browse the available designs or contact our support team to learn more." data-ur="دستیاب ڈیزائن دیکھیں یا مزید معلومات کے لیے ہماری سپورٹ ٹیم سے رابطہ کریں۔">دستیاب ڈیزائن دیکھیں یا مزید معلومات کے لیے ہماری سپورٹ ٹیم سے رابطہ کریں۔</p><div class="cta-actions"><a href="#templates" class="primary-btn" data-en="Browse Templates →" data-ur="ٹیمپلیٹس دیکھیں ←">ٹیمپلیٹس دیکھیں ←</a><a href="https://support.websitesdeal.com" class="secondary-btn" data-en="Contact Support" data-ur="سپورٹ سے رابطہ کریں">سپورٹ سے رابطہ کریں</a></div></div></div>
+</section>
 </main>
 
 <footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-about">
-        <a href="#home" class="brand">
-          <img src="https://raw.githubusercontent.com/yourdocuments/assets/main/wd1.jpg"
-               alt="WebsitesDeal Logo" onerror="this.style.display='none'">
-          <span class="brand-name">Websites<span>Deal</span></span>
-        </a>
-        <p data-en="A starting point for discovering website designs and digital resources for your next project."
-           data-ur="اپنے اگلے پروجیکٹ کے لیے ویب سائٹ ڈیزائن اور ڈیجیٹل وسائل دریافت کرنے کی جگہ۔">اپنے اگلے پروجیکٹ کے لیے ویب سائٹ ڈیزائن اور ڈیجیٹل وسائل دریافت کرنے کی جگہ۔</p>
-      </div>
-      <div>
-        <h4 data-en="Explore" data-ur="دیکھیں">دیکھیں</h4>
-        <div class="footer-links">
-          <a href="#categories" data-en="Categories" data-ur="کیٹیگریز">کیٹیگریز</a>
-          <a href="#templates" data-en="Templates" data-ur="ٹیمپلیٹس">ٹیمپلیٹس</a>
-          <a href="#pricing" data-en="Pricing" data-ur="قیمتیں">قیمتیں</a>
-        </div>
-      </div>
-      <div>
-        <h4 data-en="Account" data-ur="اکاؤنٹ">اکاؤنٹ</h4>
-        <div class="footer-links">
-          <a href="dashboard.html" data-en="Dashboard" data-ur="ڈیش بورڈ">ڈیش بورڈ</a>
-          <a href="admin.html" data-en="Admin Studio" data-ur="ایڈمن اسٹوڈیو">ایڈمن اسٹوڈیو</a>
-          <a href="https://support.websitesdeal.com" data-en="Support" data-ur="مدد">مدد</a>
-        </div>
-      </div>
-      <div>
-        <h4 data-en="Information" data-ur="معلومات">معلومات</h4>
-        <div class="footer-links">
-          <a href="#about" data-en="About WebsitesDeal" data-ur="ویب سائٹس ڈیل کے بارے میں">ویب سائٹس ڈیل کے بارے میں</a>
-          <a href="https://support.websitesdeal.com" data-en="Contact Us" data-ur="رابطہ کریں">رابطہ کریں</a>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© <span id="currentYear"></span> WebsitesDeal. <span data-en="All rights reserved." data-ur="جملہ حقوق محفوظ ہیں۔">جملہ حقوق محفوظ ہیں۔</span></span>
-      <span data-en="Made for digital growth." data-ur="ڈیجیٹل ترقی کے لیے بنایا گیا۔">ڈیجیٹل ترقی کے لیے بنایا گیا۔</span>
-    </div>
+ <div class="container">
+  <div class="footer-grid">
+   <div class="footer-about"><a href="#home" class="brand"><img src="https://raw.githubusercontent.com/yourdocuments/assets/main/wd1.jpg" alt="WebsitesDeal Logo" onerror="this.hidden=true"><span class="brand-name">Websites<span>Deal</span></span></a><p data-en="Discover website designs and digital resources for your next project." data-ur="اپنے اگلے پروجیکٹ کے لیے ویب سائٹ ڈیزائن اور ڈیجیٹل وسائل دریافت کریں۔">اپنے اگلے پروجیکٹ کے لیے ویب سائٹ ڈیزائن اور ڈیجیٹل وسائل دریافت کریں۔</p></div>
+   <div><h4 data-en="Explore" data-ur="دیکھیں">دیکھیں</h4><div class="footer-links"><a href="#categories" data-en="Categories" data-ur="کیٹیگریز">کیٹیگریز</a><a href="#templates" data-en="Templates" data-ur="ٹیمپلیٹس">ٹیمپلیٹس</a><a href="#pricing" data-en="Pricing" data-ur="قیمتیں">قیمتیں</a></div></div>
+   <div><h4 data-en="Account" data-ur="اکاؤنٹ">اکاؤنٹ</h4><div class="footer-links"><a href="dashboard.html" data-en="Dashboard" data-ur="ڈیش بورڈ">ڈیش بورڈ</a><a href="admin.html" data-en="Admin Studio" data-ur="ایڈمن اسٹوڈیو">ایڈمن اسٹوڈیو</a><a href="https://support.websitesdeal.com" data-en="Support" data-ur="مدد">مدد</a></div></div>
+   <div><h4 data-en="Information" data-ur="معلومات">معلومات</h4><div class="footer-links"><a href="#about" data-en="About WebsitesDeal" data-ur="ویب سائٹس ڈیل کے بارے میں">ویب سائٹس ڈیل کے بارے میں</a><a href="https://support.websitesdeal.com" data-en="Contact Us" data-ur="رابطہ کریں">رابطہ کریں</a></div></div>
   </div>
+  <div class="footer-bottom"><span>© <span id="currentYear"></span> WebsitesDeal. <span data-en="All rights reserved." data-ur="جملہ حقوق محفوظ ہیں۔">جملہ حقوق محفوظ ہیں۔</span></span><span data-en="Made for digital growth." data-ur="ڈیجیٹل ترقی کے لیے بنایا گیا۔">ڈیجیٹل ترقی کے لیے بنایا گیا۔</span></div>
+ </div>
 </footer>
 
-<!-- DEMO PREVIEW MODAL -->
 <div class="modal" id="demoModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-  <div class="modal-panel">
-    <div class="modal-header">
-      <h3 id="modalTitle">Website Preview</h3>
-      <button class="modal-close" id="closeModal" type="button">✕ Close</button>
-    </div>
-    <iframe class="demo-frame" id="demoFrame" title="Website demo preview" sandbox="allow-forms allow-scripts"></iframe>
-  </div>
+ <div class="modal-panel"><div class="modal-header"><h3 id="modalTitle">Website Preview</h3><button class="modal-close" id="closeModal" type="button">✕ Close</button></div><iframe class="demo-frame" id="demoFrame" title="Sample website preview" sandbox=""></iframe></div>
 </div>
-
-<div class="toast" id="toast" role="status"></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script>
 (function(){
 "use strict";
 
-const $ = (selector, root=document) => root.querySelector(selector);
-const $$ = (selector, root=document) => Array.from(root.querySelectorAll(selector));
+const $=(s,r=document)=>r.querySelector(s);
+const $$=(s,r=document)=>Array.from(r.querySelectorAll(s));
 
-let language = localStorage.getItem("wd_lang") || "ur";
-let currentFilter = "All";
-let searchTerm = "";
-let toastTimer;
-
-/* TEMPLATE DATA
-   These are sample catalogue items. Replace demoUrl values with
-   real published template URLs when those sites are available.
-*/
-const seedTemplates = [
-  {
-    id:"wd-business",
-    title:"Nova Business",
-    urTitle:"نووا بزنس",
-    category:"Business",
-    description:"A polished business layout for companies and service providers.",
-    urDescription:"کمپنیوں اور سروس فراہم کرنے والوں کے لیے پروفیشنل لے آؤٹ۔",
-    price:549,
-    badge:"Featured",
-    image:"https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80",
-    demoUrl:""
-  },
-  {
-    id:"wd-store",
-    title:"Urban Store",
-    urTitle:"اربن اسٹور",
-    category:"E-commerce",
-    description:"A clean storefront concept for modern online shopping brands.",
-    urDescription:"جدید آن لائن شاپنگ برانڈز کے لیے اسٹور فرنٹ ڈیزائن۔",
-    price:999,
-    badge:"Popular",
-    image:"https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=900&q=80",
-    demoUrl:""
-  },
-  {
-    id:"wd-restaurant",
-    title:"Olive Restaurant",
-    urTitle:"اولیو ریسٹورنٹ",
-    category:"Restaurant",
-    description:"An elegant restaurant layout for menus, dining and reservations.",
-    urDescription:"مینو، ڈائننگ اور ریزرویشن کے لیے خوبصورت ریسٹورنٹ ڈیزائن۔",
-    price:549,
-    badge:"New",
-    image:"https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=80",
-    demoUrl:""
-  },
-  {
-    id:"wd-agency",
-    title:"Pixel Agency",
-    urTitle:"پکسل ایجنسی",
-    category:"Agency",
-    description:"A bold agency concept for creative teams and digital services.",
-    urDescription:"تخلیقی ٹیموں اور ڈیجیٹل سروسز کے لیے جدید ڈیزائن۔",
-    price:1999,
-    badge:"Premium",
-    image:"https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=900&q=80",
-    demoUrl:""
-  },
-  {
-    id:"wd-portfolio",
-    title:"Creator Portfolio",
-    urTitle:"کریئیٹر پورٹ فولیو",
-    category:"Portfolio",
-    description:"Showcase your projects, skills and creative work in style.",
-    urDescription:"اپنے پروجیکٹس، مہارت اور تخلیقی کام کو خوبصورتی سے دکھائیں۔",
-    price:549,
-    badge:"Creative",
-    image:"https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=900&q=80",
-    demoUrl:""
-  },
-  {
-    id:"wd-property",
-    title:"Prime Estate",
-    urTitle:"پرائم اسٹیٹ",
-    category:"Real Estate",
-    description:"A property website concept for listings and real estate agencies.",
-    urDescription:"پراپرٹی لسٹنگ اور رئیل اسٹیٹ ایجنسیوں کے لیے ڈیزائن۔",
-    price:999,
-    badge:"Business",
-    image:"https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80",
-    demoUrl:""
-  }
-];
-
-const categoryNames = {
-  "Business":{en:"Business",ur:"کاروبار"},
-  "E-commerce":{en:"E-commerce",ur:"آن لائن اسٹور"},
-  "Restaurant":{en:"Restaurant",ur:"ریسٹورنٹ"},
-  "Agency":{en:"Agency",ur:"ایجنسی"},
-  "Portfolio":{en:"Portfolio",ur:"پورٹ فولیو"},
-  "Real Estate":{en:"Real Estate",ur:"رئیل اسٹیٹ"}
+const safeRead=(key,fallback)=>{
+  try{
+    const value=JSON.parse(localStorage.getItem(key));
+    return value===null?fallback:value;
+  }catch(_){return fallback}
+};
+const safeWrite=(key,value)=>{
+  try{localStorage.setItem(key,JSON.stringify(value));return true}
+  catch(_){showToast(tr("Browser storage is unavailable.","براؤزر اسٹوریج دستیاب نہیں۔"));return false}
 };
 
-function getTemplates(){
-  try{
-    const stored = JSON.parse(localStorage.getItem("wd_sites") || "[]");
-    if(!Array.isArray(stored) || !stored.length) return seedTemplates;
+let language=safeRead("wd_lang","ur")==="en"?"en":"ur";
+let currentFilter="All";
+let searchTerm="";
+let toastTimer;
+let lastFocusedElement=null;
 
-    const seedsById = new Map(seedTemplates.map(item=>[item.id,item]));
-    const merged = stored.map((item,index)=>{
-      const id = item.id || item.slug || "";
-      const seed = seedsById.get(id) || {};
-      return {
-        ...seed,
-        ...item,
-        id:id || ("saved-"+index),
-        title:item.title || item.name || seed.title || "Website Template",
-        urTitle:item.urTitle || seed.urTitle || item.title || item.name || "Website Template",
-        category:item.category || seed.category || "Business",
-        description:item.description || seed.description || "",
-        urDescription:item.urDescription || seed.urDescription || item.description || "",
-        price:Number(item.price ?? seed.price ?? 0),
-        image:item.image || item.imageUrl || item.thumbnail || seed.image || "",
-        badge:item.badge || seed.badge || "",
-        demoUrl:item.demoUrl || item.url || seed.demoUrl || ""
-      };
-    });
-    const savedIds = new Set(merged.map(item=>item.id));
-    seedTemplates.forEach(item=>{
-      if(!savedIds.has(item.id)) merged.push(item);
-    });
-    return merged;
-  }catch(error){
-    console.warn("Unable to read saved template catalogue:",error);
-    return seedTemplates;
-  }
-}
+const seedTemplates=[
+ {id:"wd-business",title:"Nova Business",urTitle:"نووا بزنس",category:"Business",description:"A polished business layout for companies and service providers.",urDescription:"کمپنیوں اور سروس فراہم کرنے والوں کے لیے پروفیشنل لے آؤٹ۔",price:549,badge:"Featured",image:"https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80",demoUrl:""},
+ {id:"wd-store",title:"Urban Store",urTitle:"اربن اسٹور",category:"E-commerce",description:"A clean storefront concept for modern online shopping brands.",urDescription:"جدید آن لائن شاپنگ برانڈز کے لیے اسٹور فرنٹ ڈیزائن۔",price:999,badge:"Popular",image:"https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=900&q=80",demoUrl:""},
+ {id:"wd-restaurant",title:"Olive Restaurant",urTitle:"اولیو ریسٹورنٹ",category:"Restaurant",description:"An elegant restaurant layout for menus, dining and reservations.",urDescription:"مینو، ڈائننگ اور ریزرویشن کے لیے خوبصورت ریسٹورنٹ ڈیزائن۔",price:549,badge:"New",image:"https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=80",demoUrl:""},
+ {id:"wd-agency",title:"Pixel Agency",urTitle:"پکسل ایجنسی",category:"Agency",description:"A bold agency concept for creative teams and digital services.",urDescription:"تخلیقی ٹیموں اور ڈیجیٹل سروسز کے لیے جدید ڈیزائن۔",price:1999,badge:"Premium",image:"https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=900&q=80",demoUrl:""},
+ {id:"wd-portfolio",title:"Creator Portfolio",urTitle:"کریئیٹر پورٹ فولیو",category:"Portfolio",description:"Showcase your projects, skills and creative work in style.",urDescription:"اپنے پروجیکٹس، مہارت اور تخلیقی کام کو خوبصورتی سے دکھائیں۔",price:549,badge:"Creative",image:"https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=900&q=80",demoUrl:""},
+ {id:"wd-property",title:"Prime Estate",urTitle:"پرائم اسٹیٹ",category:"Real Estate",description:"A property website concept for listings and real estate agencies.",urDescription:"پراپرٹی لسٹنگ اور رئیل اسٹیٹ ایجنسیوں کے لیے ڈیزائن۔",price:999,badge:"Business",image:"https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80",demoUrl:""}
+];
 
+const categoryNames={
+ "Business":{en:"Business",ur:"کاروبار"},
+ "E-commerce":{en:"E-commerce",ur:"آن لائن اسٹور"},
+ "Restaurant":{en:"Restaurant",ur:"ریسٹورنٹ"},
+ "Agency":{en:"Agency",ur:"ایجنسی"},
+ "Portfolio":{en:"Portfolio",ur:"پورٹ فولیو"},
+ "Real Estate":{en:"Real Estate",ur:"رئیل اسٹیٹ"}
+};
+
+function tr(en,ur){return language==="ur"?ur:en}
 function safeText(value){
-  return String(value ?? "").replace(/[&<>"']/g,char=>({
-    "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
-  })[char]);
+ return String(value??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 }
-
-function tr(en,ur){
-  return language==="ur" ? ur : en;
+function money(value){
+ const number=Number(value);
+ return "PKR "+(Number.isFinite(number)&&number>=0?number:0).toLocaleString("en-PK");
 }
-
-function money(price){
-  return "PKR "+Number(price||0).toLocaleString("en-PK");
+function safeHttpUrl(value){
+ if(typeof value!=="string"||!value.trim())return "";
+ try{
+  const url=new URL(value.trim(),window.location.href);
+  if(url.protocol!=="https:"&&url.protocol!=="http:")return "";
+  return url.href;
+ }catch(_){return ""}
 }
+function normalizeTemplate(item,index){
+ if(!item||typeof item!=="object")return null;
+ const id=String(item.id??item.slug??("saved-"+index));
+ const title=String(item.title??item.name??item.templateName??"Website Template");
+ const category=String(item.category??item.type??item.industry??"Business");
+ const status=String(item.status??"").toLowerCase();
+ const explicitlyHidden=
+   item.isPublished===false||
+   item.published===false||
+   item.isActive===false||
+   item.active===false||
+   ["draft","unpublished","inactive","disabled","archived"].includes(status);
+ if(explicitlyHidden)return null;
 
+ const image=safeHttpUrl(item.image??item.imageUrl??item.thumbnail??item.cover??item.previewImage??"");
+ const demoUrl=safeHttpUrl(item.demoUrl??item.demo??item.previewUrl??item.liveUrl??item.websiteUrl??item.url??"");
+ const price=Number(item.price??item.amount??item.cost??0);
+
+ return {
+  ...item,
+  id,title,
+  urTitle:String(item.urTitle??title),
+  category,
+  description:String(item.description??item.summary??""),
+  urDescription:String(item.urDescription??item.description??item.summary??""),
+  price:Number.isFinite(price)&&price>=0?price:0,
+  image,
+  badge:String(item.badge??""),
+  demoUrl,
+  isSample:false
+ };
+}
+function getTemplates(){
+ const stored=safeRead("wd_sites",[]);
+ let saved=[];
+ if(Array.isArray(stored))saved=stored;
+ else if(stored&&Array.isArray(stored.templates))saved=stored.templates;
+ else if(stored&&Array.isArray(stored.sites))saved=stored.sites;
+
+ const normalized=saved.map(normalizeTemplate).filter(Boolean);
+ const ids=new Set(normalized.map(x=>x.id));
+ const samples=seedTemplates.filter(x=>!ids.has(x.id)).map(x=>({...x,isSample:true}));
+ return [...normalized,...samples];
+}
+function getFavorites(){
+ const value=safeRead("wd_favorites",[]);
+ return new Set(Array.isArray(value)?value.map(String):[]);
+}
+function toggleFavorite(id){
+ const favorites=getFavorites();
+ if(favorites.has(id))favorites.delete(id);
+ else favorites.add(id);
+ if(safeWrite("wd_favorites",[...favorites]))renderTemplates();
+}
 function templateMatches(item){
-  const categoryOk = currentFilter==="All" || item.category===currentFilter;
-  const haystack = [
-    item.title,item.urTitle,item.category,item.description,item.urDescription
-  ].join(" ").toLowerCase();
-  return categoryOk && (!searchTerm || haystack.includes(searchTerm.toLowerCase()));
+ if(currentFilter==="Favorites"&&!getFavorites().has(item.id))return false;
+ if(currentFilter!=="All"&&currentFilter!=="Favorites"&&item.category!==currentFilter)return false;
+ const text=[item.title,item.urTitle,item.category,item.description,item.urDescription].join(" ").toLocaleLowerCase();
+ return !searchTerm||text.includes(searchTerm.toLocaleLowerCase());
 }
-
 function renderTemplates(){
-  const grid=$("#templateGrid");
-  if(!grid) return;
+ const grid=$("#templateGrid");
+ if(!grid)return;
+ let items=getTemplates().filter(templateMatches);
+ const sort=$("#sortSelect").value;
+ if(sort==="price-low")items.sort((a,b)=>a.price-b.price);
+ if(sort==="price-high")items.sort((a,b)=>b.price-a.price);
+ if(sort==="name")items.sort((a,b)=>a.title.localeCompare(b.title));
 
-  let items=getTemplates().filter(templateMatches);
-  const sort=$("#sortSelect")?.value || "default";
-
-  if(sort==="price-low") items.sort((a,b)=>a.price-b.price);
-  if(sort==="price-high") items.sort((a,b)=>b.price-a.price);
-  if(sort==="name") items.sort((a,b)=>String(a.title).localeCompare(String(b.title)));
-
-  if(!items.length){
-    grid.innerHTML=`<div class="empty-state">
-      <h3>${tr("No templates found","کوئی ٹیمپلیٹ نہیں ملا")}</h3>
-      <p>${tr("Try another search term or category.","کوئی اور لفظ یا کیٹیگری منتخب کریں۔")}</p>
-      <button class="primary-btn" type="button" id="clearFilters">
-        ${tr("Clear Filters","فلٹرز ختم کریں")}
-      </button>
-    </div>`;
-    $("#clearFilters")?.addEventListener("click",clearFilters);
-    return;
-  }
-
-  grid.innerHTML=items.map(item=>{
-    const title=language==="ur"?(item.urTitle||item.title):item.title;
-    const description=language==="ur"?(item.urDescription||item.description):item.description;
-    const category=categoryNames[item.category]?.[language] || item.category;
-    const badge=item.badge ? safeText(item.badge) : "";
-    const image=item.image || "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80";
-
-    return `<article class="template-card" data-template-id="${safeText(item.id)}">
-      <div class="template-image-wrap">
-        <img class="template-image"
-          src="${safeText(image)}"
-          alt="${safeText(title)}"
-          loading="lazy"
-          onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80'">
-        ${badge?`<span class="template-badge">${badge}</span>`:""}
-      </div>
-      <div class="template-body">
-        <div class="template-top">
-          <h3>${safeText(title)}</h3>
-          <span class="template-category">${safeText(category)}</span>
-        </div>
-        <p class="template-description">${safeText(description)}</p>
-        <div class="template-meta">
-          <div class="template-price">${money(item.price)} <small>${tr("starting price","ابتدائی قیمت")}</small></div>
-          <div class="template-actions">
-            <button class="small-btn demo" type="button" data-demo-id="${safeText(item.id)}">
-              ${tr("Live Demo","پری ویو")}
-            </button>
-            <button class="small-btn" type="button" data-details-id="${safeText(item.id)}">
-              ${tr("Details","تفصیل")}
-            </button>
-          </div>
-        </div>
-      </div>
-    </article>`;
-  }).join("");
-
-  $$("[data-demo-id]",grid).forEach(button=>{
-    button.addEventListener("click",()=>openDemo(button.dataset.demoId));
-  });
-  $$("[data-details-id]",grid).forEach(button=>{
-    button.addEventListener("click",()=>showDetails(button.dataset.detailsId));
-  });
+ if(!items.length){
+  grid.innerHTML=`<div class="empty-state"><h3>${tr("No templates found","کوئی ٹیمپلیٹ نہیں ملا")}</h3><p>${tr("Try another search or save a template to Favorites.","کوئی اور تلاش کریں یا ٹیمپلیٹ کو پسندیدہ میں شامل کریں۔")}</p><button class="primary-btn" type="button" id="clearFilters">${tr("Clear Filters","فلٹرز ختم کریں")}</button></div>`;
+  $("#clearFilters").addEventListener("click",clearFilters);
+  return;
+ }
+ const favorites=getFavorites();
+ grid.innerHTML=items.map(item=>{
+  const title=language==="ur"?(item.urTitle||item.title):item.title;
+  const description=language==="ur"?(item.urDescription||item.description):item.description;
+  const category=categoryNames[item.category]?.[language]||item.category;
+  const badge=item.badge?safeText(item.badge):"";
+  const image=item.image||"https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80";
+  const fav=favorites.has(item.id);
+  const demoLabel=item.demoUrl?tr("Open Demo","ڈیمو کھولیں"):tr("Sample Preview","نمونہ پری ویو");
+  return `<article class="template-card" data-template-id="${safeText(item.id)}">
+   <div class="template-image-wrap">
+    <img class="template-image" src="${safeText(image)}" alt="${safeText(title)}" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80'">
+    ${badge?`<span class="template-badge">${badge}</span>`:""}
+    <button class="favorite-btn ${fav?"active":""}" type="button" data-favorite-id="${safeText(item.id)}" aria-label="${fav?tr("Remove from favorites","پسندیدہ سے ہٹائیں"):tr("Add to favorites","پسندیدہ میں شامل کریں")}" aria-pressed="${fav}">${fav?"♥":"♡"}</button>
+   </div>
+   <div class="template-body">
+    <div class="template-top"><h3>${safeText(title)}</h3><span class="template-category">${safeText(category)}</span></div>
+    <p class="template-description">${safeText(description)}</p>
+    <div class="template-meta">
+     <div class="template-price">${money(item.price)} <small>${tr("starting price","ابتدائی قیمت")}</small></div>
+     <div class="template-actions">
+      <button class="small-btn demo" type="button" data-demo-id="${safeText(item.id)}">${demoLabel}</button>
+      <button class="small-btn" type="button" data-details-id="${safeText(item.id)}">${tr("Details","تفصیل")}</button>
+     </div>
+    </div>
+   </div>
+  </article>`;
+ }).join("");
 }
-
 function setFilter(category){
-  currentFilter=category;
-  $$("#filterBar [data-filter]").forEach(button=>{
-    button.classList.toggle("active",button.dataset.filter===category);
-  });
-  $$("#categoryGrid [data-category]").forEach(button=>{
-    button.classList.toggle("active",button.dataset.category===category);
-  });
-  renderTemplates();
+ currentFilter=category;
+ $$("#filterBar [data-filter]").forEach(b=>b.classList.toggle("active",b.dataset.filter===category));
+ $$("#categoryGrid [data-category]").forEach(b=>b.classList.toggle("active",b.dataset.category===category));
+ renderTemplates();
 }
-
 function clearFilters(){
-  currentFilter="All";
-  searchTerm="";
-  $("#searchInput").value="";
-  $("#sortSelect").value="default";
-  setFilter("All");
+ searchTerm="";
+ $("#searchInput").value="";
+ $("#sortSelect").value="default";
+ setFilter("All");
 }
-
 function showToast(message){
-  const toast=$("#toast");
-  toast.textContent=message;
-  toast.style.display="block";
-  clearTimeout(toastTimer);
-  toastTimer=setTimeout(()=>toast.style.display="none",3200);
+ const toast=$("#toast");
+ toast.textContent=message;
+ toast.style.display="block";
+ clearTimeout(toastTimer);
+ toastTimer=setTimeout(()=>toast.style.display="none",3200);
 }
-
+function findTemplate(id){return getTemplates().find(item=>item.id===id)}
 function showDetails(id){
-  const item=getTemplates().find(template=>template.id===id);
-  if(!item) return;
-  const title=language==="ur"?(item.urTitle||item.title):item.title;
-  const description=language==="ur"?(item.urDescription||item.description):item.description;
-  showToast(title+" — "+description+" — "+money(item.price));
+ const item=findTemplate(id);
+ if(!item)return;
+ const title=language==="ur"?(item.urTitle||item.title):item.title;
+ const description=language==="ur"?(item.urDescription||item.description):item.description;
+ showToast(title+" — "+description+" — "+money(item.price));
 }
-
 function openDemo(id){
-  const item=getTemplates().find(template=>template.id===id);
-  if(!item) return;
-
-  if(item.demoUrl){
-    window.open(item.demoUrl,"_blank","noopener,noreferrer");
-    return;
-  }
-
-  const title=language==="ur"?(item.urTitle||item.title):item.title;
-  const description=language==="ur"?(item.urDescription||item.description):item.description;
-  const category=categoryNames[item.category]?.[language] || item.category;
-  const demoDirection=language==="ur"?"rtl":"ltr";
-  const demoFont=language==="ur"?"Tahoma,Arial,sans-serif":"Arial,sans-serif";
-
-  const demoHTML=`<!DOCTYPE html>
-  <html lang="${language}" dir="${demoDirection}">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>${safeText(title)} — Demo</title>
-    <style>
-      *{box-sizing:border-box}
-      body{margin:0;font-family:${demoFont};color:#19251b;background:#f6f8f4;line-height:1.7}
-      header{padding:18px 6%;display:flex;justify-content:space-between;align-items:center;background:#fff;border-bottom:1px solid #e2e9de}
-      header strong{font-size:19px}
-      header a{background:#b7ff00;color:#17251b;padding:10px 16px;border-radius:8px;text-decoration:none;font-weight:bold}
-      .hero{padding:70px 8%;background:#142018;color:#fff;display:grid;grid-template-columns:1.1fr .9fr;gap:35px;align-items:center}
-      .hero h1{font-size:clamp(32px,5vw,55px);line-height:1.2;margin:10px 0}
-      .hero p{color:#c6d0c3}
-      .hero img{width:100%;height:300px;object-fit:cover;border-radius:16px}
-      .label{color:#a4e900;font-weight:bold}
-      .btn{display:inline-block;margin-top:15px;background:#b7ff00;color:#15200b;padding:12px 18px;border-radius:8px;text-decoration:none;font-weight:bold}
-      .section{padding:50px 8%;text-align:center}
-      .services{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:25px}
-      .service{background:#fff;border:1px solid #e1e8dd;padding:23px;border-radius:13px}
-      .service h3{margin:8px 0}
-      footer{padding:25px;text-align:center;background:#e9eee5;color:#566052}
-      @media(max-width:650px){.hero{grid-template-columns:1fr;padding:45px 6%}.hero img{height:220px}.services{grid-template-columns:1fr}.section{padding:38px 6%}}
-    </style>
-  </head>
-  <body>
-    <header><strong>${safeText(title)}</strong><a href="#contact">${language==="ur"?"رابطہ کریں":"Contact Us"}</a></header>
-    <section class="hero">
-      <div>
-        <span class="label">${safeText(category)}</span>
-        <h1>${safeText(title)}</h1>
-        <p>${safeText(description)}</p>
-        <a class="btn" href="#services">${language==="ur"?"مزید جانیں":"Explore Services"} →</a>
-      </div>
-      <img src="${safeText(item.image)}" alt="${safeText(title)}">
-    </section>
-    <section class="section" id="services">
-      <h2>${language==="ur"?"ہم کیا پیش کرتے ہیں؟":"What We Offer"}</h2>
-      <p>${language==="ur"?"آپ کی ضروریات کے مطابق جدید اور پروفیشنل حل۔":"Modern, professional solutions designed around your needs."}</p>
-      <div class="services">
-        <article class="service"><h3>${language==="ur"?"معیار":"Quality"}</h3><p>${language==="ur"?"ہر تفصیل پر توجہ۔":"Careful attention to every detail."}</p></article>
-        <article class="service"><h3>${language==="ur"?"جدید ڈیزائن":"Modern Design"}</h3><p>${language==="ur"?"صاف اور آسان لے آؤٹ۔":"Clean, accessible layouts."}</p></article>
-        <article class="service"><h3>${language==="ur"?"قابل اعتماد مدد":"Reliable Support"}</h3><p>${language==="ur"?"آپ کے سوالات کے لیے مدد۔":"Help when you need it."}</p></article>
-      </div>
-    </section>
-    <section class="section" id="contact">
-      <h2>${language==="ur"?"رابطہ کریں":"Get in Touch"}</h2>
-      <p>${language==="ur"?"یہ صرف ایک ڈیمو پری ویو ہے۔":"This is a sample preview, not a live customer website."}</p>
-      <a class="btn" href="https://support.websitesdeal.com" target="_blank" rel="noopener">${language==="ur"?"سپورٹ سے رابطہ کریں":"Contact Support"}</a>
-    </section>
-    <footer>© ${new Date().getFullYear()} ${safeText(title)} · Sample Preview</footer>
-  </body>
-  </html>`;
-
-  $("#modalTitle").textContent=title+" — "+tr("Sample Preview","نمونہ پری ویو");
-  $("#demoFrame").srcdoc=demoHTML;
-  $("#demoModal").classList.add("open");
-  document.body.style.overflow="hidden";
+ const item=findTemplate(id);
+ if(!item)return;
+ if(item.demoUrl){
+  const url=safeHttpUrl(item.demoUrl);
+  if(!url){showToast(tr("This demo URL is invalid.","یہ ڈیمو URL درست نہیں۔"));return}
+  window.open(url,"_blank","noopener,noreferrer");
+  return;
+ }
+ showSamplePreview(item);
 }
-
+function showSamplePreview(item){
+ const title=language==="ur"?(item.urTitle||item.title):item.title;
+ const description=language==="ur"?(item.urDescription||item.description):item.description;
+ const category=categoryNames[item.category]?.[language]||item.category;
+ const direction=language==="ur"?"rtl":"ltr";
+ const image=safeHttpUrl(item.image)||"https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80";
+ const sample=tr("SAMPLE PREVIEW — NOT A LIVE CUSTOMER WEBSITE","نمونہ پری ویو — یہ اصل کسٹمر ویب سائٹ نہیں ہے");
+ const words=language==="ur"
+  ?{contact:"رابطہ کریں",services:"ہم کیا پیش کرتے ہیں؟",quality:"معیار",qualityText:"ہر تفصیل پر توجہ۔",design:"جدید ڈیزائن",designText:"صاف اور آسان لے آؤٹ۔",support:"قابل اعتماد مدد",supportText:"آپ کے سوالات کے لیے مدد۔",more:"مزید جانیں",end:"یہ صرف ایک نمونہ پری ویو ہے۔"}
+  :{contact:"Contact Us",services:"What We Offer",quality:"Quality",qualityText:"Careful attention to every detail.",design:"Modern Design",designText:"Clean, accessible layouts.",support:"Reliable Support",supportText:"Help when you need it.",more:"Explore Services",end:"This is a sample preview, not a live website."};
+ const html=`<!doctype html><html lang="${language}" dir="${direction}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${safeText(title)} — Sample Preview</title><style>*{box-sizing:border-box}body{margin:0;font:16px Arial,sans-serif;color:#19251b;background:#f6f8f4;line-height:1.7}header{padding:18px 6%;display:flex;justify-content:space-between;align-items:center;background:white;border-bottom:1px solid #e2e9de;gap:15px}header strong{font-size:19px}header a,.btn{background:#b7ff00;color:#17251b;padding:10px 16px;border-radius:8px;text-decoration:none;font-weight:bold}.notice{background:#fff4cc;padding:10px 5%;text-align:center;font-size:12px}.hero{padding:60px 8%;background:#142018;color:white;display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center}.hero h1{font-size:clamp(32px,5vw,55px);line-height:1.2;margin:10px 0}.hero p{color:#c6d0c3}.hero img{width:100%;height:280px;object-fit:cover;border-radius:16px}.label{color:#a4e900;font-weight:bold}.btn{display:inline-block;margin-top:15px}.section{padding:45px 8%;text-align:center}.services{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:24px}.service{background:#fff;border:1px solid #e1e8dd;padding:20px;border-radius:13px}footer{padding:22px;text-align:center;background:#e9eee5;color:#566052}@media(max-width:650px){.hero{grid-template-columns:1fr;padding:38px 6%}.hero img{height:210px}.services{grid-template-columns:1fr}.section{padding:32px 6%}}</style></head><body><header><strong>${safeText(title)}</strong><a href="#contact">${words.contact}</a></header><div class="notice">${sample}</div><section class="hero"><div><span class="label">${safeText(category)}</span><h1>${safeText(title)}</h1><p>${safeText(description)}</p><a class="btn" href="#services">${words.more} →</a></div><img src="${safeText(image)}" alt="${safeText(title)}"></section><section class="section" id="services"><h2>${words.services}</h2><div class="services"><article class="service"><h3>${words.quality}</h3><p>${words.qualityText}</p></article><article class="service"><h3>${words.design}</h3><p>${words.designText}</p></article><article class="service"><h3>${words.support}</h3><p>${words.supportText}</p></article></div></section><section class="section" id="contact"><h2>${words.contact}</h2><p>${words.end}</p><a class="btn" href="https://support.websitesdeal.com" target="_blank" rel="noopener">${words.contact}</a></section><footer>© ${new Date().getFullYear()} ${safeText(title)} · Sample Preview</footer></body></html>`;
+ lastFocusedElement=document.activeElement;
+ $("#modalTitle").textContent=title+" — "+tr("Sample Preview","نمونہ پری ویو");
+ $("#demoFrame").srcdoc=html;
+ $("#demoModal").classList.add("open");
+ document.body.style.overflow="hidden";
+ $("#closeModal").focus();
+}
 function closeDemo(){
-  $("#demoModal").classList.remove("open");
-  $("#demoFrame").srcdoc="";
-  document.body.style.overflow="";
+ $("#demoModal").classList.remove("open");
+ $("#demoFrame").srcdoc="";
+ document.body.style.overflow="";
+ if(lastFocusedElement&&typeof lastFocusedElement.focus==="function")lastFocusedElement.focus();
 }
-
-/* LANGUAGE */
 function applyLanguage(){
-  document.documentElement.lang=language;
-  document.documentElement.dir=language==="ur"?"rtl":"ltr";
-  document.body.classList.toggle("urdu",language==="ur");
-  $("#languageToggle").textContent=language==="ur"?"EN":"اردو";
-
-  $$("[data-en][data-ur]").forEach(element=>{
-    const value=element.dataset[language];
-    if(value!==undefined) element.textContent=value;
-  });
-
-  $$("[data-en-placeholder][data-ur-placeholder]").forEach(element=>{
-    element.placeholder=language==="ur"
-      ?element.dataset.urPlaceholder
-      :element.dataset.enPlaceholder;
-  });
-
-  document.title=language==="ur"
-    ?"ویب سائٹس ڈیل — ویب سائٹ ٹیمپلیٹس"
-    :"WebsitesDeal — Premium Website Templates";
-
-  $("#closeModal").textContent=language==="ur"?"بند کریں ✕":"✕ Close";
-  $("#sortSelect").value=$("#sortSelect").value||"default";
-  renderTemplates();
-  updatePrayerText();
-}
-
-$("#languageToggle").addEventListener("click",()=>{
-  language=language==="ur"?"en":"ur";
-  localStorage.setItem("wd_lang",language);
-  applyLanguage();
-});
-
-$("#themeToggle").addEventListener("click",()=>{
-  document.body.classList.toggle("light");
-  localStorage.setItem("wd_theme",document.body.classList.contains("light")?"light":"dark");
-  $("#themeToggle").textContent=document.body.classList.contains("light")?"☾":"☼";
-});
-
-if(localStorage.getItem("wd_theme")==="light"){
-  document.body.classList.add("light");
-  $("#themeToggle").textContent="☾";
-}
-
-/* NAVIGATION */
-$("#menuToggle").addEventListener("click",()=>{
-  $("#navLinks").classList.toggle("open");
-});
-
-$$(".nav-links a").forEach(link=>{
-  link.addEventListener("click",()=>$("#navLinks").classList.remove("open"));
-});
-
-/* SEARCH AND FILTERS */
-$("#searchForm").addEventListener("submit",event=>{
-  event.preventDefault();
-  searchTerm=$("#searchInput").value.trim();
-  renderTemplates();
-  $("#templates").scrollIntoView({behavior:"smooth"});
-});
-
-$("#searchInput").addEventListener("input",()=>{
-  searchTerm=$("#searchInput").value.trim();
-  renderTemplates();
-});
-
-$("#filterBar").addEventListener("click",event=>{
-  const button=event.target.closest("[data-filter]");
-  if(button) setFilter(button.dataset.filter);
-});
-
-$("#categoryGrid").addEventListener("click",event=>{
-  const button=event.target.closest("[data-category]");
-  if(button){
-    setFilter(button.dataset.category);
-    $("#templates").scrollIntoView({behavior:"smooth"});
+ document.documentElement.lang=language;
+ document.documentElement.dir=language==="ur"?"rtl":"ltr";
+ document.body.classList.toggle("urdu",language==="ur");
+ $("#languageToggle").textContent=language==="ur"?"EN":"اردو";
+ $$("[data-en][data-ur]").forEach(el=>{
+  const value=el.dataset[language];
+  if(value!==undefined){
+   if(el.matches("h1")&&el.closest(".hero"))el.textContent=value;
+   else el.textContent=value;
   }
+ });
+ $$("[data-en-placeholder][data-ur-placeholder]").forEach(el=>{
+  el.placeholder=language==="ur"?el.dataset.urPlaceholder:el.dataset.enPlaceholder;
+ });
+ document.title=language==="ur"?"ویب سائٹس ڈیل — ویب سائٹ ٹیمپلیٹس":"WebsitesDeal — Premium Website Templates";
+ $("#closeModal").textContent=language==="ur"?"بند کریں ✕":"✕ Close";
+ updateClock();
+ updatePrayerText();
+ renderTemplates();
+}
+$("#languageToggle").addEventListener("click",()=>{
+ language=language==="ur"?"en":"ur";
+ safeWrite("wd_lang",language);
+ applyLanguage();
 });
-
+$("#themeToggle").addEventListener("click",()=>{
+ document.body.classList.toggle("light");
+ const mode=document.body.classList.contains("light")?"light":"dark";
+ try{localStorage.setItem("wd_theme",mode)}catch(_){}
+ $("#themeToggle").textContent=mode==="light"?"☾":"☼";
+});
+if(safeRead("wd_theme","dark")==="light"){
+ document.body.classList.add("light");
+ $("#themeToggle").textContent="☾";
+}
+$("#menuToggle").addEventListener("click",()=>{
+ const open=$("#navLinks").classList.toggle("open");
+ $("#menuToggle").setAttribute("aria-expanded",String(open));
+});
+$$(".nav-links a").forEach(a=>a.addEventListener("click",()=>{
+ $("#navLinks").classList.remove("open");
+ $("#menuToggle").setAttribute("aria-expanded","false");
+}));
+$("#searchForm").addEventListener("submit",event=>{
+ event.preventDefault();
+ searchTerm=$("#searchInput").value.trim();
+ renderTemplates();
+ $("#templates").scrollIntoView({behavior:"smooth"});
+});
+$("#searchInput").addEventListener("input",()=>{
+ searchTerm=$("#searchInput").value.trim();
+ renderTemplates();
+});
+$("#filterBar").addEventListener("click",event=>{
+ const button=event.target.closest("[data-filter]");
+ if(button)setFilter(button.dataset.filter);
+});
+$("#categoryGrid").addEventListener("click",event=>{
+ const button=event.target.closest("[data-category]");
+ if(button){
+  setFilter(button.dataset.category);
+  $("#templates").scrollIntoView({behavior:"smooth"});
+ }
+});
 $("#sortSelect").addEventListener("change",renderTemplates);
-
-/* DEMO MODAL */
+$("#templateGrid").addEventListener("click",event=>{
+ const fav=event.target.closest("[data-favorite-id]");
+ const demo=event.target.closest("[data-demo-id]");
+ const details=event.target.closest("[data-details-id]");
+ if(fav)toggleFavorite(fav.dataset.favoriteId);
+ else if(demo)openDemo(demo.dataset.demoId);
+ else if(details)showDetails(details.dataset.detailsId);
+});
 $("#closeModal").addEventListener("click",closeDemo);
 $("#demoModal").addEventListener("click",event=>{
-  if(event.target===$("#demoModal")) closeDemo();
+ if(event.target===$("#demoModal"))closeDemo();
 });
 document.addEventListener("keydown",event=>{
-  if(event.key==="Escape") closeDemo();
+ if(event.key==="Escape")closeDemo();
 });
-
-/* PAKISTAN CLOCK */
 function updateClock(){
-  try{
-    const now=new Date();
-    const time=new Intl.DateTimeFormat("en-PK",{
-      timeZone:"Asia/Karachi",hour:"2-digit",minute:"2-digit",
-      second:"2-digit",hour12:true
-    }).format(now);
-    $("#pakistanClock").textContent=(language==="ur"?"پاکستان کا وقت: ":"Pakistan time: ")+time;
-  }catch(error){
-    $("#pakistanClock").textContent="Pakistan time";
-  }
+ try{
+  const time=new Intl.DateTimeFormat("en-PK",{timeZone:"Asia/Karachi",hour:"2-digit",minute:"2-digit",second:"2-digit",hour12:true}).format(new Date());
+  $("#pakistanClock").textContent=(language==="ur"?"پاکستان کا وقت: ":"Pakistan time: ")+time;
+ }catch(_){$("#pakistanClock").textContent="Pakistan time"}
 }
-
-/* PRAYER TIMES
-   Approximate city-based prayer times are retrieved from Aladhan.
-   Karachi is used as the default location. */
 async function loadPrayerTimes(){
-  const info=$("#prayerInfo");
-  info.textContent=tr("Loading prayer times...","نماز کے اوقات لوڈ ہو رہے ہیں...");
-
-  try{
-    const date=new Intl.DateTimeFormat("en-GB",{
-      timeZone:"Asia/Karachi",day:"2-digit",month:"2-digit",year:"numeric"
-    }).format(new Date()).replaceAll("/","-");
-
-    const response=await fetch(
-      "https://api.aladhan.com/v1/timingsByCity/"+date+
-      "?city=Karachi&country=Pakistan&method=1",
-      {headers:{"Accept":"application/json"}}
-    );
-    if(!response.ok) throw new Error("Prayer API unavailable");
-
-    const data=await response.json();
-    const timings=data?.data?.timings;
-    if(!timings) throw new Error("No prayer data");
-
-    info.textContent=tr(
-      "Karachi · Fajr "+timings.Fajr+" · Dhuhr "+timings.Dhuhr+" · Asr "+timings.Asr+" · Maghrib "+timings.Maghrib+" · Isha "+timings.Isha,
-      "کراچی · فجر "+timings.Fajr+" · ظہر "+timings.Dhuhr+" · عصر "+timings.Asr+" · مغرب "+timings.Maghrib+" · عشاء "+timings.Isha
-    );
-  }catch(error){
-    info.textContent=tr(
-      "Prayer times temporarily unavailable.",
-      "نماز کے اوقات فی الحال دستیاب نہیں۔"
-    );
-  }
+ const info=$("#prayerInfo");
+ info.textContent=tr("Loading Karachi prayer times...","کراچی کے نماز کے اوقات لوڈ ہو رہے ہیں...");
+ try{
+  const date=new Intl.DateTimeFormat("en-GB",{timeZone:"Asia/Karachi",day:"2-digit",month:"2-digit",year:"numeric"}).format(new Date()).replaceAll("/","-");
+  const response=await fetch("https://api.aladhan.com/v1/timingsByCity/"+date+"?city=Karachi&country=Pakistan&method=1");
+  if(!response.ok)throw new Error("Prayer API unavailable");
+  const data=await response.json();
+  const t=data?.data?.timings;
+  if(!t)throw new Error("Missing timings");
+  info.textContent=tr(
+   "Karachi · Fajr "+t.Fajr+" · Dhuhr "+t.Dhuhr+" · Asr "+t.Asr+" · Maghrib "+t.Maghrib+" · Isha "+t.Isha,
+   "کراچی · فجر "+t.Fajr+" · ظہر "+t.Dhuhr+" · عصر "+t.Asr+" · مغرب "+t.Maghrib+" · عشاء "+t.Isha
+  );
+ }catch(_){
+  info.textContent=tr("Karachi prayer times temporarily unavailable.","کراچی کے نماز کے اوقات فی الحال دستیاب نہیں۔");
+ }
 }
-
 function updatePrayerText(){
-  const info=$("#prayerInfo");
-  if(info && info.textContent.includes("unavailable")){
-    info.textContent=tr("Prayer times temporarily unavailable.","نماز کے اوقات فی الحال دستیاب نہیں۔");
-  }
+ const info=$("#prayerInfo");
+ if(info&&/unavailable|دستیاب نہیں/.test(info.textContent)){
+  info.textContent=tr("Karachi prayer times temporarily unavailable.","کراچی کے نماز کے اوقات فی الحال دستیاب نہیں۔");
+ }
 }
-
-/* INITIALIZE */
 $("#currentYear").textContent=new Date().getFullYear();
 applyLanguage();
-renderTemplates();
 updateClock();
 setInterval(updateClock,1000);
 loadPrayerTimes();
 setInterval(loadPrayerTimes,60*60*1000);
-
 })();
 </script>
 </body>
 </html>
-```
